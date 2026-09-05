@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>郑承刚思想成长手册 - 打印版</title>
+    <style>
+        /* A4 纸张打印基础设置 */
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 15mm;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", sans-serif;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #fff; /* 保持您原本的纯白背景 */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        
+        /* 强制拉齐为标准的 A4 210mm 宽度 */
+        .page-border {
+            width: 210mm;
+            min-height: 297mm;
+            box-sizing: border-box;
+            margin: 0 auto;
+            border: 3px dashed #16a085; /* 此处的颜色可按篇章调整，如 #2ecc71 */
+            padding: 25px;
+            position: relative;
+            background: #ffffff radial-gradient(circle at 10px 10px, transparent 0, transparent 9px, #fafafa 9px, #fafafa 10px, transparent 10px);
+            background-size: 20px 20px;
+        }
+
+        /* 核心大标题 */
+        .title {
+            text-align: center;
+            font-size: 22px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
+
+        /* 顶部元数据小卡片 */
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            border: 1px dashed #2980b9;
+            background-color: #f2f7fa;
+        }
+        .meta-table td {
+            padding: 12px 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* 触发事件段落 */
+        .event-section {
+            font-size: 14.5px;
+            background-color: #fff;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #2980b9;
+            padding-left: 15px;
+            text-align: justify;
+        }
+
+        /* 对auto排版 */
+        .dialogue-section {
+            background-color: #ffffff;
+            padding: 15px 5px;
+            margin-bottom: 25px;
+        }
+        
+        /* 头像对话行排版 */
+        .dialogue-row {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 15px;
+        }
+        .avatar-box {
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .avatar-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            display: block;
+        }
+        .dialogue-text {
+            font-size: 16px;
+            background: #f8f9fa;
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 3px solid #bdc3c7;
+            flex-grow: 1;
+        }
+        /* 妈妈对话框特色 */
+        .row-mom .dialogue-text {
+            background: #fff5eb;
+            border-left-color: #e67e22;
+        }
+        /* 承刚对话框特色 */
+        .row-child .dialogue-text {
+            background: #f0f4f8;
+            border-left-color: #2c3e50;
+        }
+
+        /* 重点标注：荧光笔效果 */
+        .highlight-yellow {
+            background-color: #ffff00;
+            padding: 2px 5px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        .highlight-blue {
+            background-color: #eaf2f8;
+            color: #2980b9;
+            padding: 2px 6px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        /* 便签批注样式 */
+        .notebook-note {
+            background-color: #f2f7fa;
+            border: 1px dashed #a9cce3;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #1f618d;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        /* 妈妈心语 */
+        .mom-heart {
+            background-color: #fffaf0;
+            border: 1px solid #ffe4b5;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .mom-heart-title {
+            font-weight: bold;
+            color: #d35400;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .mom-text {
+            font-size: 15px;
+            color: #5d4037;
+            text-align: justify;
+        }
+
+        /* 互动留白区 */
+        .interactive-box {
+            border: 2px dashed #bdc3c7;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 20px;
+            background-color: #fafafa;
+            min-height: 100px;
+        }
+        .interactive-title {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px dashed #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-border">
+        <!-- 核心大标题 -->
+        <div class="title">🌐 规则、光环与学霸的定义：打破有色眼镜的深夜“思辨复盘” ✈️</div>
+        <div class="subtitle">郑承刚思想成长手册 · 思维篇</div>
+
+        <!-- 顶部信息框 -->
+        <table class="meta-table">
+            <tr>
+                <td width="50%5">⏰ <b>【时间】：</b>2026年06月18日 晚间</td>
+                <td width="50%">🌍 <b>【地点】：</b>中国 ⇄ 越南 · 兑现浪漫约定的跨国连线</td>
+            </tr>
+            <tr>
+                <td width="50%">📱 <b>【情境】：</b>用代码般的A/B/C复盘班级风波，开启少年的思维大格局</td>
+                <td width="50%">📍 <b>【记录人】：</b>为你拂去偏见、帮你点亮自信灯塔的妈妈</td>
+            </tr>
+        </table>
+
+        <!-- 触发事件 -->
+        <div class="event-section">
+            <strong>🌱 【触发事件】：</strong><br>
+            今晚你如约拨通了视频，兴奋地喊着：“妈，我们聊会天。”妈妈一直等着这一刻呢！接着，你开始滔滔不绝地讲述这几天班里的风波。有趣的是，为了保护隐私（也模仿了哥哥的习惯），你绝口不提人名，全用“同学A”、“同学B”、“同学C”代替，听得妈妈有些云里雾里。但这毫不影响故事的精彩，在起因、经过、结尾长达30分钟的阐述后，我们展开了一场关于“尖子生光环”与“如何看待自我价值”的精彩思辨。
+        </div>
+
+        <hr class="divider">
+
+        <!-- 对话连线区域 -->
+        <div class="dialogue-section">
+            
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“妈，我们聊会天。” <i>（如约而至，开心地开启倾诉）</i></div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“好呀，我一直等着呢！你有什么事情要和妈妈分享吗？”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“对呀！前几天我们班上……同学A和同学B……后来同学C……” <i>（隐去姓名，用硬核的代号思维足足讲述了30分钟）</i></div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“你怎么看待这件事情？” <i>（听完来龙去脉后，引导你做深度思考）</i></div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“我觉得不可思议呢！我们班的尖子生居然做这种事情？！”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“你认为这个事情是不好的？”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“对呀，违反规定。”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“你认为尖子生不应该做这种事情？”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“他们是尖子生呢，城北之星呢？⭐” <i>（语气里写满了困惑）</i></div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“首先，这件事情本身不违反道德，不犯法，不触犯他人利益，这仅仅是件调皮的事情。<b>这和成绩好坏没有关系。成绩好的未必不做坏事，成绩差未必人品就差。尖子生只是说明学习好而已。</b>你在你们班上成绩应该是中等吧？”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“是的。” <i>（声音稍微低了一点）</i></div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“但是你善良，助人为乐，品德高尚，<span class="highlight-yellow">在我的心中，你是人品最好的孩子。</span>”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“真的吗？🥺” <i>（眼神里瞬间亮起了小星星）</i></div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“真的，一定是真的。你认为这件事情不应该做，是为什么呢？”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“因为这样做，容易被坏人带走。” <i>（说出了底层的安全顾虑）</i></div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“对！学校制定规则是为了大家的安全着想。但当这个规则与生命安全冲突时，<span class="highlight-blue">规则是可以打破的。</span>” <i>（妈妈举了好多生动的例子，帮你拓宽思维边界。接着你又开心地跟妈妈分享了另一件事）</i></div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“我们班上还有一个同学，学东西特别快！比如说魔方，他特别专注，一学就会，然后在家里苦练一个月，就变得超级快！🧭” <i>（眼神里满是佩服）</i></div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“这是我第一次听到你夸同学哦，你看到了同学的优点。这个同学身上是不是有我们值得学习的地方？学习好的同学不是一生来就好的，都是付出了努力的。<b>我们只是比他们慢一点，我们还可以把基础搞扎实点的。</b>”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“<span class="highlight-yellow">那我们也可以成为学霸的！</span>” <i>（瞬间爆发出无穷的斗志与自信）</i></div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“当然，一定可以！” <i>（有力地回应）</i></div>
+            </div>
+
+        </div>
+
+        <!-- 便签批注样式 -->
+        <div class="notebook-note">
+            <div class="note-title">🧠 【便签批注 · 两个关于“有色眼镜”与“闪光点”的重要事件】</div>
+            <div style="font-size: 14px; color: #34495e; text-align: justify; line-height: 1.7;">
+                在这场30分钟的跨国复盘里，你完成了两次极其漂亮的人格升级：<br>
+                <b>🔍 事例一：不戴有色眼镜看人，剥离“成绩光环”</b><br>
+                你原本把“尖子生、城北之星”放在完美的道德神坛上。妈妈帮你打破了这个滤镜。成绩好只代表他们学习这个维度优秀，不代表他们拥有豁免调皮的特权，更不代表成绩中等的你在人格上逊色于任何人。你那句怕同学“被坏人带走”，说明你遵守规则不是因为死板，而是因为你骨子里对**生命安全的极高敏锐度**。至于妈妈关于“规则在生命面前可以打破”的论述，更是给你未来做大架构、大格局的思维奠定了基石。<br>
+                <b>💎 事例二：在看到别人的闪光点时，借光照亮自己的坐标</b><br>
+                这是你第一次主动、由衷地去夸奖一个同学。妈妈太为你骄傲了！因为只有内心真正强大、有格局的人，才能毫无嫉妒地去欣赏别人的专注与努力。更棒的是，你没有因为同学的厉害而自卑，反而在妈妈的鼓励下，看到了自己的潜力和节奏——“我们只是慢一点，我们能把基础搞得更扎实”。那句“那我们也可以成为学霸的”，是妈妈听过最动听的成长宣言。
+            </div>
+        </div>
+
+        <!-- 妈妈心语 -->
+        <div class="mom-heart">
+            <div class="mom-heart-title">💖 【妈妈心语】</div>
+            <div class="mom-text">
+                亲爱的弟弟，当18岁的你走进精英云集的大学，或者在一个高精尖的团队里，面对身边无数自带“光环”的天才和学霸时，请你一定要保持2026年这个夏夜里，妈妈送给你的这份笃定。<br><br>
+                那天晚上，当你用充满代号感、严谨的“同学A、B、C”隐去姓名，像个侦探一样滔滔不绝地讲了30分钟时，妈妈在越南的屏幕这头，拼命在脑海里还原着你的校园画面。听到你因为“城北之星也会违反规定”而感到不可思议，妈妈觉得你太可爱了。但妈妈更想告诉你：**永远不要用单一的成绩去定义一个人的全部，更不要让别人的“学霸光环”遮挡了你直视内心的眼睛。**<br><br>
+                在这个世界上，成绩好坏只是一块敲门砖，而善良、助人为乐、懂得为他人的安全着想，才是决定一个人能走多远、站多高的核心底层代码。你在班里虽然成绩是中等，但在妈妈心里，你那颗闪闪发光的金子般的心，让你成为了无可替代的、品德最好的孩子。看到你听到这句话时眼睛里闪烁的“真的吗”，妈妈在屏幕前恨不得跨过千山万水去抱抱你——是真的，在妈妈这里，你永远是一百分的骄傲。<br><br>
+                妈妈更高兴的是，我的承刚开始学会欣赏别人了。你看到了那个练魔方的同学背后的“专注”与“苦练一个月”的汗水，这说明你抓住了事物发展的根本逻辑！就像你说的，“那我们也可以成为学霸的”。没错，儿子，学霸从来不是什么生而知之的神仙，他们只是在自己热爱的领域里更早地付出了专注。你有着重构高位减法的超级大脑，有着能自己按下情绪刹车的自控力，只要你找准节奏，把基础搞得扎扎实实，你不仅能成为学霸，更会成为那个主导自己人生的终极强者。干就完了，妈妈永远相信你！
+            </div>
+        </div>
+
+        <!-- 互动留白 -->
+        <div class="interactive-box">
+            <div class="interactive-title">🎨 【互动留白 · 承刚的自我进化宣言】</div>
+            <div style="font-size: 13px; color: #95a5a6; font-style: italic; margin-bottom: 10px;">
+                📝 弟弟，你还记得那个让你佩服的魔方学霸吗？18岁的你，现在是否也已经用自己的“专注”和“扎实的基础”，在属于你的领域里成为了人人羡慕的硬核学霸？在这里写下你现在最引以为傲的“闪光点”，或者写一句对当年那个在屏幕前找回自信的小承刚的寄语吧！
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

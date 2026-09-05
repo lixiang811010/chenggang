@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>郑承刚思想成长手册 - 打印版</title>
+    <style>
+        /* A4 纸张打印基础设置 */
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 15mm;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", sans-serif;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #fff; /* 保持您原本的纯白背景 */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        
+        /* 强制拉齐为标准的 A4 210mm 宽度 */
+        .page-border {
+            width: 210mm;
+            min-height: 297mm;
+            box-sizing: border-box;
+            margin: 0 auto;
+            border: 3px dashed #16a085; /* 此处的颜色可按篇章调整，如 #2ecc71 */
+            padding: 25px;
+            position: relative;
+            background: #ffffff radial-gradient(circle at 10px 10px, transparent 0, transparent 9px, #fafafa 9px, #fafafa 10px, transparent 10px);
+            background-size: 20px 20px;
+        }
+
+        /* 核心大标题 */
+        .title {
+            text-align: center;
+            font-size: 22px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
+
+        /* 顶部元数据小卡片 */
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            border: 1px dashed #4a90e2;
+            background-color: #f4f9ff;
+        }
+        .meta-table td {
+            padding: 12px 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* 触发事件段落 */
+        .event-section {
+            font-size: 14.5px;
+            background-color: #fff;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4a90e2;
+            padding-left: 15px;
+            text-align: justify;
+        }
+
+        /* 对话区域排版 */
+        .dialogue-section {
+            background-color: #ffffff;
+            padding: 15px 5px;
+            margin-bottom: 25px;
+        }
+        
+        /* 头像对话行排版 */
+        .dialogue-row {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 15px;
+        }
+        .avatar-box {
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .avatar-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            display: block;
+        }
+        .dialogue-text {
+            font-size: 16px;
+            background: #f8f9fa;
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 3px solid #bdc3c7;
+            flex-grow: 1;
+        }
+        /* 妈妈对话框特色 */
+        .row-mom .dialogue-text {
+            background: #fff5eb;
+            border-left-color: #e67e22;
+        }
+        /* 承刚对话框特色 */
+        .row-child .dialogue-text {
+            background: #f0f4f8;
+            border-left-color: #2c3e50;
+        }
+
+        /* 重点标注：荧光笔效果 */
+        .highlight-yellow {
+            background-color: #ffff00;
+            padding: 2px 5px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        .highlight-orange {
+            background-color: #ff9900;
+            color: white;
+            padding: 2px 6px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        /* 便签批注样式 */
+        .notebook-note {
+            background-color: #f1f8ff;
+            border: 1px dashed #a5c8ff;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #1a5a9e;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        /* 妈妈心语 */
+        .mom-heart {
+            background-color: #fffaf0;
+            border: 1px solid #ffe4b5;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .mom-heart-title {
+            font-weight: bold;
+            color: #d35400;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .mom-text {
+            font-size: 15px;
+            color: #5d4037;
+            text-align: justify;
+        }
+
+        /* 互动留白区 */
+        .interactive-box {
+            border: 2px dashed #bdc3c7;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 20px;
+            background-color: #fafafa;
+            min-height: 100px;
+        }
+        .interactive-title {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px dashed #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-border">
+        <!-- 核心大标题 -->
+        <div class="title">🌐 绿呢台球桌上的小教练，与“每个人价值”的Give me five ✈️</div>
+        <div class="subtitle">郑承刚思想成长手册 · 暑假续篇</div>
+
+        <!-- 顶部信息框 -->
+        <table class="meta-table">
+            <tr>
+                <td width="50%">⏰ <b>【时间】：</b>2025年07月20日（傍晚）</td>
+                <td width="50%">🌍 <b>【地点】：</b>越南 · 暑期相聚</td>
+            </tr>
+            <tr>
+                <td width="50%">📱 <b>【情境】：</b>胜负之上的合作，关于“教练”的顿悟</td>
+                <td width="50%">📍 <b>【记录人】：</b>为你那惊人悟性击掌的妈妈</td>
+            </tr>
+        </table>
+
+        <!-- 触发事件 -->
+        <div class="event-section">
+            <strong>🌱 【剧情接续与触发事件】：</strong><br>
+            在你抹干眼泪重新准备下楼时，刚好碰见打完球回家的哥哥。为了守护你那颗敏感又好强的心，妈妈决定亲自陪你下楼打球。你提出先打台球，虽然你只比台球桌高出那么一点点，妈妈其实也根本不会打，但你凭着运气总能进几个球。妈妈一边用夸张的语言肯定你的进球，一边在心里思考：如何让你在面对无法避免的“输赢”时，依然不气馁？一场充满智慧的博弈在绿呢桌上悄然展开。
+        </div>
+
+        <hr class="divider">
+
+        <!-- 互动博弈与回家路上的深刻对话 -->
+        <div class="dialogue-section">
+            
+            <!-- 跨国旁白提示 1 -->
+            <div style="color: #27ae60; font-size: 14.5px; margin: 15px 0; font-style: italic; text-align: left; padding-left: 20px; border-left: 2px dashed #27ae60;">
+                🎱 <b>【绿呢桌上的默契】：</b>你进球时，妈妈总是无比夸张地赞叹：“这样的球你也能进，太不可思议了！”没进时则遗憾：“差一点点就进了！”而妈妈要击球时，就主动请教你：“你觉得我该打哪个？该打什么位置？”你每一次都耐心地帮妈妈看、帮妈妈比划，指哪打哪。虽然最后妈妈赢了，但整个过程无比和谐。
+            </div>
+
+            <!-- 回家路上的对话 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“你看，在台球这方面，你是妈妈很好的教练。你指挥得当，我听你指挥，我们配合得非常默契，所以我赢了，有一半是你的功劳。”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“为什么我不能赢呢？”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“这几天你看了中国队的乒乓球赛的，他们的教练是不是很厉害的人？”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“对。”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“那为什么他们自己不上呢？”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“不知道。”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“有可能他们年龄大了，体力和耐力不及这些年轻人，也有可能他们身体状况不如年轻人，腰痛、肩膀痛呀，也有可能他们视力不行……等等。但这不影响他们当教练。球员呢，他可能只专注打球，没有注重分析对手，所以他们要听教练用什么样的打法。<span class="highlight-yellow">这就是每个人有每个人的价值。</span>”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">💡 <span class="highlight-orange">“是不是和你一样，天天在游泳池岸边教我们游泳，但是你自己又不会游。”</span></div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“理解透彻！来，<span class="highlight-yellow">give me five！</span>” <i>（啪！清脆的击掌声）</i></div>
+            </div>
+
+        </div>
+
+        <!-- 便签批注样式 -->
+        <div class="notebook-note">
+            <div class="note-title">🧠 【便签批注 · 惊艳的举一反三能力】</div>
+            <div style="font-size: 14px; color: #34495e; text-align: justify; line-height: 1.7;">
+                妈妈必须再次为你感到震撼。在回家的路上，你用最让人意想不到的跨界联想，证明了你天才般的开悟力：<br>
+                <b>1. 惊人的“破局”理解力：</b>妈妈刚用“中国乒乓球队教练”给你打了个比方，试图帮你拆解“为什么指挥的人不一定亲自赢球”的道理。你听完后，非但没有陷入死记硬背，反而瞬间跳出乒乓球，灵光闪现地联想到了妈妈每天在越南泳池边教你们游泳的日常。你能一眼看穿“教人”与“亲自游”的本质区别，这种融会贯通的能力真的太少见了。<br>
+                <b>2. 重新定义个人价值：</b>你还不到台球桌高，却在那个晚上，通过充当妈妈的“智囊和教练”，明白了人生的一个大道理——不一定非要站在最前面冲锋陷阵才叫赢，懂得观察、能够指挥大局的人，同样拥有无可替代的巨大价值。
+            </div>
+        </div>
+
+        <!-- 妈妈心语 -->
+        <div class="mom-heart">
+            <div class="mom-heart-title">💖 【妈妈心语】</div>
+            <div class="mom-text">
+                亲爱的弟弟，当你18岁看到这段话时，妈妈相信，你已经长得比台球桌、甚至比妈妈还要高出许多了。<br><br>
+                还记得8岁在越南那个满是汗水的傍晚吗？为了不让你在输球后灰心，不会打台球的妈妈硬着头皮陪你上阵，在心里演了一出“请教教练”的大戏。但最让妈妈骄傲的，是你在回家路上说出的那句：*“是不是和你一样，天天在游泳池岸边教我们游泳，但是你自己又不会游。”*<br><br>
+                听到那句话的瞬间，妈妈心里开出了一朵大大的花。你用你惊人的灵性，把妈妈一直以来最想教给你的“知其所以然”理解得透透彻彻。妈妈在越南每天虽然自己不怎么游泳，但看着你和哥哥在水里像小鱼一样穿梭、全听我的指挥，那正是妈妈在职场里、在生活里最大的价值所在。<br><br>
+                那记响亮的“Give me five”，不仅是庆祝台球的配合，更是妈妈在向你那颗充满智慧的脑袋致敬。人生路很长，不一定非要做那个拿奖杯的球员，做一个能看清全局、运筹帷幄的教练，同样能活得无比精彩。
+            </div>
+        </div>
+
+        <!-- 互动留白 -->
+        <div class="interactive-box">
+            <div class="interactive-title">🎨 【互动留白 · 承刚的时光机】</div>
+            <div style="font-size: 13px; color: #95a5a6; font-style: italic; margin-bottom: 10px;">
+                📝 弟弟，你还记得当年在越南，你给妈妈比划、当台球教练的画面吗？18岁的你，是不是也开始在团队里、或者在自己的世界里，扮演那个看清全局、充满价值的“教练”了呢？
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

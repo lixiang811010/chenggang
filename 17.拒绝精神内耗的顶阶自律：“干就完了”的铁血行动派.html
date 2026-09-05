@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>郑承刚思想成长手册 - 打印版</title>
+    <style>
+        /* A4 纸张打印基础设置 */
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 15mm;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", sans-serif;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #fff; /* 保持您原本的纯白背景 */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        
+        /* 强制拉齐为标准的 A4 210mm 宽度 */
+        .page-border {
+            width: 210mm;
+            min-height: 297mm;
+            box-sizing: border-box;
+            margin: 0 auto;
+            border: 3px dashed #16a085; /* 此处的颜色可按篇章调整，如 #2ecc71 */
+            padding: 25px;
+            position: relative;
+            background: #ffffff radial-gradient(circle at 10px 10px, transparent 0, transparent 9px, #fafafa 9px, #fafafa 10px, transparent 10px);
+            background-size: 20px 20px;
+        }
+
+        /* 核心大标题 */
+        .title {
+            text-align: center;
+            font-size: 22px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
+
+        /* 顶部元数据小卡片 */
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            border: 1px dashed #3498db;
+            background-color: #f4f9ff;
+        }
+        .meta-table td {
+            padding: 12px 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* 触发事件段落 */
+        .event-section {
+            font-size: 14.5px;
+            background-color: #fff;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+            text-align: justify;
+        }
+
+        /* 对话区域排版 */
+        .dialogue-section {
+            background-color: #ffffff;
+            padding: 15px 5px;
+            margin-bottom: 25px;
+        }
+        
+        /* 头像对话行排版 */
+        .dialogue-row {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 15px;
+        }
+        .avatar-box {
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .avatar-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            display: block;
+        }
+        .dialogue-text {
+            font-size: 16px;
+            background: #f8f9fa;
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 3px solid #bdc3c7;
+            flex-grow: 1;
+        }
+        /* 妈妈对话框特色 */
+        .row-mom .dialogue-text {
+            background: #fff5eb;
+            border-left-color: #e67e22;
+        }
+        /* 承刚对话框特色 */
+        .row-child .dialogue-text {
+            background: #f0f4f8;
+            border-left-color: #2c3e50;
+        }
+
+        /* 重点标注：荧光笔效果 */
+        .highlight-yellow {
+            background-color: #ffff00;
+            padding: 2px 5px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        .highlight-blue {
+            background-color: #3498db;
+            color: white;
+            padding: 3px 8px;
+            font-weight: bold;
+            border-radius: 4px;
+            font-size: 17px;
+            letter-spacing: 1px;
+        }
+
+        /* 便签批注样式 */
+        .notebook-note {
+            background-color: #f1f8ff;
+            border: 1px dashed #a5c8ff;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #1a5a9e;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        /* 妈妈心语 */
+        .mom-heart {
+            background-color: #fffaf0;
+            border: 1px solid #ffe4b5;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .mom-heart-title {
+            font-weight: bold;
+            color: #d35400;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .mom-text {
+            font-size: 15px;
+            color: #5d4037;
+            text-align: justify;
+        }
+
+        /* 互动留白区 */
+        .interactive-box {
+            border: 2px dashed #bdc3c7;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 20px;
+            background-color: #fafafa;
+            min-height: 100px;
+        }
+        .interactive-title {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px dashed #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-border">
+        <!-- 核心大标题 -->
+        <div class="title">🌐 拒绝精神内耗的顶阶自律：“干就完了”的铁血行动派 ✈️</div>
+        <div class="subtitle">郑承刚思想成长手册 · 行动篇</div>
+
+        <!-- 顶部信息框 -->
+        <table class="meta-table">
+            <tr>
+                <td width="50%">⏰ <b>【时间】：</b>2026年02月28日</td>
+                <td width="50%">🌍 <b>【地点】：</b>中国 ⇄ 越南 · 闪烁着豪迈光芒的屏幕</td>
+            </tr>
+            <tr>
+                <td width="50%">📱 <b>【情境】：</b>三年级上学期期末考刚结束，关于作业的硬核对话</td>
+                <td width="50%">📍 <b>【记录人】：</b>被儿子的英雄气概狠狠爽到、隔空疯狂点赞的妈妈</td>
+            </tr>
+        </table>
+
+        <!-- 触发事件 -->
+        <div class="event-section">
+            <strong>🌱 【触发事件】：</strong><br>
+            今天是三年级上学期期末考试结束的日子。别的小朋友一跨出校门都在疯狂盘算去哪里大玩特玩，而你一回到家，竟然破天荒地在微信上主动给远在越南的妈妈发来了一条炸裂的信息：“我准备写寒假作业了。我自己写就好了。”看着你的高度自觉，妈妈又欣慰又心疼，可接下来我们的简短对话，却彻底让妈妈看到了你灵魂深处那种“霸道总裁”般的高阶执行力！
+        </div>
+
+        <hr class="divider">
+
+        <!-- 对话连线区域 -->
+        <div class="dialogue-section">
+            
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“妈妈，我准备写寒假作业了。我自己写就好了。” <i>（淡定，自主，散发着强者气场）</i></div>
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“不休息几天吗？😲” <i>（吃惊地瞪大眼睛）</i></div>
+            </div>
+
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“我这几天做完。”</div>
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“那你不要给自己太大压力哦。🫂” <i>（满满的心疼）</i></div>
+            </div>
+
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“没事，<span class="highlight-blue">干就完了。</span>” <i>（云淡风轻，帅气拉满！）</i></div>
+            </div>
+
+        </div>
+
+        <!-- 便签批注样式 -->
+        <div class="notebook-note">
+            <div class="note-title">🧠 【便签批注 · 顶级解决问题者的标志——零内耗】</div>
+            <div style="font-size: 14px; color: #34495e; text-align: justify; line-height: 1.7;">
+                你这句话“干就完了”，简直直接击中了妈妈这个老IT人的心脏！你知道这句话有多高级吗？<br>
+                <b>1. 你具备了“目标直达”的强者思维：</b>普通人在面对任务时，往往会花大把的时间去焦虑、去拖延、去痛苦地做心理建设。而你，九岁的小伙子，直接跳过了所有无意义的精神内耗！你把困难看作一条必须要过的河，不抱怨、不装可怜，卷起裤腿就直接过河。这种“自我驱动力”，是无数成年人学一辈子都学不会的顶级自律。<br>
+                <b>2. 顶天立地的掌控感：</b>“我自己写就好了”、“我这几天做完”。这两句话，说明你已经完全拿回了自己人生的主动权。你不再是为了应付老师、应付妈妈去写作业，你是为了成为自己时间的主人。这一刻的你，比任何时候都像一个真正的大男子汉。
+            </div>
+        </div>
+
+        <!-- 妈妈心语 -->
+        <div class="mom-heart">
+            <div class="mom-heart-title">💖 【妈妈心语】</div>
+            <div class="mom-text">
+                亲爱的弟弟，当18岁的你正面临着高考、或者是大学里更复杂的科研与学业挑战时，妈妈希望你对着镜子里的自己，大声重复一遍你9岁时说的那四个字：<b>干就完了！</b><br><br>
+                妈妈必须承认，2026年2月28日的那个晚上，妈妈在越南的电脑前，看着聊天记录，整个人被你狠狠地帅到了。你可能不知道，妈妈每天在大型制造企业的IT世界里，要面对跨国的复杂系统、优化庞大的底层数据库，还要处理 frontline 用户没完没了的重复提问。很多时候，大人们也会感到疲惫、甚至想退缩。可那天晚上，你那句“没事，干就完了”，却像一剂超强能量针，反而给了妈妈巨大的启发。<br><br>
+                前一阵子你背古文时哭得撕心裂肺，妈妈还担心你对自己要求太高、会陷入自责。但现在妈妈彻底放心了！因为你的骨子里，不仅有深度思考者的细腻，更有着一股**“快刀斩乱麻”的英雄气概**！你想通了逻辑，锁定了目标，剩下的就是最纯粹、最痛快的执行。<br><br>
+                孩子，这种“零拖延、零内耗”的行动派特质，是你行走世界最锋利的武器。答应妈妈，一辈子都保持这种“干就完了”的利落与豁达。无论未来你遇到多大的难关、多复杂的算法，都别怕，上去就是干！妈妈永远在屏幕这头，为我这个酷毙了的儿子隔空疯狂打Call！
+            </div>
+        </div>
+
+        <!-- 互动留白 -->
+        <div class="interactive-box">
+            <div class="interactive-title">🎨 【互动留白 · 钢铁行动派宣告栏】</div>
+            <div style="font-size: 13px; color: #95a5a6; font-style: italic; margin-bottom: 10px;">
+                📝 弟弟，18岁的你，现在是否依然继承了当年那个“说干就干”的硬核灵魂？在面对新的人生挑战时，请在这里亲手写下你当下的战歌或者行动宣言吧！干就完了！
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

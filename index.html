@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>郑承刚思想成长手册 - 封面</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #0f172a;
+            -webkit-print-color-adjust: exact;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .page-container {
+            width: 210mm;
+            height: 297mm;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 40mm 20mm 20mm 20mm;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .click-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .next-prompt {
+            background: rgba(46, 204, 113, 0.85);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 25mm;
+            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4);
+            animation: pulse 2s infinite;
+            transition: all 0.3s;
+        }
+        .next-prompt:hover {
+            transform: scale(1.05);
+            background: #2ecc71;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.98); opacity: 0.8; }
+            50% { transform: scale(1.04); opacity: 1; }
+            100% { transform: scale(0.98); opacity: 0.8; }
+        }
+
+        .tech-lines {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100mm;
+            height: 100mm;
+            border-bottom: 2px solid rgba(46, 204, 113, 0.2);
+            border-left: 2px solid rgba(46, 204, 113, 0.2);
+            transform: rotate(45deg) translate(30mm, -40mm);
+        }
+        .tech-binary {
+            position: absolute;
+            bottom: 20mm;
+            left: 20mm;
+            font-family: "Courier New", monospace;
+            color: rgba(46, 204, 113, 0.15);
+            font-size: 14px;
+            line-height: 1.2;
+            letter-spacing: 2px;
+        }
+
+        .cover-header {
+            border-left: 6px solid #2ecc71;
+            padding-left: 20px;
+        }
+        .cover-series {
+            font-size: 16px;
+            color: #94a3b8;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .cover-title {
+            font-size: 38px;
+            color: #ffffff;
+            font-weight: 900;
+            letter-spacing: 4px;
+            line-height: 1.4;
+            margin: 0;
+        }
+        .cover-title span {
+            color: #2ecc71;
+        }
+
+        .cover-center {
+            margin-top: 20mm;
+            text-align: center;
+        }
+        .core-matrix {
+            width: 60mm;
+            height: 60mm;
+            border: 2px solid #2ecc71;
+            border-radius: 50%;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 30px rgba(46, 204, 113, 0.2);
+        }
+        .core-matrix::before {
+            content: '';
+            width: 45mm;
+            height: 45mm;
+            border: 1px dashed rgba(255,255,255,0.3);
+            border-radius: 50%;
+            position: absolute;
+        }
+        .core-text {
+            color: #ffffff;
+            font-family: "Courier New", monospace;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .cover-footer {
+            margin-bottom: 20mm;
+        }
+        .meta-box {
+            border-top: 1px solid rgba(148, 163, 184, 0.3);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            color: #cbd5e1;
+            font-size: 15px;
+        }
+        .meta-item strong {
+            color: #2ecc71;
+        }
+
+        @media print {
+            body { background-color: #fff; }
+            .page-container { box-shadow: none; margin: 0; }
+            .click-layer { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+        <a href="preface.html" class="click-layer">
+            <div class="next-prompt">点击封面 开启阅读 ➔</div>
+        </a>
+
+        <div class="tech-lines"></div>
+        <div class="tech-binary">
+            BASE_10 -> BASE_6<br>
+            ALGORITHM_RECONSTRUCT<br>
+            1104 - 356 = HIGH_POSITION_FIRST<br>
+            STATUS: NO_EMOTION_RUNNING
+        </div>
+
+        <div class="cover-header">
+            <div class="cover-series">思想成长手册 · 极客特刊</div>
+            <h1 class="cover-title">不被规则驯服的<br><span>超级大脑</span></h1>
+        </div>
+
+        <div class="cover-center">
+            <div class="core-matrix">
+                <div class="core-text">郑承刚</div>
+            </div>
+        </div>
+
+        <div class="cover-footer">
+            <div class="meta-box">
+                <div class="meta-item">对象：<strong>郑承刚（小儿子）</strong></div>
+                <div class="meta-item">观测期：三年级及成长跨度</div>
+                <div class="meta-item">记录人：妈妈</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

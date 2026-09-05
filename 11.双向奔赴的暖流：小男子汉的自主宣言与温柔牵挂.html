@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>郑承刚思想成长手册 - 打印版</title>
+    <style>
+        /* A4 纸张打印基础设置 */
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 15mm;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", sans-serif;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #fff; /* 保持您原本的纯白背景 */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        
+        /* 强制拉齐为标准的 A4 210mm 宽度 */
+        .page-border {
+            width: 210mm;
+            min-height: 297mm;
+            box-sizing: border-box;
+            margin: 0 auto;
+            border: 3px dashed #16a085; /* 此处的颜色可按篇章调整，如 #2ecc71 */
+            padding: 25px;
+            position: relative;
+            background: #ffffff radial-gradient(circle at 10px 10px, transparent 0, transparent 9px, #fafafa 9px, #fafafa 10px, transparent 10px);
+            background-size: 20px 20px;
+        }
+
+        /* 核心大标题 */
+        .title {
+            text-align: center;
+            font-size: 22px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
+
+        /* 顶部元数据小卡片 */
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            border: 1px dashed #4a90e2;
+            background-color: #f4f9ff;
+        }
+        .meta-table td {
+            padding: 12px 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* 触发事件段落 */
+        .event-section {
+            font-size: 14.5px;
+            background-color: #fff;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4a90e2;
+            padding-left: 15px;
+            text-align: justify;
+        }
+
+        /* 对话区域排版 */
+        .dialogue-section {
+            background-color: #ffffff;
+            padding: 15px 5px;
+            margin-bottom: 25px;
+        }
+        
+        /* 头像对话行排版 */
+        .dialogue-row {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 15px;
+        }
+        .avatar-box {
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .avatar-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            display: block;
+        }
+        .dialogue-text {
+            font-size: 16px;
+            background: #f8f9fa;
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 3px solid #bdc3c7;
+            flex-grow: 1;
+        }
+        /* 妈妈对话框特色 */
+        .row-mom .dialogue-text {
+            background: #fff5eb;
+            border-left-color: #e67e22;
+        }
+        /* 承刚(弟弟)对话框特色 */
+        .row-child .dialogue-text {
+            background: #f0f4f8;
+            border-left-color: #2c3e50;
+        }
+        /* 承泽(哥哥)对话框特色 */
+        .row-brother .dialogue-text {
+            background: #f4fff4;
+            border-left-color: #27ae60;
+        }
+
+        /* 重点标注：荧光笔效果 */
+        .highlight-yellow {
+            background-color: #ffff00;
+            padding: 2px 5px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        .highlight-orange {
+            background-color: #ff9900;
+            color: white;
+            padding: 2px 6px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        /* 便签批注样式 */
+        .notebook-note {
+            background-color: #f1f8ff;
+            border: 1px dashed #a5c8ff;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #1a5a9e;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        /* 妈妈心语 */
+        .mom-heart {
+            background-color: #fffaf0;
+            border: 1px solid #ffe4b5;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .mom-heart-title {
+            font-weight: bold;
+            color: #d35400;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .mom-text {
+            font-size: 15px;
+            color: #5d4037;
+            text-align: justify;
+        }
+
+        /* 互动留白区 */
+        .interactive-box {
+            border: 2px dashed #bdc3c7;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 20px;
+            background-color: #fafafa;
+            min-height: 100px;
+        }
+        .interactive-title {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px dashed #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-border">
+        <!-- 核心大标题 -->
+        <div class="title">🌐 双向奔赴的暖流：小男子汉的自主宣言与温柔牵挂 ✈️</div>
+        <div class="subtitle">郑承刚思想成长手册 · 独立篇</div>
+
+        <!-- 顶部信息框 -->
+        <table class="meta-table">
+            <tr>
+                <td width="50%">⏰ <b>【时间】：</b>2026年01月10日（周六）</td>
+                <td width="50%">🌍 <b>【地点】：</b>中国 ⇄ 越南 · 双向视频通话</td>
+            </tr>
+            <tr>
+                <td width="50%">📱 <b>【情境】：</b>高强度会议后的温柔交心，见证孩子的自主成长</td>
+                <td width="50%">📍 <b>【记录人】：</b>被你们的懂事彻底治愈、感到无比幸福的妈妈</td>
+            </tr>
+        </table>
+
+        <!-- 触发事件 -->
+        <div class="event-section">
+            <strong>🌱 【触发事件】：</strong><br>
+            2026年开年的这个周六，妈妈在越南经历了极其疲惫的一上午——连续开了3个半小时的高强度会议，又讲了3个半小时的话，终于把昨晚困扰了一整夜的棘手技术难题给彻底攻克了。在你吃过中饭兴冲冲给妈妈打来视频时，妈妈还在会场的尾声中。等到会议一结束，妈妈带着沙哑的嗓子迫不及待地拨回电话，而你们兄弟俩接下来的回应，让妈妈所有的疲惫瞬间烟消云散。
+        </div>
+
+        <hr class="divider">
+
+        <!-- 对话连线区域 -->
+        <div class="dialogue-section">
+            
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“宝贝们，找我啥事？我上午开了3个半小时会议，又讲了3个半小时，终于把昨晚困扰我一晚上的问题搞清楚了。”</div>
+            </div>
+
+            <!-- 行：承泽(哥哥) -->
+            <div class="dialogue-row row-brother">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chengze.png" alt="承泽">
+                </div>
+                <div class="dialogue-text">“妈，那你要注意身体哦，说话多要多喝水。”</div>
+            </div>
+
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“<span class="highlight-yellow">妈，多喝温水，嗓子就不会沙哑了。</span>” <i>（敏锐地听出了妈妈声音里的疲惫）</i></div>
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“谢谢宝贝们！刚找我是有啥事吗？”</div>
+            </div>
+
+            <!-- 行：承泽(哥哥) -->
+            <div class="dialogue-row row-brother">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chengze.png" alt="承泽">
+                </div>
+                <div class="dialogue-text">“我们就是告诉你，我们打完球了，吃完饭了，准备写作业，不用你陪我们了。”</div>
+            </div>
+
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“我也不要你陪！” <i>（小下巴一扬，超级骄傲）</i></div>
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“我已经半个学期没有陪哥哥写作业了，弟弟确定不要我陪吗？是不想让我监督还是已经可以自主了？”</div>
+            </div>
+
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“<span class="highlight-orange">当然是可以自主了。</span>”</div>
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“那好，我相信你们，我们各自管好各自，一起努力。”</div>
+            </div>
+
+            <!-- 兄弟俩齐声 -->
+            <div style="color: #27ae60; font-size: 14.5px; margin: 15px 0; font-style: italic; text-align: left; padding-left: 20px; border-left: 2px dashed #27ae60;">
+                📢 <b>【视频挂断前的爆笑大合唱】：</b>“多喝点温水！多敷点面膜！！”
+            </div>
+
+        </div>
+
+        <!-- 便签批注样式 -->
+        <div class="notebook-note">
+            <div class="note-title">🧠 【便签批注 · 从“被动监督”到“绝对自主”的里程碑】</div>
+            <div style="font-size: 14px; color: #34495e; text-align: justify; line-height: 1.7;">
+                在这通短短的周末视频里，妈妈看到了两个极其珍贵的成长切片：<br>
+                <b>1. 弟弟里程碑式的独立宣言：</b>几个月前，面对期中考试，你还会隐隐担心“考不好会怎么样”。而到了今天，你已经能非常自豪、笃定地宣布“当然是可以自主了”。从依赖妈妈的陪伴，到主动规划“打球、吃饭、写作业”的周末节奏，你真正做到了**‘各自管好各自’的成熟**。这就是最高级的自我驱动力。<br>
+                <b>2. 双向奔赴的爱与无微不至的共情：</b>你和哥哥主动给妈妈打视频，不是为了索取，而是为了给远在越南拼搏的妈妈递上一份“安心报告”，免去妈妈的牵挂。你们敏锐地捕捉到了妈妈嗓音的沙哑，一唱一和地叮嘱“多喝温水、多敷面膜”，这种不仅懂事而且充满幽默感的细腻体贴，证明你们已经成长为了懂得照顾、体恤家人的小男子汉了。
+            </div>
+        </div>
+
+        <!-- 妈妈心语 -->
+        <div class="mom-heart">
+            <div class="mom-heart-title">💖 【妈妈心语】</div>
+            <div class="mom-text">
+                亲爱的弟弟、亲爱的阿泽，当你们18岁长成顶天立地的男子汉时，妈妈希望你们能读懂这一页里，妈妈流下的幸福泪水。<br><br>
+                在海外孤身工作的日子里，妈妈经常要面对高强度、高压力的职场挑战。那天上午，妈妈连讲了3.5个小时的话，走出会议室的时候口干舌燥、精疲力竭。可当视频接通，听到你们那句“不用你陪，当然是可以自主了”，妈妈觉得心里有一团火被瞬间点燃了。你们知道那是种什么感觉吗？那是**身为母亲最极致的骄傲与自由**。<br><br>
+                弟弟，妈妈真的为你自豪。你不仅长高了，更把“独立”这门课修到了满分。你不需要妈妈拿着鞭子在后面监督，就能把自己的人生打理得井井有条。我们之间不再是传统的‘管教与被管教’，而是变成了最好的战友——“我们各自管好各自，一起努力。”<br><br>
+                谢谢你们最后塞过来的那句“多喝温水，多敷面膜”，让妈妈在越南的工作室里一个人笑出了声。有你们这样温柔、强大又自带幽默感的儿子，妈妈在外面就算再开十个、百个3.5小时的会，也永远有使不完的劲儿。各自努力，顶峰相见！
+            </div>
+        </div>
+
+        <!-- 互动留白 -->
+        <div class="interactive-box">
+            <div class="interactive-title">🎨 【互动留白 · 独立宣言墙】</div>
+            <div style="font-size: 13px; color: #95a5a6; font-style: italic; margin-bottom: 10px;">
+                📝 弟弟、阿泽，你们还记得当年隔着屏幕给妈妈开出的“温水与面膜”的医生处方吗？18岁的你们，是不是已经成为了可以完全掌控自己人生、甚至能够张开双臂保护妈妈的大人呢？在这儿留下一笔，见证你们当年的自主高光吧！
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

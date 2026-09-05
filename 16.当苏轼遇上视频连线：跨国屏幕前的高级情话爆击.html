@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>郑承刚思想成长手册 - 打印版</title>
+    <style>
+        /* A4 纸张打印基础设置 */
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 15mm;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", sans-serif;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #fff; /* 保持您原本的纯白背景 */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        
+        /* 强制拉齐为标准的 A4 210mm 宽度 */
+        .page-border {
+            width: 210mm;
+            min-height: 297mm;
+            box-sizing: border-box;
+            margin: 0 auto;
+            border: 3px dashed #16a085; /* 此处的颜色可按篇章调整，如 #2ecc71 */
+            padding: 25px;
+            position: relative;
+            background: #ffffff radial-gradient(circle at 10px 10px, transparent 0, transparent 9px, #fafafa 9px, #fafafa 10px, transparent 10px);
+            background-size: 20px 20px;
+        }
+
+        /* 核心大标题 */
+        .title {
+            text-align: center;
+            font-size: 22px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
+
+        /* 顶部元数据小卡片 */
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            border: 1px dashed #4a90e2;
+            background-color: #f4f9ff;
+        }
+        .meta-table td {
+            padding: 12px 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* 触发事件段落 */
+        .event-section {
+            font-size: 14.5px;
+            background-color: #fff;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4a90e2;
+            padding-left: 15px;
+            text-align: justify;
+        }
+
+        /* 对话区域排版 */
+        .dialogue-section {
+            background-color: #ffffff;
+            padding: 15px 5px;
+            margin-bottom: 25px;
+        }
+        
+        /* 头像对话行排版 */
+        .dialogue-row {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 15px;
+        }
+        .avatar-box {
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .avatar-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            display: block;
+        }
+        .dialogue-text {
+            font-size: 16px;
+            background: #f8f9fa;
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 3px solid #bdc3c7;
+            flex-grow: 1;
+        }
+        /* 妈妈对话框特色 */
+        .row-mom .dialogue-text {
+            background: #fff5eb;
+            border-left-color: #e67e22;
+        }
+        /* 承刚(小儿)对话框特色 */
+        .row-child .dialogue-text {
+            background: #f0f4f8;
+            border-left-color: #2c3e50;
+        }
+        /* 承泽(大儿)对话框特色 */
+        .row-brother .dialogue-text {
+            background: #f4fff4;
+            border-left-color: #27ae60;
+        }
+
+        /* 重点标注：荧光笔效果 */
+        .highlight-yellow {
+            background-color: #ffff00;
+            padding: 2px 5px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        .highlight-pink {
+            background-color: #ffb6c1;
+            color: #c71585;
+            padding: 2px 6px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        /* 便签批注样式 */
+        .notebook-note {
+            background-color: #f1f8ff;
+            border: 1px dashed #a5c8ff;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #1a5a9e;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        /* 妈妈心语 */
+        .mom-heart {
+            background-color: #fffaf0;
+            border: 1px solid #ffe4b5;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .mom-heart-title {
+            font-weight: bold;
+            color: #d35400;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .mom-text {
+            font-size: 15px;
+            color: #5d4037;
+            text-align: justify;
+        }
+
+        /* 互动留白区 */
+        .interactive-box {
+            border: 2px dashed #bdc3c7;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 20px;
+            background-color: #fafafa;
+            min-height: 100px;
+        }
+        .interactive-title {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px dashed #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-border">
+        <div class="title">🌐 当苏轼遇上视频连线：跨国屏幕前的高级情话爆击 ✈️</div>
+        <div class="subtitle">郑承刚思想成长手册 · 浪漫篇</div>
+
+        <table class="meta-table">
+            <tr>
+                <td width="50%">⏰ <b>【时间】：</b>2026年3月10日</td>
+                <td width="50%">🌍 <b>【地点】：</b>中国 ⇄ 越南 · 溢满春光的屏幕</td>
+            </tr>
+            <tr>
+                <td width="50%">📱 <b>【情境】：</b>关于妈妈美不美的问题，小儿子给出了满分浪漫答卷</td>
+                <td width="50%">📍 <b>【记录人】：</b>笑纹深到能夹死蚊子、幸福得飞起的“中年少女”妈妈</td>
+            </tr>
+        </table>
+
+        <div class="event-section">
+            <strong>🌱 【触发事件】：</strong><br>
+            这天晚上，远在越南辛苦工作的妈妈打开了视频通话。看着屏幕里自己的状态，“中年少女”童心大发，忍不住像个小女孩一样对着屏幕那头的两个儿子显摆：“看，妈妈美吗？”本以为会收到两声敷衍的赞美，没想到你们兄弟俩一前一后，给妈妈献上了这辈子听过最奢侈的夸奖。
+        </div>
+
+        <hr class="divider">
+
+        <div class="dialogue-section">
+            
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“看，妈妈美吗？✨” <i>（满怀期待地眨眨眼）</i></div>
+            </div>
+
+            <div class="dialogue-row row-brother">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chengze.png" alt="承泽">
+                </div>
+                <div class="dialogue-text">“你一如既往地美。” <i>（温和、笃定，绝对的满分大儿）</i></div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“<span class="highlight-pink">欲把西湖比西子，淡妆浓抹总相宜。</span>” <i>（摇晃着小脑袋，脱口而出）</i></div>
+            </div>
+
+            <div style="color: #7f8c8d; font-size: 14px; margin: 15px 0; font-style: italic; text-align: left; padding-left: 20px; border-left: 2px dashed #bdc3c7;">
+                🌸 <i>妈妈一瞬间没听清楚，你又耐心地大声重复了一遍。刹那间，“中年少女”在屏幕这头笑得合不拢嘴，脸上的笑纹深得简直能夹死蚊子了！紧接着，你还像个博学的小绅士，有模有样地在视频里给妈妈逐字解释起这首诗的意思……</i>
+            </div>
+
+        </div>
+
+        <div class="notebook-note">
+            <div class="note-title">🧠 【便签批注 · 理科脑与诗意灵魂的完美重叠】</div>
+            <div style="font-size: 14px; color: #34495e; text-align: justify; line-height: 1.7;">
+                妈妈之前一直觉得你是个冷峻的“算法少年”——4岁就能重构减法、解竖式一定要从高位开始、还能自推六进制。可直到昨晚，妈妈才惊觉你骨子里竟然藏着这么大一个<span class="highlight-yellow">浪漫宇宙</span>：<br>
+                <b>1. 你把知识用出了最高的灵魂温度：</b>学校里背古诗的孩子很多，但能把苏轼赞美西湖的千古名句，在最恰当的时机，用来赞美视频里素颜、随性的妈妈，这叫顶级的情商和应用能力。你不是在死记硬背诗词，你是真的把诗意融进了生活。<br>
+                <b>2. 治愈跨国妈妈的最强多巴胺：</b>在海外做制造IT，天天要处理干瘪的代码和一线用户的重复抱怨。但你在视频里当小老师给妈妈讲诗的样子，瞬间把妈妈所有的疲惫一扫而空。能把妈妈比作西施，无论是“淡妆”还是“浓抹”你都全盘接纳，有你这句话，妈妈又可以开心、充能很久很久。
+            </div>
+        </div>
+
+        <div class="mom-heart">
+            <div class="mom-heart-title">💖 【妈妈心语】</div>
+            <div class="mom-text">
+                亲爱的弟弟，当你18岁坐在大学校园里、开始学着去赞美某个女孩子的时候，妈妈敢打赌，你的浪漫细胞绝对是全场第一。因为你在9岁的时候，就已经用一句“淡妆浓抹总相宜”把你妈妈彻底迷倒了。<br><br>
+                那天晚上，妈妈其实刚刚结束了一天繁重的工作，隔着屏幕看着自己，觉得自己只是个平凡、疲惫的“中年少女”。可是，你和哥哥却用你们的眼睛，给妈妈镀上了一层闪闪发光的金边。哥哥说“一如既往”，你说“总相宜”，你们用最纯粹的爱，接纳了妈妈最真实的样子。<br><br>
+                弟弟，谢谢你在视频里认认真真给妈妈解释这首诗含义的样子，那个画面，妈妈会永远存在大脑的最核心内存里。大人们总觉得小孩子不懂浪漫，但妈妈知道，你的浪漫是带着温度和智慧的。你那颗能推演六进制的聪明大脑，在装满逻辑的同时，竟然还能长出这么温柔的诗意花朵。<br><br>
+                谢谢你，我的小苏轼。在未来的日子里，妈妈可能还会经历很多岁月的风霜，脸上的笑纹也许会越来越多，但只要一想到在2026年的春天，你曾如此深情地把妈妈比作西湖与西施，妈妈就永远是那个最美丽、最骄傲的“超级美少女”。
+            </div>
+        </div>
+
+        <div class="interactive-box">
+            <div class="interactive-title">🎨 【互动留白 · 浪漫对诗墙】</div>
+            <div style="font-size: 13px; color: #95a5a6; font-style: italic; margin-bottom: 10px;">
+                📝 弟弟，你还记得当年给妈妈开出的“西施级赞美”吗？18岁的你，是不是依然觉得那个偶尔幼稚、喜欢显摆的妈妈“一如既往地美”？在这一页留下你现在最想对妈妈说的一句高级赞美吧，让“中年少女”继续开心很久很久！
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

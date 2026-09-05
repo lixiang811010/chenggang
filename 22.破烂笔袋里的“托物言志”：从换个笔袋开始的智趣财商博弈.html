@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>郑承刚思想成长手册 - 打印版</title>
+    <style>
+        /* A4 纸张打印基础设置 */
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 15mm;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", sans-serif;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #fff; /* 保持您原本的纯白背景 */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        
+        /* 强制拉齐为标准的 A4 210mm 宽度 */
+        .page-border {
+            width: 210mm;
+            min-height: 297mm;
+            box-sizing: border-box;
+            margin: 0 auto;
+            border: 3px dashed #16a085; /* 此处的颜色可按篇章调整，如 #2ecc71 */
+            padding: 25px;
+            position: relative;
+            background: #ffffff radial-gradient(circle at 10px 10px, transparent 0, transparent 9px, #fafafa 9px, #fafafa 10px, transparent 10px);
+            background-size: 20px 20px;
+        }
+
+        /* 核心大标题 */
+        .title {
+            text-align: center;
+            font-size: 22px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
+
+        /* 顶部元数据小卡片 */
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            border: 1px dashed #27ae60;
+            background-color: #f4fbf7;
+        }
+        .meta-table td {
+            padding: 12px 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* 触发事件段落 */
+        .event-section {
+            font-size: 14.5px;
+            background-color: #fff;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #27ae60;
+            padding-left: 15px;
+            text-align: justify;
+        }
+
+        /* 对话区域排版 */
+        .dialogue-section {
+            background-color: #ffffff;
+            padding: 15px 5px;
+            margin-bottom: 25px;
+        }
+        
+        /* 头像对话行排版 */
+        .dialogue-row {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 15px;
+        }
+        .avatar-box {
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .avatar-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            display: block;
+        }
+        .dialogue-text {
+            font-size: 16px;
+            background: #f8f9fa;
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 3px solid #bdc3c7;
+            flex-grow: 1;
+        }
+        /* 妈妈对话框特色 */
+        .row-mom .dialogue-text {
+            background: #fff5eb;
+            border-left-color: #e67e22;
+        }
+        /* 承刚对话框特色 */
+        .row-child .dialogue-text {
+            background: #f0f4f8;
+            border-left-color: #2c3e50;
+        }
+
+        /* 重点标注：荧光笔效果 */
+        .highlight-yellow {
+            background-color: #ffff00;
+            padding: 2px 5px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        .highlight-green {
+            background-color: #e8f8f5;
+            color: #27ae60;
+            padding: 2px 6px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        /* 便签批注样式 */
+        .notebook-note {
+            background-color: #f4fbf7;
+            border: 1px dashed #a3e4d7;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #196f3d;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        /* 妈妈心语 */
+        .mom-heart {
+            background-color: #fffaf0;
+            border: 1px solid #ffe4b5;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .mom-heart-title {
+            font-weight: bold;
+            color: #d35400;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .mom-text {
+            font-size: 15px;
+            color: #5d4037;
+            text-align: justify;
+        }
+
+        /* 互动留白区 */
+        .interactive-box {
+            border: 2px dashed #bdc3c7;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 20px;
+            background-color: #fafafa;
+            min-height: 100px;
+        }
+        .interactive-title {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px dashed #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-border">
+        <!-- 核心大标题 -->
+        <div class="title">🌐 破烂笔袋里的“托物言志”：从换个笔袋开始的智趣财商博弈 ✈️</div>
+        <div class="subtitle">郑承刚思想成长手册 · 自控篇</div>
+
+        <!-- 顶部信息框 -->
+        <table class="meta-table">
+            <tr>
+                <td width="50%">⏰ <b>【时间】：</b>2026年06月18日 晚间（续篇）</td>
+                <td width="50%">🌍 <b>【地点】：</b>中国 ⇄ 越南 · 充满欢声笑语的深夜连线</td>
+            </tr>
+            <tr>
+                <td width="50%">📱 <b>【情境】：</b>关于一个沾满墨渍的旧笔袋，引出了一场亲子自控力契约</td>
+                <td width="50%">📍 <b>【记录人】：</b>被你强大的“偷师能力”逗得哈哈大笑的妈妈</td>
+            </tr>
+        </table>
+
+        <!-- 触发事件 -->
+        <div class="event-section">
+            <strong>🌱 【触发事件】：</strong><br>
+            在今晚那场聊了足足半个多小时的畅快视频里，除了关于班级规则的思辨，你还极其自然地向妈妈提出了一个小愿望：“妈，我想换个笔袋。”妈妈没有立刻说行或者不行，而是顺着这个线头，和你展开了一场关于“欲望管理”、“冲动消费”以及“如何不攀比”的智趣大博弈。在这个过程中，你居然把前两天妈妈教哥哥写作文的绝招给悄悄“偷学”了过去！
+        </div>
+
+        <hr class="divider">
+
+        <!-- 对话连线区域 -->
+        <div class="dialogue-section">
+            
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“妈，我想换个笔袋。”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“哦？笔袋坏了吗？”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“没有坏，旧了。”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“那我们可以清洗一下吗？”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“洗不干净，全是墨渍。🔏”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“你看，这个笔袋留下了你曾经奋斗的痕迹。是你努力学习的见证。” <i>（试图给你做一波文风升华）</i></div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“<span class="highlight-yellow">那又可以写作文了。一个破烂不堪的笔袋里放着一颗破烂不堪的橡皮……</span>” <i>（神来之笔，小脸上洋溢着机灵的坏笑）</i></div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“哈哈！对呀，你看这个素材多好！” <i>（恍然大悟：你这小家伙，前两天我教哥哥写‘托物言志’的作文，居然全被你旁听学去了！）</i>“嗯……不过，你还是想要换笔袋对吗？”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“嗯，我还是想要换笔袋。” <i>（虽然写作文好玩，但换笔袋的执念很坚定）</i></div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“你是看到班上同学有漂亮笔袋吗？” <i>（精准排查：看看儿子是不是陷入了盲目攀比）</i></div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“不是的，我在店里看到一个笔袋，我想要。” <i>（单纯被物品本身吸引，警报解除！）</i></div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“是怎么样的一个笔袋，下次带我去看看。”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“下次我拍给你看。📸”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“好的。承刚，其实妈妈去逛商店的时候，也发现里面有好多东西我都想买，这时候怎么办呢？人是有‘冲动消费’的，我们要稍微控制一下自己的欲望，等过几天回想一下，我们是否还是会想要这个东西。这叫**给大脑设置缓存期**。”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“如果过几天还是想要呢？🤔” <i>（严密追问逻辑闭环）</i></div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“可以的！<span class="highlight-green">到时候你和妈妈辩论一下。你赢了，就买；你输了，我们就再制定规则，看看怎么样可以得到你想要的心爱之物。</span>怎么样？”</div>
+            </div>
+
+        </div>
+
+        <!-- 便签批注样式 -->
+        <div class="notebook-note">
+            <div class="note-title">🧠 【便签批注 · 避开盲目攀比与冲动消费的顶层逻辑】</div>
+            <div style="font-size: 14px; color: #34495e; text-align: justify; line-height: 1.7;">
+                妈妈之所以把这段看似平常的换笔袋对话单独列为一章，是因为你展现出了极为优秀的心理品质和逻辑潜质：<br>
+                <b>1. 零内耗的独立审美（拒绝攀比）：</b>当妈妈探寻你是否是因为同学有漂亮笔袋时，你非常笃定地否认了。你换笔袋，不是为了在学校里换来同学羡慕的眼光，只是单纯因为“自己在店里看到了，自己喜欢”。这种不被外界评价绑架、只取悦自己的消费心态，非常高级。<br>
+                <b>2. 极其敏锐的“神级偷师”：</b>你随口编出的那句“破烂不堪的笔袋里放着破烂不堪的橡皮”，直接把妈妈前两天教哥哥写“托物言志”作文的底层心法给偷学了过去。你那颗逻辑大脑对语言素材的捕捉和调用速度，再次惊艳了妈妈。<br>
+                <b>3. 接受“欲望管理”的游戏规则：</b>当妈妈提出“冲动消费”和“延迟满足”时，你没有耍赖撒娇，而是理智地追问规则的闭环（如果几天后还想要怎么办）。你完美地接下了妈妈抛出的“辩论赛契约”，这说明你骨子里崇尚用智慧和规则来解决欲望，而不是用情绪。
+            </div>
+        </div>
+
+        <!-- 妈妈心语 -->
+        <div class="mom-heart">
+            <div class="mom-heart-title">💖 【妈妈心语】</div>
+            <div class="mom-text">
+                亲爱的承刚，当18岁的你走进成年人的世界，面对琳琅满目的电子产品、炫酷的极客装备、或是各种各样诱惑你掏出钱包的消费广告时，妈妈希望你能回想起2026年这个夏夜，关于“破烂不堪的笔袋”的对话。<br><br>
+                在妈妈工作的IT和制造行业里，我们最讲究的就是系统资源的合理配置。当面对欲望时，人最容易发生“CPU过载下的冲动消费”。那天晚上，你坦诚地告诉妈妈你想换笔袋，妈妈心里做的第一件事，就是帮你做“压力测试”——我想确认我的小儿子，是在盲目和班上同学攀比，还是纯粹由于冲动。而你的回答让妈妈无比骄傲，你淡淡地说“不是，是我在店里看到想要的”。儿子，这种不随波逐流、只专注自己内心真正需求的定力，是很多成年人一辈子都没修来的底气。<br><br>
+                最让妈妈笑喷的是你的那句“破烂不堪的笔袋里放着一颗破烂不堪的橡皮”。你这个小机灵鬼！妈妈前两天跨国视频给哥哥辅导作文，讲到怎么用残旧的物品去“托物言志”，你当时明明在旁边玩，竟然一字不落地全记在了心里，还能立刻用来自黑自己的旧笔袋。你这种惊人的旁听和吸收能力，简直是个天生的“代码复制高手”，把基础作文心法玩得太溜了！<br><br>
+                所以，妈妈非常尊重你的执念。我没有当场拒绝你，而是把选择权交还给了你。我们设置了“几天后”的缓存期。如果几天过去，你那颗神奇大脑里的冲动热度退去，发现其实旧笔袋还能用，那你就战胜了消费主义的魔鬼；如果几天后你还是对那个笔袋朝思暮想，没问题，带着你的证据和理由，来和妈妈展开一场正式的“跨国辩论赛”！<br><br>
+                如果你能用强大的逻辑说服妈妈，妈妈会心甘情愿为你的独立审美买单；如果你辩论输了，那我们就启动“第二套系统规则”，通过学习表现或家务积分去解锁它。无论输赢，你都将学会用理智去驯服欲望。承刚，妈妈迫不及待想收到你拍来的笔袋照片，更迫不及待想和你在明晚的辩论赛上顶峰相见了。加油，我的小死党！
+            </div>
+        </div>
+
+        <!-- 互动留白 -->
+        <div class="interactive-box">
+            <div class="interactive-title">🎨 【互动留白 · 18岁首席架构师的欲望解构报告】</div>
+            <div style="font-size: 13px; color: #95a5a6; font-style: italic; margin-bottom: 10px;">
+                📝 承刚，你后来拍给妈妈看的那款笔袋，你通过辩论赢到了吗？18岁的你，现在面对自己极度想拥有的高阶电子产品或心仪物品时，是否依然会用妈妈教你的“延迟满足缓存期”来控制冲动？在这里留下你最近通过“理智与努力”解锁的最得意的一件物品，或者写写你对当年那个写“破烂不堪”作文的自己的评价吧！
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

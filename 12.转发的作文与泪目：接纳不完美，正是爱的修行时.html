@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>郑承刚思想成长手册 - 打印版</title>
+    <style>
+        /* A4 纸张打印基础设置 */
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 15mm;
+        }
+       body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", sans-serif;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #fff; /* 保持您原本的纯白背景 */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        
+        /* 强制拉齐为标准的 A4 210mm 宽度 */
+        .page-border {
+            width: 210mm;
+            min-height: 297mm;
+            box-sizing: border-box;
+            margin: 0 auto;
+            border: 3px dashed #16a085; /* 此处的颜色可按篇章调整，如 #2ecc71 */
+            padding: 25px;
+            position: relative;
+            background: #ffffff radial-gradient(circle at 10px 10px, transparent 0, transparent 9px, #fafafa 9px, #fafafa 10px, transparent 10px);
+            background-size: 20px 20px;
+        }
+
+        /* 核心大标题 */
+        .title {
+            text-align: center;
+            font-size: 22px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
+
+        /* 顶部元数据小卡片 */
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            border: 1px dashed #4a90e2;
+            background-color: #f4f9ff;
+        }
+        .meta-table td {
+            padding: 12px 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* 触发事件段落 */
+        .event-section {
+            font-size: 14.5px;
+            background-color: #fff;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4a90e2;
+            padding-left: 15px;
+            text-align: justify;
+        }
+
+        /* 对话区域排版 */
+        .dialogue-section {
+            background-color: #ffffff;
+            padding: 15px 5px;
+            margin-bottom: 25px;
+        }
+        
+        /* 头像对话行排版 */
+        .dialogue-row {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 15px;
+        }
+        .avatar-box {
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .avatar-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            display: block;
+        }
+        .dialogue-text {
+            font-size: 16px;
+            background: #f8f9fa;
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 3px solid #bdc3c7;
+            flex-grow: 1;
+        }
+        /* 妈妈对话框特色 */
+        .row-mom .dialogue-text {
+            background: #fff5eb;
+            border-left-color: #e67e22;
+        }
+        /* 承刚对话框特色 */
+        .row-child .dialogue-text {
+            background: #f0f4f8;
+            border-left-color: #2c3e50;
+        }
+
+        /* 重点标注：荧光笔效果 */
+        .highlight-yellow {
+            background-color: #ffff00;
+            padding: 2px 5px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        .highlight-orange {
+            background-color: #ff9900;
+            color: white;
+            padding: 2px 6px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        /* 便签批注样式 */
+        .notebook-note {
+            background-color: #f1f8ff;
+            border: 1px dashed #a5c8ff;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #1a5a9e;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        /* 妈妈心语 */
+        .mom-heart {
+            background-color: #fffaf0;
+            border: 1px solid #ffe4b5;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .mom-heart-title {
+            font-weight: bold;
+            color: #d35400;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .mom-text {
+            font-size: 15px;
+            color: #5d4037;
+            text-align: justify;
+        }
+
+        /* 互动留白区 */
+        .interactive-box {
+            border: 2px dashed #bdc3c7;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 20px;
+            background-color: #fafafa;
+            min-height: 100px;
+        }
+        .interactive-title {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px dashed #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-border">
+        <!-- 核心大标题 -->
+        <div class="title">🌐 转发的作文与泪目：接纳不完美，正是爱的修行时 ✈️</div>
+        <div class="subtitle">郑承刚思想成长手册 · 情感篇</div>
+
+        <!-- 顶部信息框 -->
+        <table class="meta-table">
+            <tr>
+                <td width="50%">⏰ <b>【时间】：</b>2026年01月20日</td>
+                <td width="50%">🌍 <b>【地点】：</b>中国 ⇄ 越南 · 跨越千里的屏幕</td>
+            </tr>
+            <tr>
+                <td width="50%">📱 <b>【情境】：</b>关于一篇让人想哭的作文，两代人的生命对谈</td>
+                <td width="50%">📍 <b>【记录人】：</b>永远深深懂得你每一个情绪、深深爱你的妈妈</td>
+            </tr>
+        </table>
+
+        <!-- 触发事件 -->
+        <div class="event-section">
+            <strong>🌱 【触发事件】：</strong><br>
+            这天，三年级的你在阅读时，突然发给妈妈一篇别人写的作文。作文大概意思是：作者小时候经常对妈妈发火，长大之后觉得很愧疚，有人建议他打个电话给妈妈道歉，他遗憾地回答：“妈妈已经去世了。”妈妈在越南看到你发来的这篇文章，心里有些惊讶，敏锐地察觉到了你内心的波澜，于是我们开启了这样一场关于“生命与爱”的深刻对话。
+        </div>
+
+        <hr class="divider">
+
+        <!-- 对话连线区域 -->
+        <div class="dialogue-section">
+            
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“你是不是有什么感触，说来听听？” <i>（温柔引导）</i></div>
+            </div>
+
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“没有什么感触……<span class="highlight-yellow">就是感觉，有点想哭。</span>” <i>（心思细腻的你，眼里闪烁着泪光）</i></div>
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“<span class="highlight-orange">所以我们善待爱我们的人和我们爱的人</span>，等到爱的人走了，就会成为遗憾。”</div>
+            </div>
+
+        </div>
+
+        <!-- 便签批注样式 -->
+        <div class="notebook-note">
+            <div class="note-title">🧠 【便签批注 · “有点想哭”背后的顶级善良】</div>
+            <div style="font-size: 14px; color: #34495e; text-align: justify; line-height: 1.7;">
+                妈妈在这个瞬间，看到了你灵魂深处两样亮晶晶的东西：<br>
+                <b>1. 你有一颗极其柔软、善良的同理心：</b>一个能因为别人的遗憾而“有点想哭”的孩子，情感是极其丰盈且高贵的。你懂爱，也畏惧失去爱。<br>
+                <b>2. 扔掉情绪负罪感，接纳不完美的自己：</b>妈妈知道，你偶尔控制不住小火苗，会对妈妈或者哥哥发脾气。看到这篇作文，你可能会偷偷自责：“我是不是也对妈妈发过火？以后我会不会也像作者一样遗憾？”孩子，千万不要这样想。发脾气是人类最正常的自控力练习，连妈妈在制造业做IT面对 frontline 没完没了重复提问的时候，内心也会抓狂。**真正强大的爱，不是一辈子相敬如宾、从不吵架；而是我们就算吵了架、发了火，5分钟后依然能抱在一起说‘我爱你’。** 只要我们在当下用力相爱，就没有什么可遗憾的。
+            </div>
+        </div>
+
+        <!-- 妈妈心语 -->
+        <div class="mom-heart">
+            <div class="mom-heart-title">💖 【妈妈心语】</div>
+            <div class="mom-text">
+                亲爱的弟弟，当你在未来某天翻开这本厚厚的册子，妈妈希望你对自己说一句：“我从小就是一个特别棒、特别深情的人。”<br><br>
+                那天你把那篇作文发给我，说“有点想哭”的时候，妈妈隔着屏幕，其实特别想跨越国境去抱抱你。妈妈知道，你是个对自己要求很高、内心又很敏感的孩子。你偶尔情绪不稳定，对妈妈和哥哥发了火之后，你的小脑瓜里其实偷偷藏着很多小自责、小内疚，对不对？<br><br>
+                妈妈今天想郑重地给你做一次“心理IT系统升级”：<b>妈妈允许你发脾气。</b> 每个人都有情绪的阴晴圆缺。你对妈妈发脾气，恰恰是因为在你的安全感体系里，你百分之百确定——无论你变成什么样，妈妈都会永远接纳你。这不需要有负罪感。<br><br>
+                你看，你上次不是还嘱咐妈妈“多喝温水，多敷面膜”吗？你平时给妈妈和哥哥存下的爱，比你发小脾气扣掉的分数多得太多太多了！我们“善待爱我们的人”，并不是要求自己变成一个没有脾气的机器人，而是在发完火之后，懂得去抱抱对方，说一句“对不起，但我真的很爱你”。<br><br>
+                妈妈现在在越南努力工作，你在家里自主学习。我们只要在每一次通电话时都毫无保留地表达想念，在每一个相聚的日子里都尽情拥抱，我们的人生就不会有那篇作文里的遗憾。别怕，孩子，大胆地长大，妈妈永远是你最坚固的心理后盾。
+            </div>
+        </div>
+
+        <!-- 互动留白 -->
+        <div class="interactive-box">
+            <div class="interactive-title">🎨 【互动留白 · 情绪抱抱储蓄罐】</div>
+            <div style="font-size: 13px; color: #95a5a6; font-style: italic; margin-bottom: 10px;">
+                📝 弟弟，18岁的你，现在是不是已经变成了一个能妥善安放自己情绪的大人呢？回看9岁时那个因为心疼妈妈而差点掉小眼泪的自己，是不是觉得当年的自己特别可爱？在这里写下你现在想对妈妈说的一句话吧，我们永远不留遗憾。
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

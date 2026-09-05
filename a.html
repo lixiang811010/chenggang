@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>郑承刚思想成长纪实 - 第27章</title>
+    <style>
+        /* A4 纸张打印及尺寸基础设置 */
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #0f172a; /* 统一的网页暗色底背景 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            -webkit-print-color-adjust: exact;
+        }
+        
+        /* 严格保持与封面、扉页一致的 210mm x 297mm 尺寸 */
+        .page-container {
+            width: 210mm;
+            height: 297mm;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            background-color: #ffffff;
+            padding: 25mm 20mm 20mm 20mm;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+
+        /* 顶部章节标签与标题 */
+        .chapter-header {
+            border-bottom: 2px solid #0f172a;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .chapter-tag {
+            font-size: 13px;
+            color: #2ecc71;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+        .chapter-title {
+            font-size: 24px;
+            color: #0f172a;
+            font-weight: 800;
+            margin: 0 0 8px 0;
+            letter-spacing: 1px;
+        }
+        .chapter-meta {
+            font-size: 12px;
+            color: #64748b;
+            font-family: "Courier New", monospace;
+        }
+
+        /* 对话框/现场复盘样式 */
+        .dialogue-card {
+            background-color: #f8fafc;
+            border-left: 4px solid #2ecc71;
+            padding: 20px 25px;
+            margin: 10px 0 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .dialogue-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #0f172a;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .dialogue-line {
+            font-size: 14.5px;
+            line-height: 1.8;
+            color: #334155;
+            margin-bottom: 8px;
+        }
+        .dialogue-line strong {
+            color: #0f172a;
+        }
+        .dialogue-action {
+            font-size: 13.5px;
+            color: #64748b;
+            font-style: italic;
+            margin: 10px 0;
+            padding-left: 10px;
+            border-left: 2px solid #cbd5e1;
+        }
+
+        /* 分析与注解区域 */
+        .analysis-section {
+            margin-top: 5px;
+        }
+        .analysis-head {
+            font-size: 16px;
+            font-weight: bold;
+            color: #0f172a;
+            margin-bottom: 12px;
+            border-left: 4px solid #0f172a;
+            padding-left: 10px;
+        }
+        .analysis-item {
+            margin-bottom: 12px;
+        }
+        .analysis-item-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 3px;
+        }
+        .analysis-item-desc {
+            font-size: 13px;
+            color: #475569;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        /* 金句底栏 */
+        .quote-box {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #ffffff;
+            padding: 16px 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 13.5px;
+            letter-spacing: 1px;
+            margin-top: 10px;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+        }
+        .quote-box span {
+            color: #2ecc71;
+            font-weight: bold;
+        }
+
+        /* 底部导航控制栏 */
+        .footer-nav {
+            border-top: 1px dashed #cbd5e1;
+            padding-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+        .btn-nav {
+            text-decoration: none;
+            color: #64748b;
+            background-color: #f1f5f9;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease;
+        }
+        .btn-nav:hover {
+            background-color: #e2e8f0;
+            color: #0f172a;
+        }
+
+        @media print {
+            body { background-color: #fff; }
+            .page-container { box-shadow: none; margin: 0; }
+            .footer-nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+        <!-- 头部标题区 -->
+        <div class="chapter-header">
+            <div class="chapter-tag">Chapter 27 · 情感与同理心模块</div>
+            <h1 class="chapter-title">温度、音色与主动闭环</h1>
+            <div class="chapter-meta">DATE: 2026.08.26 | LOCATION: 陪写作业现场 | OBSERVER: 妈妈</div>
+        </div>
+
+        <!-- 现场对话记录 -->
+        <div class="dialogue-card">
+            <div class="dialogue-title">🎙️ 现场对话真实复盘：</div>
+            <div class="dialogue-line"><strong>突然，儿子：</strong>“妈，你去喝点水吧！”</div>
+            <div class="dialogue-line"><strong>妈妈：</strong>“怎么啦？是有口臭吗？”</div>
+            <div class="dialogue-line"><strong>儿子：</strong>“不是的。你嗓子哑了！”</div>
+            
+            <div class="dialogue-action">（孩子随即站起身，跑去倒了一杯温水递过来）</div>
+            
+            <div class="dialogue-line"><strong>儿子：</strong>“妈，你看温度合适吗？”</div>
+            <div class="dialogue-line"><strong>妈妈：</strong>“我怎么有你这么体贴的儿子呢？”</div>
+        </div>
+
+        <!-- 观察者深度解析 -->
+        <div class="analysis-section">
+            <div class="analysis-head">💡 妈妈的架构师注解</div>
+            
+            <div class="analysis-item">
+                <div class="analysis-item-title">1. 超越任务的细节捕捉力（敏锐度）</div>
+                <div class="analysis-item-desc">
+                    当时他正在专注写作业，但并没有被限制在自己的任务线程里，而是精准捕捉到了妈妈嗓子音色的微小哑化。这说明他的感知窗口始终对身边的人保持着高度开放。
+                </div>
+            </div>
+
+            <div class="analysis-item">
+                <div class="analysis-item-title">2. 完美的“闭环式”关怀逻辑（执行力）</div>
+                <div class="analysis-item-desc">
+                    从<b>“觉察异常（嗓子哑）”</b> ➔ <b>“提出建议（去喝水）”</b> ➔ <b>“主动执行（站起倒水）”</b> ➔ <b>“二次确认与优化（询问温度是否合适）”</b>，这一套连贯的动作展现出了极其成熟且极具同理心的行为闭环。
+                </div>
+            </div>
+
+            <div class="analysis-item">
+                <div class="analysis-item-title">3. 底层代码里的温柔（同理心）</div>
+                <div class="analysis-item-desc">
+                    大家都以为理性的孩子只讲逻辑，但事实证明，当他把这种细致入微的逻辑用来关心人时，比任何甜言蜜语都更具有穿透力。
+                </div>
+            </div>
+        </div>
+
+        <!-- 标志性金句 -->
+        <div class="quote-box">
+            “细腻的察觉与主动的体贴，也是<span>超级大脑</span>不可或缺的核心模块。”
+        </div>
+
+        <!-- 底部导航 -->
+        <div class="footer-nav">
+            <a href="toc.html" class="btn-nav">← 返回目录</a>
+            <span style="font-size: 12px; color: #94a3b8;">郑承刚思想独立成长档案</span>
+        </div>
+    </div>
+
+</body>
+</html>

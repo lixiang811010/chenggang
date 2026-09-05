@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>郑承刚思想成长手册 - 封面与扉页</title>
+    <style>
+        /* A4 纸张打印基础设置 */
+        @page {
+            size: A4;
+            margin: 0; /* 封面扉页采用全幅或精准控制 */
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            -webkit-print-color-adjust: exact;
+        }
+        
+        /* 分页控制 */
+        .page-container {
+            width: 210mm;
+            height: 297mm;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+            page-break-after: always;
+        }
+
+        /* ========================================================= */
+        /* SECTION 1: 封面样式 (未来几何与超级大脑) */
+        /* ========================================================= */
+        .cover-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 40mm 20mm 20mm 20mm;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        /* 科技感装饰线条 */
+        .tech-lines {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100mm;
+            height: 100mm;
+            border-bottom: 2px solid rgba(46, 204, 113, 0.2);
+            border-left: 2px solid rgba(46, 204, 113, 0.2);
+            transform: rotate(45deg) translate(30mm, -40mm);
+        }
+        .tech-binary {
+            position: absolute;
+            bottom: 20mm;
+            left: 20mm;
+            font-family: "Courier New", monospace;
+            color: rgba(46, 204, 113, 0.15);
+            font-size: 14px;
+            line-height: 1.2;
+            letter-spacing: 2px;
+        }
+
+        .cover-header {
+            border-left: 6px solid #2ecc71;
+            padding-left: 20px;
+        }
+        .cover-series {
+            font-size: 16px;
+            color: #94a3b8;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .cover-title {
+            font-size: 38px;
+            color: #ffffff;
+            font-weight: 900;
+            letter-spacing: 4px;
+            line-height: 1.4;
+            margin: 0;
+        }
+        .cover-title span {
+            color: #2ecc71;
+        }
+
+        .cover-center {
+            margin-top: 20mm;
+            text-align: center;
+        }
+        /* 抽象几何大脑核心图标 */
+        .core-matrix {
+            width: 60mm;
+            height: 60mm;
+            border: 2px solid #2ecc71;
+            border-radius: 50%;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 30px rgba(46, 204, 113, 0.2);
+        }
+        .core-matrix::before {
+            content: '';
+            width: 45mm;
+            height: 45mm;
+            border: 1px dashed rgba(255,255,255,0.3);
+            border-radius: 50%;
+            position: absolute;
+        }
+        .core-text {
+            color: #ffffff;
+            font-family: "Courier New", monospace;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .cover-footer {
+            margin-bottom: 20mm;
+        }
+        .meta-box {
+            border-top: 1px solid rgba(148, 163, 184, 0.3);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            color: #cbd5e1;
+            font-size: 15px;
+        }
+        .meta-item strong {
+            color: #2ecc71;
+        }
+
+        /* ========================================================= */
+        /* SECTION 2: 扉页样式 (留白与仪式感) */
+        /* ========================================================= */
+        .inner-page {
+            background-color: #ffffff;
+            padding: 30mm 25mm 25mm 25mm;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid #e2e8f0;
+        }
+        .inner-border {
+            position: absolute;
+            top: 15mm;
+            left: 15mm;
+            right: 15mm;
+            bottom: 15mm;
+            border: 1px solid #cbd5e1;
+            pointer-events: none;
+        }
+
+        .inner-header {
+            text-align: center;
+        }
+        .inner-subtitle {
+            font-size: 15px;
+            color: #64748b;
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+        }
+        .inner-main-title {
+            font-size: 28px;
+            color: #1e293b;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+        .inner-decor {
+            width: 40mm;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #2ecc71, transparent);
+            margin: 20px auto;
+        }
+
+        .inner-manifesto {
+            background-color: #f8fafc;
+            border-left: 4px solid #1e293b;
+            padding: 25px;
+            margin-top: 15mm;
+            border-radius: 0 8px 8px 0;
+        }
+        .manifesto-title {
+            font-weight: bold;
+            color: #0f172a;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        .manifesto-text {
+            font-size: 14.5px;
+            color: #334155;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .inner-quote {
+            text-align: center;
+            margin: 20mm 0;
+            font-style: italic;
+            color: #475569;
+            font-size: 16px;
+            position: relative;
+        }
+        .inner-quote::before {
+            content: "“";
+            font-size: 50px;
+            color: rgba(46, 204, 113, 0.3);
+            position: absolute;
+            top: -20px;
+            left: 45%;
+        }
+
+        .inner-footer {
+            border-top: 1px dashed #cbd5e1;
+            padding-top: 20px;
+        }
+        .sign-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .sign-column {
+            width: 45%;
+        }
+        .sign-label {
+            font-size: 13px;
+            color: #64748b;
+            margin-bottom: 40px;
+        }
+        .sign-line {
+            border-bottom: 1px solid #0f172a;
+            height: 10px;
+        }
+        .sign-date {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: 8px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== PAGE 1: 封面 ==================== -->
+    <div class="page-container cover-bg">
+        <!-- 几何科技装饰 -->
+        <div class="tech-lines"></div>
+        <div class="tech-binary">
+            BASE_10 -> BASE_6<br>
+            ALGORITHM_RECONSTRUCT<br>
+            1104 - 356 = HIGH_POSITION_FIRST<br>
+            STATUS: NO_EMOTION_RUNNING
+        </div>
+
+        <!-- 顶部标题区 -->
+        <div class="cover-header">
+            <div class="cover-series">思想成长手册 · 极客特刊</div>
+            <h1 class="cover-title">不被规则驯服的<br><span>超级大脑</span></h1>
+        </div>
+
+        <!-- 中部核心视觉 -->
+        <div class="cover-center">
+            <div class="core-matrix">
+                <div class="core-text">郑承刚</div>
+            </div>
+        </div>
+
+        <!-- 底部元数据 -->
+        <div class="cover-footer">
+            <div class="meta-box">
+                <div class="meta-item">对象：<strong>郑承刚（小儿子）</strong></div>
+                <div class="meta-item">观测期：三年级及成长跨度</div>
+                <div class="meta-item">记录人：妈妈</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ==================== PAGE 2: 扉页 ==================== -->
+    <div class="page-container inner-page">
+        <!-- 仪式感内框 -->
+        <div class="inner-border"></div>
+
+        <!-- 扉页头部 -->
+        <div class="inner-header">
+            <div class="inner-subtitle">THE BLUEPRINT OF AN ARCHITECT</div>
+            <h2 class="inner-main-title">郑承刚思想独立成长档案</h2>
+            <div class="inner-decor"></div>
+        </div>
+
+        <!-- 核心立意/妈妈的画像寄语 -->
+        <div class="inner-manifesto">
+            <div class="manifesto-title">💡 观测者引言 / 妈妈的心之图谱：</div>
+            <div class="manifesto-text">
+                这本手册，记录的不是一个听话的“标准答案复制机器”，而是一个独立灵魂重构世界的真实轨迹。
+                从4岁时打破既定凑十法、自发推演六进制，到面对错字死磕再到骄傲地按下情绪刹车说出“重来，我没情绪了”——弟弟，你身上流淌着天生架构师的血液。你拒绝盲从，崇尚底层的优雅与全局的逻辑。妈妈把这些闪光的、硬朗的、甚至是有些倔强的瞬间悉数裁下，作为给未来18岁你的成年礼。
+            </div>
+        </div>
+
+        <!-- 贯穿手册的标志性金句 -->
+        <div class="inner-quote">
+            <br>
+            “没事，干就完了。”
+        </div>
+
+        <!-- 扉页落款与未来签章区 -->
+        <div class="inner-footer">
+            <div class="sign-grid">
+                <!-- 妈妈的落款 -->
+                <div class="sign-column">
+                    <div class="sign-label">✍️ 记录人（妈妈）：</div>
+                    <div class="sign-line"></div>
+                    <div class="sign-date">于 越南 · 跨国连线端</div>
+                </div>
+                <!-- 弟弟18岁时的签章留白 -->
+                <div class="sign-column">
+                    <div class="sign-label">🤝 18岁的首席架构师郑承刚阅签：</div>
+                    <div class="sign-line"></div>
+                    <div class="sign-date">2035年 / 开启未来之日</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

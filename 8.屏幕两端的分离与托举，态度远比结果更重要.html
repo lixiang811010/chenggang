@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>郑承刚思想成长手册 - 打印版</title>
+    <style>
+        /* A4 纸张打印基础设置 */
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 15mm;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", sans-serif;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #fff; /* 保持您原本的纯白背景 */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        
+        /* 强制拉齐为标准的 A4 210mm 宽度 */
+        .page-border {
+            width: 210mm;
+            min-height: 297mm;
+            box-sizing: border-box;
+            margin: 0 auto;
+            border: 3px dashed #16a085; /* 此处的颜色可按篇章调整，如 #2ecc71 */
+            padding: 25px;
+            position: relative;
+            background: #ffffff radial-gradient(circle at 10px 10px, transparent 0, transparent 9px, #fafafa 9px, #fafafa 10px, transparent 10px);
+            background-size: 20px 20px;
+        }
+
+        /* 核心大标题 */
+        .title {
+            text-align: center;
+            font-size: 22px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
+
+        /* 顶部元数据小卡片 */
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            border: 1px dashed #4a90e2;
+            background-color: #f4f9ff;
+        }
+        .meta-table td {
+            padding: 12px 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* 触发事件段落 */
+        .event-section {
+            font-size: 14.5px;
+            background-color: #fff;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4a90e2;
+            padding-left: 15px;
+            text-align: justify;
+        }
+
+        /* 对话区域排版 */
+        .dialogue-section {
+            background-color: #ffffff;
+            padding: 15px 5px;
+            margin-bottom: 25px;
+        }
+        
+        /* 头像对话行排版 */
+        .dialogue-row {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 15px;
+        }
+        .avatar-box {
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .avatar-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            display: block;
+        }
+        .dialogue-text {
+            font-size: 16px;
+            background: #f8f9fa;
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 3px solid #bdc3c7;
+            flex-grow: 1;
+        }
+        /* 妈妈对话框特色 */
+        .row-mom .dialogue-text {
+            background: #fff5eb;
+            border-left-color: #e67e22;
+        }
+        /* 承刚对话框特色 */
+        .row-child .dialogue-text {
+            background: #f0f4f8;
+            border-left-color: #2c3e50;
+        }
+
+        /* 重点标注：荧光笔效果 */
+        .highlight-yellow {
+            background-color: #ffff00;
+            padding: 2px 5px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        .highlight-orange {
+            background-color: #ff9900;
+            color: white;
+            padding: 2px 6px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        /* 便签批注样式 */
+        .notebook-note {
+            background-color: #f1f8ff;
+            border: 1px dashed #a5c8ff;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #1a5a9e;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        /* 妈妈心语 */
+        .mom-heart {
+            background-color: #fffaf0;
+            border: 1px solid #ffe4b5;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .mom-heart-title {
+            font-weight: bold;
+            color: #d35400;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .mom-text {
+            font-size: 15px;
+            color: #5d4037;
+            text-align: justify;
+        }
+
+        /* 互动留白区 */
+        .interactive-box {
+            border: 2px dashed #bdc3c7;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 20px;
+            background-color: #fafafa;
+            min-height: 100px;
+        }
+        .interactive-title {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px dashed #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-border">
+        <!-- 核心大标题 -->
+        <div class="title">🌐 屏幕两端的分离与托举，态度远比结果更重要 ✈️</div>
+        <div class="subtitle">郑承刚思想成长手册 · 学习篇</div>
+
+        <!-- 顶部信息框 -->
+        <table class="meta-table">
+            <tr>
+                <td width="50%">⏰ <b>【时间】：</b>2025年11月01日</td>
+                <td width="50%">🌍 <b>【地点】：</b>中国 ⇄ 越南 · 跨国视频通话</td>
+            </tr>
+            <tr>
+                <td width="50%">📱 <b>【情境】：</b>三年级期中考试前两周的周末复习</td>
+                <td width="50%">📍 <b>【记录人】：</b>永远为你兜底、注重你长远成长的妈妈</td>
+            </tr>
+        </table>
+
+        <!-- 触发事件 -->
+        <div class="event-section">
+            <strong>🌱 【触发事件】：</strong><br>
+            那是你上小学三年级期中考试前两周的一个周末，妈妈因为工作在越南，你留在中国，我们隔着手机屏幕通着视频。面对即将来临的考试，你展现出了非常让人欣慰的独立性，主动提出要自己复习。然而，在挂断视频前妈妈的一句叮嘱，引发了你内心深处对于“万一考不好”的隐隐担忧。于是在视频的两端，我们展开了一场关于“态度、方法与分数”的深度对话。
+        </div>
+
+        <hr class="divider">
+
+        <!-- 对话连线区域 -->
+        <div class="dialogue-section">
+            
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“快期中考试了，需要我陪你复习吗？”</div>
+            </div>
+
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“不需要，我自己复习。”</div>
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“那我就挂掉视频哦，你自己复习的话要有效果哦。” <i>（其实妈妈当时用词不够准确，心里真正想叮嘱的是你要认真）</i></div>
+            </div>
+
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“那如果没效果呢？如果我考试不好呢？” <i>（敏感的你，眼神里闪过了一丝对未知结果的焦虑）</i></div>
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“<span class="highlight-yellow">妈妈讲错了，不是要有效果，而是要有认真的态度</span>，至少不能假装复习，不能敷衍……<span class="highlight-orange">如果我们努力过了，没有效果，那说明方法不对，我们再来换方法，有的是时间和机会。</span>”</div>
+            </div>
+
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“如果我考不好，会怎么样？” <i>（你再次向妈妈确认安全的边界）</i></div>
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“如果考不好，我绝对不会说你，你放心好了。”</div>
+            </div>
+
+        </div>
+
+        <!-- 便签批注样式 -->
+        <div class="notebook-note">
+            <div class="note-title">🧠 【便签批注 · 为什么要为你探索方法的认真态度点赞？】</div>
+            <div style="font-size: 14px; color: #34495e; text-align: justify; line-height: 1.7;">
+                在这段短暂的视频对话里，妈妈看到了你在学习和认知成长上非常了不起的特质：<br>
+                <b>1. 难能可贵的独立性：</b>在三年级面对期中考时，你没有依赖妈妈，而是非常自信地说“我自己复习”。这种敢于自我负责的担当，比任何一张满分试卷都更加珍贵。<br>
+                <b>2. 卸下结果包袱，勇敢探索方法：</b>因为你有着强烈的胜负欲和好胜心，所以你会本能地害怕“考不好”。但妈妈想告诉你，**对待事情的态度，远比最终得到的结果更重要**。考试的分数只代表过去，而你在复习过程中付出的“不敷衍、不假装”的认真态度，以及在遇到挫折时“重新寻找、调整学习方法”的探索精神，才是会伴随你一生的核心超能力。只要态度是对的，方法可以通过无数次尝试去校准，我们有的是时间和机会！
+            </div>
+        </div>
+
+        <!-- 妈妈心语 -->
+        <div class="mom-heart">
+            <div class="mom-heart-title">💖 【妈妈心语】</div>
+            <div class="mom-text">
+                亲爱的弟弟，当你18岁看到这段话，或许你正在准备人生中更重要的某场考试或挑战。<br><br>
+                还记得2025年的那个秋天吗？妈妈因为在越南工作，没办法陪在三年级的你身边，只能通过冷冰冰的屏幕看着你。当时妈妈失言说了“要有效果”，让你产生了压力。妈妈至今都很庆幸，当时自己能立刻向你承认错误。因为妈妈最不希望的，就是用短暂的分数变成一道枷锁，锁住你那颗本就追求完美、极其好强的心。<br><br>
+                妈妈那句“绝对不会说你”，是真心的。因为在妈妈眼里，人生的每一步都是一场关于“方法”的实验。如果你认真复习了却没考好，那绝对不是因为你“笨”，而仅仅是当下的这个方法不适合你。那我们就一起去分析、去复盘、去寻找新的解题路径——就像科学家做实验一样。只要你的态度是热烈、诚实、且不敷衍的，那么在这个世界上，就没有任何一场失败能真正击倒你。<br><br>
+                孩子，放下对结果的恐惧，大胆地去尝试、去探索属于你自己的步调吧。无论何时何地，哪怕跨越千山万水，妈妈永远都会在视频的这一端，稳稳地接住你。
+            </div>
+        </div>
+
+        <!-- 互动留白 -->
+        <div class="interactive-box">
+            <div class="interactive-title">🎨 【互动留白 · 承刚的时光机】</div>
+            <div style="font-size: 13px; color: #95a5a6; font-style: italic; margin-bottom: 10px;">
+                📝 弟弟，三年级的那场期中考试，你后来摸索到了好用的复习方法吗？如今18岁的你，在面对那些不能保证“百分之百成功”的未知挑战时，是不是也能带着当年那份不敷衍的坦荡，勇敢地去尝试呢？
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

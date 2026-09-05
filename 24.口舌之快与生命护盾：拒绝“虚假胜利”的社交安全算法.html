@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>郑承刚思想成长手册 - 安全防御篇</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 15mm;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", sans-serif;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #fff; /* 保持您原本的纯白背景 */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        
+        /* 强制拉齐为标准的 A4 210mm 宽度 */
+        .page-border {
+            width: 210mm;
+            min-height: 297mm;
+            box-sizing: border-box;
+            margin: 0 auto;
+            border: 3px dashed #16a085; /* 此处的颜色可按篇章调整，如 #2ecc71 */
+            padding: 25px;
+            position: relative;
+            background: #ffffff radial-gradient(circle at 10px 10px, transparent 0, transparent 9px, #fafafa 9px, #fafafa 10px, transparent 10px);
+            background-size: 20px 20px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 22px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
+
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            border: 1px dashed #16a085;
+            background-color: #e8f8f5;
+        }
+        .meta-table td {
+            padding: 12px 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .event-section {
+            font-size: 14.5px;
+            background-color: #fff;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #16a085;
+            padding-left: 15px;
+            text-align: justify;
+        }
+
+        .dialogue-section {
+            background-color: #ffffff;
+            padding: 15px 5px;
+            margin-bottom: 25px;
+        }
+        
+        .dialogue-row {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 15px;
+        }
+        .avatar-box {
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .avatar-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            display: block;
+        }
+        .dialogue-text {
+            font-size: 16px;
+            background: #f8f9fa;
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 3px solid #bdc3c7;
+            flex-grow: 1;
+        }
+        .row-mom .dialogue-text {
+            background: #e8f8f5;
+            border-left-color: #16a085;
+        }
+        .row-child .dialogue-text {
+            background: #f0f4f8;
+            border-left-color: #34495e;
+        }
+
+        .highlight-red {
+            background-color: #fadbd8;
+            color: #78281f;
+            padding: 2px 6px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        .highlight-green {
+            background-color: #d4efdf;
+            color: #145a32;
+            padding: 2px 6px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        .notebook-note {
+            background-color: #edf2f7;
+            border: 1px dashed #34495e;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .mom-heart {
+            background-color: #fffaf0;
+            border: 1px solid #ffe4b5;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .mom-heart-title {
+            font-weight: bold;
+            color: #d35400;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .mom-text {
+            font-size: 15px;
+            color: #5d4037;
+            text-align: justify;
+        }
+
+        .interactive-box {
+            border: 2px dashed #bdc3c7;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 20px;
+            background-color: #fafafa;
+            min-height: 100px;
+        }
+        .interactive-title {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px dashed #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-border">
+        <div class="title">🛡️ 口舌之快与生命护盾：拒绝“虚假胜利”的社交安全算法 🌐</div>
+        <div class="subtitle">郑承刚思想成长手册 · 安全篇</div>
+
+        <table class="meta-table">
+            <tr>
+                <td width="50%">⏰ <b>【时间】：</b>2026年06月25日 晚间</td>
+                <td width="50%">🌍 <b>【地点】：</b>中国 ⇄ 越南 · 跨国安全红线复盘现场</td>
+            </tr>
+            <tr>
+                <td width="50%">📱 <b>【情境】：</b>一次因“逞口舌之快”引发的跨年级肢体冲突复盘</td>
+                <td width="50%">📍 <b>【记录人】：</b>在异国深夜为你每一次涉险都惊出一身冷汗、深爱你的妈妈</td>
+            </tr>
+        </table>
+
+        <div class="event-section">
+            <strong>🌱 【触发事件】：</strong><br>
+            今晚一开视频，你便带着一丝小男孩的得意向妈妈宣告：“我今天打架打赢了！”在妈妈的追问下，你还原了现场：你和同学出于好心去询问一位躺在面地上的四年级学生，却遭到了对方不友善的挑衅。你体内的“高频反击系统”瞬间启动，回怼了一句“没见过呀！”，从而引发了口舌大战。虽然你后来勇敢承认是自己骂的，并被对方掐了脖子，最终通过告知老师解决，但在妈妈看来，这场所谓的“打赢了”，其实暴露出你缺乏对社会未知风险的底层防御逻辑。
+        </div>
+
+        <hr class="divider">
+
+        <!-- 对话连线区域 -->
+        <div class="dialogue-section">
+            
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“我今天打架打赢了！” <i>（神色傲然，语气里带着炫耀）</i></div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“哦？发生什么事情了？”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“我和同学看到一个四年级同学躺在地上，担心他生病就上前去看。结果那同学说：‘看什么看？没见过人啦？’我和同学就说：‘<span class="highlight-red">没见过呀！</span>’于是双方就开始骂架了……”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“后来他追过来问刚刚是谁骂的，我承认了。于是他就<span class="highlight-red">用手掐着我的脖子</span>，后来同学们扯开了……我们去和四年级老师讲，他被老师教育了。”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“有没有受伤？” <i>（心头一紧，急忙仔细端详屏幕里的你）</i></div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“没有。”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“<span class="highlight-green">坐下来，我们聊聊。</span>”</div>
+            </div>
+
+        </div>
+
+        <!-- 妈妈的安全防卫黑匣子 -->
+        <div class="notebook-note">
+            <div class="note-title">🛡️ 【安全运行协议 · 郑承刚必须背诵的防御算法】</div>
+            <div style="font-size: 14px; color: #34495e; text-align: justify; line-height: 1.7;">
+                在这场冲突中，你以为告诉了老师、对方挨了训就是你的“胜利”。但在妈妈的IT安全世界里，这是一次<b>严重未授权的“系统涉险”</b>。请你死死记住妈妈今晚给你写下的最高防御两条协议：<br>
+                <b>1. 永远不要逞口舌之快（关闭无谓的反弹攻击）：</b>对方挑衅，你的CPU秒回怼，这不叫勇敢，这叫缺乏社会经验。你不清楚对方是什么样的人，他的精神状态如何，他会不会被你一句话彻底激怒做出出格的暴力行为？如果对方是个记仇的极端性格，后续趁你一个人的时候在校外找你算账，你怎么办？记住：<b>骂人，从来不能带来任何实质性好处，只会把安全防火墙降为零。</b><br>
+                <b>2. 极端情况下的生命避险算法：</b>如果事情真的恶化到了要动手的一步，你的大脑必须瞬间运行以下逻辑：<b>【评估战力】</b> -> 如果打不赢，立刻放弃无谓的尊严，<b>【往人多的地方跑】</b> -> 如果跑不掉，立刻<b>【服软示弱】</b>保护关键部位。在任何冲突里，所谓的面子都是身外之物，<b>【保证生命安全】才是唯一的通关指标</b>。
+            </div>
+        </div>
+
+        <!-- 妈妈心语 -->
+        <div class="mom-heart">
+            <div class="mom-heart-title">💖 【妈妈心语】</div>
+            <div class="mom-text">
+                亲爱的弟弟，当你在视频里轻描淡写地说出“他用手掐着我的脖子”时，你不知道远在越南、隔着屏幕的妈妈，那一瞬间手心全都是冷汗。你还在为你的“胜出”沾沾自喜，而妈妈的心已经悬到了嗓子眼。<br><br>
+                儿子，你是个善良的孩子，看到同学躺在地上会上前去关心，这很好。但当你的善意换来对方的恶意挑衅时，你身体里那股“不服输、想赢、求快”的劲头又冒出来了。你回怼的那句“没见过呀”，就像往原本就充满火药味的系统里丢了一颗火星。孩子，妈妈是一家大型制造业的 IT，我每天都在和各种系统漏洞打交道。我深知，一个强大的系统，最厲害的地方不是它的攻击力有多强，而是它的<b>容错率和安全防御机制</b>有多高。在社会这个复杂的超级网络里，你永远不知道站在你对面的人，是一个正常的系统，还是一个已经崩溃、随时准备报复社会的“恶意病毒”。逞口舌之快，就是把自己的安全，赌在对方的‘理智’上，这太危险了！<br><br>
+                你敢于承认是自己骂的，这说明你是一个有担当的男子汉，妈妈赞赏你的骨气。但妈妈更要求你拥有保护自己的智慧。那个四年级的孩子比你高、比你壮，当他的手掐上你脖子的那一刻，任何口头上的输赢都已经失去了意义。妈妈今晚严厉地让你坐下来听，就是想在你长大的骨子里刻下一条红线：**永远不要用自己的安全去赌气。打不赢就跑，跑不了就服软，这不叫懦弱，这叫留得青山在的高级智慧。** 遇到这种事，随时、及时、第一时间和妈妈说，无论多远，妈妈都是你最坚固的后盾。儿子，答应妈妈，下一次，我们要用智商去避险，而不是用脖子去硬扛，好吗？
+            </div>
+        </div>
+
+        <!-- 互动留白 -->
+        <div class="interactive-box">
+            <div class="interactive-title">🎨 【互动留白 · 少年握拳与松拳的智慧】</div>
+            <div style="font-size: 13px; color: #95a5a6; font-style: italic; margin-bottom: 10px;">
+                📝 弟弟，当你成年后，在职场、在社会上，一定还会遇到各种各样不讲理的“挑衅”和“垃圾人”。回看18年前妈妈在越南深夜给你的这段教诲，你现在明白为什么“懂得低头和绕道走的人，才是真正的强者”了吗？请写下你至今为止最成功的一次数值防御经验：
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>郑承刚思想成长手册 - 打印版</title>
+    <style>
+        /* A4 纸张打印基础设置 */
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 15mm;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", sans-serif;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #fff; /* 保持您原本的纯白背景 */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        
+        /* 强制拉齐为标准的 A4 210mm 宽度 */
+        .page-border {
+            width: 210mm;
+            min-height: 297mm;
+            box-sizing: border-box;
+            margin: 0 auto;
+            border: 3px dashed #16a085; /* 此处的颜色可按篇章调整，如 #2ecc71 */
+            padding: 25px;
+            position: relative;
+            background: #ffffff radial-gradient(circle at 10px 10px, transparent 0, transparent 9px, #fafafa 9px, #fafafa 10px, transparent 10px);
+            background-size: 20px 20px;
+        }
+
+        /* 核心大标题 */
+        .title {
+            text-align: center;
+            font-size: 22px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
+
+        /* 顶部元数据小卡片 */
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            border: 1px dashed #4a90e2;
+            background-color: #f4f9ff;
+        }
+        .meta-table td {
+            padding: 12px 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* 触发事件段落 */
+        .event-section {
+            font-size: 14.5px;
+            background-color: #fff;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4a90e2;
+            padding-left: 15px;
+            text-align: justify;
+        }
+
+        /* 对话区域排版 */
+        .dialogue-section {
+            background-color: #ffffff;
+            padding: 15px 5px;
+            margin-bottom: 25px;
+        }
+        
+        /* 头像对话行排版 */
+        .dialogue-row {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 15px;
+        }
+        .avatar-box {
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .avatar-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            display: block;
+        }
+        .dialogue-text {
+            font-size: 16px;
+            background: #f8f9fa;
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 3px solid #bdc3c7;
+            flex-grow: 1;
+        }
+        /* 妈妈对话框特色 */
+        .row-mom .dialogue-text {
+            background: #fff5eb;
+            border-left-color: #e67e22;
+        }
+        /* 承刚对话框特色 */
+        .row-child .dialogue-text {
+            background: #f0f4f8;
+            border-left-color: #2c3e50;
+        }
+
+        /* 重点标注：荧光笔效果 */
+        .highlight-yellow {
+            background-color: #ffff00;
+            padding: 2px 5px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        .highlight-orange {
+            background-color: #ff9900;
+            color: white;
+            padding: 2px 6px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        /* 便签批注样式 */
+        .notebook-note {
+            background-color: #f1f8ff;
+            border: 1px dashed #a5c8ff;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #1a5a9e;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        /* 妈妈心语 */
+        .mom-heart {
+            background-color: #fffaf0;
+            border: 1px solid #ffe4b5;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .mom-heart-title {
+            font-weight: bold;
+            color: #d35400;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .mom-text {
+            font-size: 15px;
+            color: #5d4037;
+            text-align: justify;
+        }
+
+        /* 互动留白区 */
+        .interactive-box {
+            border: 2px dashed #bdc3c7;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 20px;
+            background-color: #fafafa;
+            min-height: 100px;
+        }
+        .interactive-title {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px dashed #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-border">
+        <!-- 核心大标题 -->
+        <div class="title">🌐 允许一切发生，直到你亲身体会了那堵“南墙” ✈️</div>
+        <div class="subtitle">郑承刚思想成长手册 · 暑假篇</div>
+
+        <!-- 顶部信息框 -->
+        <table class="meta-table">
+            <tr>
+                <td width="50%">⏰ <b>【时间】：</b>2025年07月15日</td>
+                <td width="50%">🌍 <b>【地点】：</b>越南 · 暑期相聚</td>
+            </tr>
+            <tr>
+                <td width="50%">📱 <b>【情境】：</b>泳池边的哲学联想</td>
+                <td width="50%">📍 <b>【记录人】：</b>永远在你身后温柔引导的妈妈</td>
+            </tr>
+        </table>
+
+        <!-- 触发事件 -->
+        <div class="event-section">
+            <strong>🌱 【前情提要与触发事件】：</strong><br>
+            在这个你和哥哥来越南陪妈妈过暑假的夏夜，哥哥在泳池里畅游。而你因为刚做了手术不能下水，只能满眼羡慕地在泳池边来回走动。妈妈一遍遍叮嘱你不要走得太靠边，会掉进水里。但有些鞋，必须要自己穿过才知道大小；有些路，必须自己走过才知道深浅。妈妈选择放手允许一切发生。结果，你果然一身湿漉漉地回到了妈妈面前……
+        </div>
+
+        <hr class="divider">
+
+        <!-- 对话连线区域 -->
+        <div class="dialogue-section">
+            
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“妈，我掉水里了，<span class="highlight-yellow">我碰墙了。</span>”</div>
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“哪里撞到墙了？受伤没？” <i>（焦急且心疼地检查着）</i></div>
+            </div>
+
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“不是真的墙，<span class="highlight-orange">是你之前和我说的南墙。</span>”</div>
+            </div>
+
+        </div>
+
+        <!-- 便签批注样式 -->
+        <div class="notebook-note">
+            <div class="note-title">🧠 【便签批注 · 惊艳的联想力与反思习惯】</div>
+            <div style="font-size: 14px; color: #34495e; text-align: justify; line-height: 1.7;">
+                在那个普通的夏夜，你的回答让妈妈内心受到了极大的震撼。你在这次“落水”中展现了极其高级的思想光芒：<br>
+                <b>1. 极其高级的哲学联想力：</b>很多孩子掉进水里后，只会哭闹、害怕或者急于找借口。而你，竟然能将妈妈曾经讲过的抽象道理（撞南墙），完美地映射到自己眼前的生活体验中。你把“落水受挫”化为了一个高级的幽默隐喻，这说明妈妈教给你的道理，早已深深植根于你的潜意识里。<br>
+                <b>2. 极其宝贵的反思习惯：</b>妈妈在系统设计中见过太多踩坑的团队，也见过太多撞了南墙多次也不明白的成年人。一个人能“清醒地知道自己正在撞南墙”，并大方承认，就意味着你已经具备了极其罕见的<b>反思、归纳与总结的习惯</b>。这是拉开人与人之间成长差距的最核心能力，你才8岁，却已经做到了。
+            </div>
+        </div>
+
+        <!-- 妈妈心语 -->
+        <div class="mom-heart">
+            <div class="mom-heart-title">💖 【妈妈心语】</div>
+            <div class="mom-text">
+                亲爱的弟弟，当你18岁看到这段话时，希望你还能记得那个在越南泳池边湿漉漉、却眼神闪亮的自己。<br><br>
+                在妈妈20年的工作经历里，我常常感到困惑：为什么我已经把踩过的坑、痛点讲得绘声绘色，别人还是不听，非要自己摔一跤？直到后来妈妈才明白：这个世界没有真正的感同身受，除非他穿过你的鞋，走过你的路。对团队是这样，对你更是这样。<br><br>
+                妈妈作为过来人，总是本能地想让你少走弯路。但那天晚上我克制住了自己，我告诉自己要“允许一切发生，接受一切发生”。因为妈妈知道，只有你自己亲自掉过一次水，亲身体会过那份湿冷，你才能真正理解妈妈当时的叮嘱。<br><br>
+                当你说出“那是你之前和我说的南墙”时，妈妈在心里为你疯狂鼓掌。你没有让这一跤白摔，你用你的反思赋予了这次落水极大的价值。请记住，未来的日子里，妈妈永远不会在你失败时责备和挖苦你。只要你敢去穿鞋、敢去走自己的路，撞了南墙，妈妈就陪你一起回头、一起反思。
+            </div>
+        </div>
+
+        <!-- 互动留白 -->
+        <div class="interactive-box">
+            <div class="interactive-title">🎨 【互动留白 · 承刚的时光机】</div>
+            <div style="font-size: 13px; color: #95a5a6; font-style: italic; margin-bottom: 10px;">
+                📝 弟弟，那堵让你“湿了全身”的南墙，有没有让你觉得很神奇？18岁的你，在面对人生的选择时，是不是也多了一份亲自去“撞南墙”的勇气和智慧呢？
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

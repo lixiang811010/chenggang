@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>郑承刚思想成长手册 - 情感同理篇</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", sans-serif;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #0f172a; /* 统一暗色底背景，突显 A4 卡片 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            -webkit-print-color-adjust: exact;
+        }
+        
+        /* 页面外框：严格保持与 index 一致的 210mm 标准 A4 宽度 */
+        .page-border {
+            width: 210mm;
+            min-height: 297mm;
+            box-sizing: border-box;
+            margin: 0 auto;
+            border: 3px dashed #2ecc71;
+            padding: 25mm 20mm 20mm 20mm;
+            position: relative;
+            background: #ffffff radial-gradient(circle at 10px 10px, transparent 0, transparent 9px, #fafafa 9px, #fafafa 10px, transparent 10px);
+            background-size: 20px 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* 核心大标题与副标题 */
+        .title {
+            text-align: center;
+            font-size: 22px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+        /* 元数据表格 */
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            border: 1px dashed #2ecc71;
+            background-color: #e8f8f5;
+        }
+        .meta-table td {
+            padding: 10px 12px;
+            font-size: 13.5px;
+            color: #555;
+        }
+
+        /* 触发事件段落 */
+        .event-section {
+            font-size: 14px;
+            background-color: #fff;
+            padding: 8px 5px;
+            margin-bottom: 15px;
+            border-left: 4px solid #2ecc71;
+            padding-left: 12px;
+            text-align: justify;
+        }
+
+        /* 对话流区域 */
+        .dialogue-section {
+            background-color: #ffffff;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+        }
+        
+        .dialogue-row {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 12px;
+        }
+        .avatar-box {
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        .avatar-img {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            display: block;
+        }
+        .dialogue-text {
+            font-size: 15px;
+            background: #f8f9fa;
+            padding: 8px 12px;
+            border-radius: 4px;
+            border-left: 3px solid #bdc3c7;
+            flex-grow: 1;
+        }
+        .row-mom .dialogue-text {
+            background: #e8f8f5;
+            border-left-color: #2ecc71;
+        }
+        .row-child .dialogue-text {
+            background: #f0f4f8;
+            border-left-color: #34495e;
+        }
+
+        .highlight-green {
+            background-color: #d4efdf;
+            color: #145a32;
+            padding: 2px 6px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        /* 观察/架构笔记 */
+        .notebook-note {
+            background-color: #edf2f7;
+            border: 1px dashed #34495e;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 14.5px;
+        }
+
+        /* 妈妈心语 */
+        .mom-heart {
+            background-color: #fffaf0;
+            border: 1px solid #ffe4b5;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .mom-heart-title {
+            font-weight: bold;
+            color: #d35400;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 15.5px;
+        }
+        .mom-text {
+            font-size: 14px;
+            color: #5d4037;
+            text-align: justify;
+            line-height: 1.7;
+        }
+
+        /* 互动留白 */
+        .interactive-box {
+            border: 2px dashed #bdc3c7;
+            border-radius: 8px;
+            padding: 15px;
+            background-color: #fafafa;
+            min-height: 80px;
+        }
+        .interactive-title {
+            font-size: 13.5px;
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px dashed #ddd;
+            margin: 15px 0;
+        }
+
+        @media print {
+            body { background-color: #fff; padding: 0; }
+            .page-border { box-shadow: none; margin: 0; border-color: #2ecc71; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-border">
+        <div>
+            <!-- 核心大标题与副标题 -->
+            <div class="title">☕ 温度、音色与主动闭环：超级大脑里的同理心算法 💡</div>
+            <div class="subtitle">郑承刚思想成长手册 · 情感篇</div>
+
+            <!-- 元数据表格 -->
+            <table class="meta-table">
+                <tr>
+                    <td width="50%">⏰ <b>【时间】：</b>2026年08月26日 晚间</td>
+                    <td width="50%">🌍 <b>【地点】：</b>陪写作业现场 · 极速温情捕捉</td>
+                </tr>
+                <tr>
+                    <td width="50%">📱 <b>【情境】：</b>陪写作业时的一场超预期体贴对话</td>
+                    <td width="50%">📍 <b>【记录人】：</b>被你细心倒的水暖到心坎里的妈妈</td>
+                </tr>
+            </table>
+
+            <!-- 触发事件 -->
+            <div class="event-section">
+                <strong>🌱 【触发事件】：</strong><br>
+                8月26日晚上，我正在旁边陪你写作业。突然，你停下手中的笔，抬头看着我说了句暖心的话，甚至还主动站起来给我倒了一杯温水。这个平日里追求逻辑、严谨干练的小男孩，在细节里展现出来的体贴和敏锐，瞬间击中了妈妈的心。
+            </div>
+
+            <hr class="divider">
+
+            <!-- 对话连线区域 -->
+            <div class="dialogue-section">
+                
+                <div class="dialogue-row row-child">
+                    <div class="avatar-box">
+                        <img class="avatar-img" src="chenggang.png" alt="弟弟">
+                    </div>
+                    <div class="dialogue-text">“妈，你去喝点水吧！” <i>（突然抬头，关切地看着妈妈）</i></div>
+                </div>
+
+                <div class="dialogue-row row-mom">
+                    <div class="avatar-box">
+                        <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                    </div>
+                    <div class="dialogue-text">“怎么啦？是有口臭吗？” <i>（有点懵）</i></div>
+                </div>
+
+                <div class="dialogue-row row-child">
+                    <div class="avatar-box">
+                        <img class="avatar-img" src="chenggang.png" alt="弟弟">
+                    </div>
+                    <div class="dialogue-text">“不是的。<span class="highlight-green">你嗓子哑了！</span>”</div>
+                </div>
+
+                <div style="font-size: 13px; color: #7f8c8d; font-style: italic; margin: 8px 0 8px 54px;">
+                    （说完，你立刻站起身来，跑去倒了一杯水端过来……）
+                </div>
+
+                <div class="dialogue-row row-child">
+                    <div class="avatar-box">
+                        <img class="avatar-img" src="chenggang.png" alt="弟弟">
+                    </div>
+                    <div class="dialogue-text">“妈，你看<span class="highlight-green">温度合适吗？</span>”</div>
+                </div>
+
+                <div class="dialogue-row row-mom">
+                    <div class="avatar-box">
+                        <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                    </div>
+                    <div class="dialogue-text">“我怎么有你这么体贴的儿子呢？” <i>（心里无比治愈）</i></div>
+                </div>
+
+            </div>
+
+            <!-- 观察笔记 -->
+            <div class="notebook-note">
+                <div class="note-title">💡 【妈妈的架构师注解 · 同理心运行逻辑】</div>
+                <div style="font-size: 13.5px; color: #34495e; text-align: justify; line-height: 1.6;">
+                    1. <b>超越任务的细节捕捉力（敏锐度）：</b> 当时你正在专注写作业，但感知窗口并没有被单一任务死死封锁，而是精准捕捉到了妈妈嗓子音色的微小变化。<br>
+                    2. <b>完美的“闭环式”关怀算法（执行力）：</b> 觉察异常（嗓子哑）➔ 提出建议（去喝水）➔ 主动执行（站起倒水）➔ 二次确认与优化（询问温度是否合适）。这一套动作展现了极其成熟的关怀闭环。<br>
+                    3. <b>底层代码里的温柔（同理心）：</b> 当理性的孩子把细致入微的逻辑用来关心人时，比任何甜言蜜语都更具穿透力。
+                </div>
+            </div>
+
+            <!-- 妈妈心语 -->
+            <div class="mom-heart">
+                <div class="mom-heart-title">💖 【妈妈心语】</div>
+                <div class="mom-text">
+                    亲爱的弟弟，那一刻妈妈心里真的很感动。大家都觉得你是个讲逻辑、求真相、思维严密的“小架构师”，但你今晚的行为告诉妈妈：你的超级大脑里，不仅装满了严谨的逻辑，更装满了细腻的爱。<br><br>
+                    你不仅听出了妈妈声音的沙哑，还主动站起来倒水，甚至最后还会细心问一句“温度合适吗”。这种懂得观察他人需求、并主动完成“二次确认”的体贴，是很多大人都不一定具备的高级情商。儿子，真正的强大从来不是冷冰冰的智力胜出，而是拥有理性的智慧，同时保持一颗温暖柔软的心。谢谢你的这杯水，它是妈妈收过的最好礼物。
+                </div>
+            </div>
+        </div>
+
+        <!-- 互动留白 -->
+        <div class="interactive-box">
+            <div class="interactive-title">🎨 【互动留白 · 少年与未来的温情约定】</div>
+            <div style="font-size: 12.5px; color: #95a5a6; font-style: italic;">
+                📝 弟弟，等你长到18岁、20岁，甚至建立了自己的家庭，请记得保持今天这种“能听懂别人疲惫、会倒一杯温水”的细腻与温柔。写下你将来想给重要的人带来的温暖瞬间：
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

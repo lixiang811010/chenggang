@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>郑承刚思想成长手册 - 打印版</title>
+    <style>
+        /* A4 纸张打印基础设置 */
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 15mm;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", sans-serif;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #fff; /* 保持您原本的纯白背景 */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        
+        /* 强制拉齐为标准的 A4 210mm 宽度 */
+        .page-border {
+            width: 210mm;
+            min-height: 297mm;
+            box-sizing: border-box;
+            margin: 0 auto;
+            border: 3px dashed #16a085; /* 此处的颜色可按篇章调整，如 #2ecc71 */
+            padding: 25px;
+            position: relative;
+            background: #ffffff radial-gradient(circle at 10px 10px, transparent 0, transparent 9px, #fafafa 9px, #fafafa 10px, transparent 10px);
+            background-size: 20px 20px;
+        }
+
+        /* 核心大标题 */
+        .title {
+            text-align: center;
+            font-size: 24px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
+
+        /* 顶部元数据小卡片 */
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            border: 1px dashed #4a90e2;
+            background-color: #f4f9ff;
+        }
+        .meta-table td {
+            padding: 12px 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* 触发事件段落 */
+        .event-section {
+            font-size: 15px;
+            background-color: #fff;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4a90e2;
+            padding-left: 15px;
+            text-align: justify;
+        }
+
+        /* 对话区域排版 */
+        .dialogue-section {
+            background-color: #ffffff;
+            padding: 15px 5px;
+            margin-bottom: 25px;
+        }
+        
+        /* 头像对话行排版 */
+        .dialogue-row {
+            display: flex;
+            align-items: center; /* 头像与对话框垂直居中对齐 */
+            margin-bottom: 15px;
+        }
+        .avatar-box {
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .avatar-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            display: block;
+        }
+        .dialogue-text {
+            font-size: 16px;
+            background: #f8f9fa;
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 3px solid #bdc3c7;
+            flex-grow: 1;
+        }
+        /* 妈妈对话框特色 */
+        .row-mom .dialogue-text {
+            background: #fff5eb;
+            border-left-color: #e67e22;
+        }
+        /* 承刚对话框特色 */
+        .row-child .dialogue-text {
+            background: #f0f4f8;
+            border-left-color: #2c3e50;
+        }
+
+        /* 重点标注：荧光笔效果 */
+        .highlight-yellow {
+            background-color: #ffff00;
+            padding: 2px 5px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        .highlight-orange {
+            background-color: #ff9900;
+            color: white;
+            padding: 2px 6px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        /* 便签批注样式 */
+        .notebook-note {
+            background-color: #f1f8ff;
+            border: 1px dashed #a5c8ff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #1a5a9e;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        /* 妈妈心语 */
+        .mom-heart {
+            background-color: #fffaf0;
+            border: 1px solid #ffe4b5;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .mom-heart-title {
+            font-weight: bold;
+            color: #d35400;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .mom-text {
+            font-size: 15.5px;
+            color: #5d4037;
+            text-align: justify;
+        }
+
+        /* 互动留白区 */
+        .interactive-box {
+            border: 2px dashed #bdc3c7;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #fafafa;
+            min-height: 120px;
+        }
+        .interactive-title {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px dashed #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-border">
+        <!-- 核心大标题 -->
+        <div class="title">🌐 被争夺的爱，与一盏瞬间熄灭的灯 ✈️</div>
+        <div class="subtitle">郑承刚思想成长手册 · 8岁篇</div>
+
+        <!-- 顶部信息框 -->
+        <table class="meta-table">
+            <tr>
+                <td width="50%">⏰ <b>【时间】：</b>2025年03月05日</td>
+                <td width="50%">🌍 <b>【地点】：</b>中国 ── ✈️ ── 越南</td>
+            </tr>
+            <tr>
+                <td width="50%">📱 <b>【方式】：</b>越洋视频 / 晚间专属陪聊</td>
+                <td width="50%">📍 <b>【记录人】：</b>永远爱你的妈妈</td>
+            </tr>
+        </table>
+
+        <!-- 触发事件 -->
+        <div class="event-section">
+            <strong>🌱 【触发事件】：</strong><br>
+            每天晚上北京时间 7:00～10:00，我是家里两个儿子的“跨国专职陪聊妈妈”。由于身处两地，越洋视频通话成了我们每天最珍贵的连接。昨天因为和哥哥多聊了一会儿，敏锐的弟弟立刻感受到了“危机”，跑过来引发了一场关于“妈妈更喜欢谁”的可爱辩论。
+        </div>
+
+        <hr class="divider">
+
+        <!-- 对话连线区域（已隐去名字标签，头像与对话框完美居中居左） -->
+        <div class="dialogue-section">
+            
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“妈，你喜欢谁？”</div>
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“我喜欢的人可多着呢! 为什么这么问？”</div>
+            </div>
+
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“你是不是喜欢哥哥多些？”</div>
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“你从哪里看出来的？”</div>
+            </div>
+
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“你为什么和他聊那么久？”</div>
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“你哥是个话痨。”</div>
+            </div>
+
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text"><span class="highlight-yellow">“我也是个话痨！”</span> <i>（不服输地大声宣告）</i></div>
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“好好好，我陪你聊。”</div>
+            </div>
+            
+            <!-- 跨国小连线提示 -->
+            <div style="color: #95a5a6; font-size: 14px; margin: 20px 0; font-style: italic; text-align: center;">
+                ─── 🌐 于是我们就这样跨着国境线，一路快乐地聊到了10点15分…… ───
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“该睡觉了!” <i>（那边依旧兴高采烈地不停聊）</i></div>
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“该关灯睡觉了!” <i>（调皮地假装完全没反应）</i></div>
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text"><i>（揉了揉眼睛，轻声示弱）</i>“哎! 妈眼睛痛，可否让我早点休息？”</div>
+            </div>
+
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">💡 <span class="highlight-orange">“ 啪 ！”</span> <b>── 房间的灯瞬间被他关掉了。</b></div>
+            </div>
+
+            <!-- 大儿旁白行 -->
+            <div class="dialogue-row" style="opacity: 0.8;">
+                <div class="avatar-box">
+                    <div style="width:45px; height:45px; background:#e0e0e0; border-radius:50%; line-height:45px; font-size:12px; color:#666; font-weight:bold; text-align:center;">哥哥</div>
+                </div>
+                <div class="dialogue-text" style="background:#f1f2f6; border-left-color:#747d8c;">“妈，晚安了，88”</div>
+            </div>
+
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">☕️ <span class="highlight-yellow">“妈，记得多喝热水！”</span></div>
+            </div>
+        </div>
+
+        <!-- 便签批注样式 -->
+        <div class="notebook-note">
+            <div class="note-title">🧠 【便签批注 · 思想闪光点】</div>
+            <div style="font-size: 14.5px; color: #34495e; text-align: justify;">
+                8岁的你在这场连线中展现了极其丰满的个性：你直率、纯真，敢于大方表达对妈妈的爱与占有欲；同时，你又具备惊人的同理心。当妈妈用“规则和命令”催促你睡觉时，你沉溺于和妈妈说话的快乐中不愿停下；但当妈妈表达出“疲惫和身体不适”时，你内心的温柔和体贴瞬间战胜了贪玩，利落地关灯，并送上最实际的叮嘱。<b>你学会了在爱里克制自己的欲望，这是非常了不起的情绪转换能力。</b>
+            </div>
+        </div>
+
+        <!-- 妈妈心语 -->
+        <div class="mom-heart">
+            <div class="mom-heart-title">💖 【妈妈心语】</div>
+            <div class="mom-text">
+                亲爱的弟弟，当你18岁看到这段话时，或许早已不记得这个普通而温暖的夏夜了。<br><br>
+                妈妈想告诉你，当时的你虽然是个缠着妈妈聊天的小复读机，但在妈妈说出“眼睛痛”的那个瞬间，你立刻关掉的不仅是灯，还有你按耐不住的天性。你那句跨越千里的<b>“记得多喝热水”</b>，是妈妈在异乡听过最美的催眠曲。<br><br>
+                谢谢你，一直是个粗犷中带着极致温柔的男孩。妈妈好爱你。
+            </div>
+        </div>
+
+        <!-- 互动留白 -->
+        <div class="interactive-box">
+            <div class="interactive-title">🎨 【互动留白 · 弟弟的时光机】</div>
+            <div style="font-size: 13px; color: #95a5a6; font-style: italic; margin-bottom: 15px;">
+                📝 8岁的你，此刻你想对远在越南的妈妈，或者18岁的自己说什么呢？（你可以用彩笔在这里画画，或者写字留存哦！）
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

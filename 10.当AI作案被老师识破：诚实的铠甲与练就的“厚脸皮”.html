@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>郑承刚思想成长手册 - 打印版</title>
+    <style>
+        /* A4 纸张打印基础设置 */
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 15mm;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", sans-serif;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #fff; /* 保持您原本的纯白背景 */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        
+        /* 强制拉齐为标准的 A4 210mm 宽度 */
+        .page-border {
+            width: 210mm;
+            min-height: 297mm;
+            box-sizing: border-box;
+            margin: 0 auto;
+            border: 3px dashed #16a085; /* 此处的颜色可按篇章调整，如 #2ecc71 */
+            padding: 25px;
+            position: relative;
+            background: #ffffff radial-gradient(circle at 10px 10px, transparent 0, transparent 9px, #fafafa 9px, #fafafa 10px, transparent 10px);
+            background-size: 20px 20px;
+        }
+
+        /* 核心大标题 */
+        .title {
+            text-align: center;
+            font-size: 22px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
+
+        /* 顶部元数据小卡片 */
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            border: 1px dashed #4a90e2;
+            background-color: #f4f9ff;
+        }
+        .meta-table td {
+            padding: 12px 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* 触发事件段落 */
+        .event-section {
+            font-size: 14.5px;
+            background-color: #fff;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4a90e2;
+            padding-left: 15px;
+            text-align: justify;
+        }
+
+        /* 对话区域排版 */
+        .dialogue-section {
+            background-color: #ffffff;
+            padding: 15px 5px;
+            margin-bottom: 25px;
+        }
+        
+        /* 头像对话行排版 */
+        .dialogue-row {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 15px;
+        }
+        .avatar-box {
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .avatar-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            display: block;
+        }
+        .dialogue-text {
+            font-size: 16px;
+            background: #f8f9fa;
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 3px solid #bdc3c7;
+            flex-grow: 1;
+        }
+        /* 妈妈对话框特色 */
+        .row-mom .dialogue-text {
+            background: #fff5eb;
+            border-left-color: #e67e22;
+        }
+        /* 承刚对话框特色 */
+        .row-child .dialogue-text {
+            background: #f0f4f8;
+            border-left-color: #2c3e50;
+        }
+
+        /* 重点标注：荧光笔效果 */
+        .highlight-yellow {
+            background-color: #ffff00;
+            padding: 2px 5px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        .highlight-orange {
+            background-color: #ff9900;
+            color: white;
+            padding: 2px 6px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        /* 便签批注样式 */
+        .notebook-note {
+            background-color: #f1f8ff;
+            border: 1px dashed #a5c8ff;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #1a5a9e;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        /* 妈妈心语 */
+        .mom-heart {
+            background-color: #fffaf0;
+            border: 1px solid #ffe4b5;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .mom-heart-title {
+            font-weight: bold;
+            color: #d35400;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .mom-text {
+            font-size: 15px;
+            color: #5d4037;
+            text-align: justify;
+        }
+
+        /* 互动留白区 */
+        .interactive-box {
+            border: 2px dashed #bdc3c7;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 20px;
+            background-color: #fafafa;
+            min-height: 100px;
+        }
+        .interactive-title {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px dashed #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-border">
+        <!-- 核心大标题 -->
+        <div class="title">🌐 当AI作案被老师识破：诚实的铠甲与练就的“厚脸皮” ✈️</div>
+        <div class="subtitle">郑承刚思想成长手册 · 品格篇</div>
+
+        <!-- 顶部信息框 -->
+        <table class="meta-table">
+            <tr>
+                <td width="50%">⏰ <b>【时间】：</b>2025年12月15日</td>
+                <td width="50%">🌍 <b>【地点】：</b>中国 ⇄ 越南 · 隔空对谈的日常</td>
+            </tr>
+            <tr>
+                <td width="50%">📱 <b>【情境】：</b>关于三年级作文求助AI被识破的爆笑复盘</td>
+                <td width="50%">📍 <b>【记录人】：</b>为你那无惧诚实的强大内核疯狂点赞的妈妈</td>
+            </tr>
+        </table>
+
+        <!-- 触发事件 -->
+        <div class="event-section">
+            <strong>🌱 【触发事件】：</strong><br>
+            前几天，三年级的你遇到写作文的难题，转头向妈妈求助：“妈妈，你教我写作文。”妈妈当时非常坦荡地回答你：“我自己都不会写作文，你叫豆包教你。”于是，你高高兴兴地开启了你和AI联手创作的序幕。然而就在昨天，你放学回来时带着一肚子疑惑，视频刚接通，你就抛出了一个非常严肃的科技伦理问题……
+        </div>
+
+        <hr class="divider">
+
+        <!-- 对话连线区域 -->
+        <div class="dialogue-section">
+            
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“妈，为什么老师知道我的作文是AI写的？”</div>
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“讲讲，老师怎么说的？”</div>
+            </div>
+
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“老师就是问这个作文是不是在电脑上查的？”</div>
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“你怎么回答的？”</div>
+            </div>
+
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“我说是的。”</div>
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“那老师问你的时候，你害怕吗？”</div>
+            </div>
+
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“<span class="highlight-yellow">我一点都不害怕。</span>” <i>（神色自若，坦荡无比）</i></div>
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“<span class="highlight-orange">这就对了，诚实地回答就好了！</span>不害怕，说明你脸皮已经练就到一定的厚度了，很不错！”</div>
+            </div>
+
+        </div>
+
+        <!-- 便签批注样式 -->
+        <div class="notebook-note">
+            <div class="note-title">🧠 【便签批注 · 诚实的铠甲与强大的大局观】</div>
+            <div style="font-size: 14px; color: #34495e; text-align: justify; line-height: 1.7;">
+                在绝大多数人把“被老师发现查电脑”当成丢脸或作弊的坏事时，我们母子俩却把它复盘成了一次精神上的高光：<br>
+                <b>1. 诚实是你最坚固的盾牌：</b>当老师提出质疑时，你没有找借口编谎话，而是直接说“是的”。很多人之所以在犯错或穿帮时感到恐惧，是因为他们试图用更多的谎言去掩盖。而你的坦荡，让你在老师面前拥有了**一种任何力量都无法击碎的平静**。这种“做了就认”的担当，太man了！<br>
+                <b>2. 妈妈口中的“厚脸皮”，是心理弹性的最高境界：</b>在互联网时代，AI是工具。妈妈叫你找豆包，是希望你看见更大的世界、学到更高效的方法；而被老师识破后你的“一点都不害怕”，证明你拥有极强的钝感力和抗挫力。这种被妈妈戏称为“练就了一定厚度”的脸皮，本质上是一种不活在他人眼光和评价里的**强大内心体系**。
+            </div>
+        </div>
+
+        <!-- 妈妈心语 -->
+        <div class="mom-heart">
+            <div class="mom-heart-title">💖 【妈妈心语】</div>
+            <div class="mom-text">
+                亲爱的弟弟，当你18岁看到这一页，估计AI已经全面改变了人类世界，而你或许也已经成为了熟练驾驭各种高科技工具的超级高手。但妈妈最想让你记住的，依然是2025年那个冬天，你站在老师面前那句坦荡荡的“是的”。<br><br>
+                很多大人的世界很复杂，他们犯了错会推脱，遇到了穿帮会恐慌。但你那天展现出来的气场，让妈妈在屏幕这头佩服得不得了。你没有因为用电脑查作文而感到低人一等，也没有因为被老师抓包而瑟瑟发抖。你用你的诚实，稳稳地平息了一场可能发生的风暴。<br><br>
+                妈妈教你用豆包，是因为妈妈在IT的世界里深知，未来是属于敢于借助工具的人的。但工具再聪明，它也写不出你“一点都不害怕”的骄傲风骨。老师能一眼看穿那是AI写的，是因为AI没有你那独特的、会自嘲会开悟的灵性。以后写作文啊，咱们可以继续让豆包当你的助手，但真正的灵魂，还得是你这个有“厚脸皮”和“大心脏”的郑承刚自己来填满。<br><br>
+                诚实面对世界，坦然面对瑕疵。孩子，保持你这份不卑不亢的厚脸皮，你未来的路，会走得比谁都宽阔、都舒坦。
+            </div>
+        </div>
+
+        <!-- 互动留白 -->
+        <div class="interactive-box">
+            <div class="interactive-title">🎨 【互动留白 · 承刚与AI的创作日志】</div>
+            <div style="font-size: 13px; color: #95a5a6; font-style: italic; margin-bottom: 10px;">
+                📝 弟弟，你后来知道为什么三年级的老师能一眼看穿那是豆包写的了吗？18岁的你，现在写文章或者做项目时，是不是已经能把AI工具用得天衣无缝、比它更具智慧了？在这里签上你的名字，向当年的“坦荡小作家”致敬吧！
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

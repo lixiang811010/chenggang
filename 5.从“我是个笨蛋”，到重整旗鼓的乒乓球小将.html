@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>郑承刚思想成长手册 - 打印版</title>
+    <style>
+        /* A4 纸张打印基础设置 */
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 15mm;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", sans-serif;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #fff; /* 保持您原本的纯白背景 */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        
+        /* 强制拉齐为标准的 A4 210mm 宽度 */
+        .page-border {
+            width: 210mm;
+            min-height: 297mm;
+            box-sizing: border-box;
+            margin: 0 auto;
+            border: 3px dashed #16a085; /* 此处的颜色可按篇章调整，如 #2ecc71 */
+            padding: 25px;
+            position: relative;
+            background: #ffffff radial-gradient(circle at 10px 10px, transparent 0, transparent 9px, #fafafa 9px, #fafafa 10px, transparent 10px);
+            background-size: 20px 20px;
+        }
+
+        /* 核心大标题 */
+        .title {
+            text-align: center;
+            font-size: 22px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
+
+        /* 顶部元数据小卡片 */
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            border: 1px dashed #4a90e2;
+            background-color: #f4f9ff;
+        }
+        .meta-table td {
+            padding: 12px 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* 触发事件段落 */
+        .event-section {
+            font-size: 14.5px;
+            background-color: #fff;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4a90e2;
+            padding-left: 15px;
+            text-align: justify;
+        }
+
+        /* 对话区域排版 */
+        .dialogue-section {
+            background-color: #ffffff;
+            padding: 15px 5px;
+            margin-bottom: 25px;
+        }
+        
+        /* 头像对话行排版 */
+        .dialogue-row {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 15px;
+        }
+        .avatar-box {
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .avatar-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            display: block;
+        }
+        .dialogue-text {
+            font-size: 16px;
+            background: #f8f9fa;
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 3px solid #bdc3c7;
+            flex-grow: 1;
+        }
+        /* 妈妈对话框特色 */
+        .row-mom .dialogue-text {
+            background: #fff5eb;
+            border-left-color: #e67e22;
+        }
+        /* 承刚对话框特色 */
+        .row-child .dialogue-text {
+            background: #f0f4f8;
+            border-left-color: #2c3e50;
+        }
+
+        /* 重点标注：荧光笔效果 */
+        .highlight-yellow {
+            background-color: #ffff00;
+            padding: 2px 5px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        .highlight-orange {
+            background-color: #ff9900;
+            color: white;
+            padding: 2px 6px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        /* 便签批注样式 */
+        .notebook-note {
+            background-color: #f1f8ff;
+            border: 1px dashed #a5c8ff;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #1a5a9e;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        /* 妈妈心语 */
+        .mom-heart {
+            background-color: #fffaf0;
+            border: 1px solid #ffe4b5;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .mom-heart-title {
+            font-weight: bold;
+            color: #d35400;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .mom-text {
+            font-size: 15px;
+            color: #5d4037;
+            text-align: justify;
+        }
+
+        /* 互动留白区 */
+        .interactive-box {
+            border: 2px dashed #bdc3c7;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 20px;
+            background-color: #fafafa;
+            min-height: 100px;
+        }
+        .interactive-title {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px dashed #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-border">
+        <!-- 核心大标题 -->
+        <div class="title">🌐 从“我是个笨蛋”，到重整旗鼓的乒乓球小将 ✈️</div>
+        <div class="subtitle">郑承刚思想成长手册 · 暑假篇</div>
+
+        <!-- 顶部信息框 -->
+        <table class="meta-table">
+            <tr>
+                <td width="50%">⏰ <b>【时间】：</b>2025年07月20日</td>
+                <td width="50%">🌍 <b>【地点】：</b>越南 · 暑期相聚</td>
+            </tr>
+            <tr>
+                <td width="50%">📱 <b>【情境】：</b>关于好胜心与降维规则的博弈</td>
+                <td width="50%">📍 <b>【记录人】：</b>最懂你那颗好强心的妈妈</td>
+            </tr>
+        </table>
+
+        <!-- 触发事件 -->
+        <div class="event-section">
+            <strong>🌱 【触发事件】：</strong><br>
+            你心思细腻、敏感，身上有一股极其强烈、不服输的好胜心。在越南过暑假的这个下午，你兴冲冲地跟哥哥下楼去打乒乓球。结果没过一会儿，你就抹着眼泪、哭得无比伤心地推开门跑回了家。在妈妈的怀抱里，你展开了一场关于面子、规则和自我认知的博弈。
+        </div>
+
+        <hr class="divider">
+
+        <!-- 对话连线区域 -->
+        <div class="dialogue-section">
+            
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“怎么啦？哭得这么伤心？”</div>
+            </div>
+
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“乒乓球我打不过哥哥……” <i>（抽抽搭搭地掉眼泪）</i></div>
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“哥哥大你5岁，从生理上来说，他控制球的能力要高于你的。而且去年爸爸有指导过哥哥打乒乓球，所以你打不过哥哥是正常的。”</div>
+            </div>
+
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“<span class="highlight-yellow">我是个笨蛋，我什么都不会。</span>”</div>
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“怎么会呢？前两天我们打乒乓球，你就打得很好呀！”</div>
+            </div>
+
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“哥哥明知道我不会，他还不放水！开始还有放水，<span class="highlight-orange">后来见我赢了一个球，他就往死里打我！</span>”</div>
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“哦，原来是这样。哥哥也是个孩子，有朋友在旁边，他也要面子的。这样，我等下告诉哥哥，他和朋友打的时候才能切磋乒乓球技术，和你打的时候，只能当陪练，这样好吗？”</div>
+            </div>
+
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“好！” <i>（眼泪瞬间收住，又屁颠屁颠地跑下楼去了）</i></div>
+            </div>
+
+        </div>
+
+        <!-- 便签批注样式 -->
+        <div class="notebook-note">
+            <div class="note-title">🧠 【便签批注 · 妈妈看到的闪光点】</div>
+            <div style="font-size: 14px; color: #34495e; text-align: justify; line-height: 1.7;">
+                在这场哭鼻子的日常里，你身上依然闪烁着极其特别的思想火花：<br>
+                <b>1. 极强的观察力与反向证明：</b>虽然你哭着说自己是笨蛋，但其实你把比赛的过程看得明明白白。你捕捉到了一个极其关键的细节——“因为我赢了一个球，哥哥才往死里打我”。傻孩子，大你5岁、被爸爸专业指导过的哥哥，竟然因为被你赢了一个球而感受到了“危机”，从而不得不使出全力。这恰恰反向证明了你那一球打得有多漂亮，你根本不是笨蛋，你是个让哥哥感到威胁的小对手！<br>
+                <b>2. 绝不内耗的行动力：</b>你虽然敏感、好胜，但你最可爱的一点就在于“绝不内耗”。当妈妈重新理顺规则，把哥哥的身份从“碾压你的对手”降级为“陪你玩的陪练”后，你内心的不公和委屈瞬间烟消云散，立刻就能抹干眼泪重新下楼。这种能迅速接受合理建议并重整旗鼓的行动力，非常了不起。
+            </div>
+        </div>
+
+        <!-- 妈妈心语 -->
+        <div class="mom-heart">
+            <div class="mom-heart-title">💖 【妈妈心语】</div>
+            <div class="mom-text">
+                亲爱的弟弟，当你18岁看到这段话时，不知道你的乒乓球技术有没有超过哥哥呢？<br><br>
+                看着你那天哭着跑回家，大喊自己是“笨蛋”的时候，妈妈心里全是疼爱。妈妈懂你那颗好强的心，因为你想做得和哥哥一样好，甚至比他更好。但妈妈想告诉你，世界上的许多输赢，并不是因为你“笨”，而仅仅是因为时间。哥哥比你多长了5年的肌肉，多练了5年的球感，打不过他是再正常不过的自然规律。<br><br>
+                但你最让妈妈赞叹的，是你的诚实与敏锐。你能看出哥哥因为面子而“恼羞成怒”地全力以赴。妈妈帮你把哥哥定义为“陪练”，就是想让你明白，人生很多时候，面对不平等的竞争，我们不需要拿别人的高标来惩罚自己，换个角度，把对方当成垫脚石，我们就能玩得高高兴兴。<br><br>
+                看着你又屁颠屁颠跑下楼的背影，妈妈知道，你那颗不服输的心，永远不会被轻易打倒。
+            </div>
+        </div>
+
+        <!-- 互动留白 -->
+        <div class="interactive-box">
+            <div class="interactive-title">🎨 【互动留白 · 承刚的时光机】</div>
+            <div style="font-size: 13px; color: #95a5a6; font-style: italic; margin-bottom: 10px;">
+                📝 弟弟，那个下午最后你让哥哥当陪练，打得开心吗？18岁的你，在面对那些暂时比你强大的对手时，是不是也学会了像当年一样，转个弯让他们成为你的“陪练”呢？
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

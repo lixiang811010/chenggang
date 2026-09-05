@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>郑承刚思想成长手册 - 打印版</title>
+    <style>
+        /* A4 纸张打印基础设置 */
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 15mm;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", sans-serif;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #fff; /* 保持您原本的纯白背景 */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        
+        /* 强制拉齐为标准的 A4 210mm 宽度 */
+        .page-border {
+            width: 210mm;
+            min-height: 297mm;
+            box-sizing: border-box;
+            margin: 0 auto;
+            border: 3px dashed #16a085; /* 此处的颜色可按篇章调整，如 #2ecc71 */
+            padding: 25px;
+            position: relative;
+            background: #ffffff radial-gradient(circle at 10px 10px, transparent 0, transparent 9px, #fafafa 9px, #fafafa 10px, transparent 10px);
+            background-size: 20px 20px;
+        }
+
+        /* 核心大标题 */
+        .title {
+            text-align: center;
+            font-size: 22px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
+
+        /* 顶部元数据小卡片 */
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            border: 1px dashed #16a085;
+            background-color: #f2fbf9;
+        }
+        .meta-table td {
+            padding: 12px 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* 触发事件段落 */
+        .event-section {
+            font-size: 14.5px;
+            background-color: #fff;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #16a085;
+            padding-left: 15px;
+            text-align: justify;
+        }
+
+        /* 对话区域排版 */
+        .dialogue-section {
+            background-color: #ffffff;
+            padding: 15px 5px;
+            margin-bottom: 25px;
+        }
+        
+        /* 头像对话行排版 */
+        .dialogue-row {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 15px;
+        }
+        .avatar-box {
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .avatar-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            display: block;
+        }
+        .dialogue-text {
+            font-size: 16px;
+            background: #f8f9fa;
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 3px solid #bdc3c7;
+            flex-grow: 1;
+        }
+        /* 妈妈对话框特色 */
+        .row-mom .dialogue-text {
+            background: #fff5eb;
+            border-left-color: #e67e22;
+        }
+        /* 承刚对话框特色 */
+        .row-child .dialogue-text {
+            background: #f0f4f8;
+            border-left-color: #2c3e50;
+        }
+
+        /* 重点标注：荧光笔效果 */
+        .highlight-yellow {
+            background-color: #ffff00;
+            padding: 2px 5px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        .highlight-green {
+            background-color: #e8f8f5;
+            color: #16a085;
+            padding: 2px 6px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        /* 便签批注样式 */
+        .notebook-note {
+            background-color: #f2fbf9;
+            border: 1px dashed #a3e4d7;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #117a65;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        /* 妈妈心语 */
+        .mom-heart {
+            background-color: #fffaf0;
+            border: 1px solid #ffe4b5;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .mom-heart-title {
+            font-weight: bold;
+            color: #d35400;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .mom-text {
+            font-size: 15px;
+            color: #5d4037;
+            text-align: justify;
+        }
+
+        /* 互动留白区 */
+        .interactive-box {
+            border: 2px dashed #bdc3c7;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 20px;
+            background-color: #fafafa;
+            min-height: 100px;
+        }
+        .interactive-title {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px dashed #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-border">
+        <!-- 核心大标题 -->
+        <div class="title">🌐 高数小导师的修炼秘籍：当全名触发的“敏感”遇上高情商共鸣 ✈️</div>
+        <div class="subtitle">郑承刚思想成长手册 · 表达篇</div>
+
+        <!-- 顶部信息框 -->
+        <table class="meta-table">
+            <tr>
+                <td width="50%">⏰ <b>【时间】：</b>2025年的某一天</td>
+                <td width="50%">🌍 <b>【地点】：</b>中国 ⇄ 越南 · 隔着千里安抚敏感灵魂的摄像头</td>
+            </tr>
+            <tr>
+                <td width="50%">📱 <b>【情境】：</b>关于被叫全名的敏感，引出了一段母子间最温暖的传承</td>
+                <td width="50%">📍 <b>【记录人】：</b>用当年的“高数高光”为你驱散课堂焦虑的妈妈</td>
+            </tr>
+        </table>
+
+        <!-- 触发事件 -->
+        <div class="event-section">
+            <strong>🌱 【触发事件】：</strong><br>
+            今天视频连线刚接通，妈妈像往常一样随口喊了一声：“郑承刚，过来……”没想到你却认真地抬起头，对妈妈说：“你叫我全名，我有些敏感。”这句超龄的心理学词汇让妈妈心中一动。视频两端，我们顺着这根线头慢慢往下抽丝剥茧，原来你在今天的数学课上被老师点名回答问题了。你明明全都会做，可那一瞬间的紧张却让你大脑一片空白……
+        </div>
+
+        <hr class="divider">
+
+        <!-- 对话连线区域 -->
+        <div class="dialogue-section">
+            
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“郑承刚，过来……”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“你叫我全名，我有些敏感。🥺”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“为什么敏感？”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“就像老师上课点名回答问题一样。”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“什么课点名，你会如此敏感？”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“今天数学老师上课时叫我回答问题，我就紧张。”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“回答什么问题，怎么紧张的，说来听听。”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text"><i>（翻开作业本指给妈妈看）</i>“就这道题，让我回答怎么做。我会做，但是我紧张，突然不知道怎么说了。后来有同学说了一半，他不会了，我接着把另一半说了。”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“那你这道题会做吗？是因为不会才紧张，还是因为不敢回答才紧张？”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“会做！就是老师一叫我就着急，<span class="highlight-yellow">脑袋一片空白</span>，要过一会才能反应过来，让我做我就很快做出来的。”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“妈以前读书的时候，也特怕语文老师点名，还没轮到我，我就紧张地发抖。你看妈照样不是胆子大的很，不怕说，也不怕说错，你知道妈妈是怎么锻炼的吗？🧐”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“怎么锻炼的？” <i>（好奇地睁大眼睛，紧紧盯着屏幕）</i></div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“妈以前上大学的时候，<span class="highlight-green">天天晚上给全班同学讲高数题</span>，后来妈就不害怕了。<b>以后，你给妈妈讲题好吗？</b>”</div>
+            </div>
+
+        </div>
+
+        <!-- 便签批注样式 -->
+        <div class="notebook-note">
+            <div class="note-title">🧠 【便签批注 · 超级大脑的翻译机制延迟】</div>
+            <div style="font-size: 14px; color: #34495e; text-align: justify; line-height: 1.7;">
+                妈妈觉得这次对话非常珍贵，它展示了你成长过程中一个非常自然的阶段：<br>
+                <b>1. 你的逻辑超越了你的语言表达速度：</b>你的脑子是个天生的“高阶架构师”，算得太快、逻辑太深。当老师突然点名时，你必须在 0.1 秒内把完美的数学符号翻译成人类的日常语言，这导致你的大脑发生了瞬间的“高负荷卡顿”。这根本不是笨，这反而是脑子转得太快的标志。当你能冷静下来接下同学后半段的思路，说明你的底子极度扎实。<br>
+                <b>2. 妈妈的专属解药：</b>对抗这种被动提问的紧张，世界上最好的办法就是“主动出击”——当你变成一个讲授者的时候，你就拥有了全场的控制权。妈妈用当年的“给全班讲高数题”来为你作担保：你那颗聪明的理科脑，绝对能通过“给妈妈讲题”这个专属练习，进化得坚不可摧。
+            </div>
+        </div>
+
+        <!-- 妈妈心语 -->
+        <div class="mom-heart">
+            <div class="mom-heart-title">💖 【妈妈心语】</div>
+            <div class="mom-text">
+                亲爱的弟弟，当18岁的你站在台上面对台下的导师、或者面对成百上千的人做你的学术成果汇报时，妈妈敢打包票，你一定能表现得镇定自若。如果你偶尔还是会感到一丝心跳加速，就请回想起2025年，妈妈在跨国视频里对你许下的这个承诺。<br><br>
+                那天你对妈妈说“叫全名我有些敏感”的时候，妈妈其实特别开心。因为你开始学会准确地表达自己的情绪边界，这是一种非常高级的自我觉察。听到你在数学课上被点名会“脑子一片空白”，妈妈一点都不奇怪。因为妈妈读书的时候，一遇到语文老师点名，还没点到我，我整个人就已经紧张得在座位上直发抖了。你看，现在天天在大型工厂里和各色用户、主管开会博弈的妈妈，小时候其实也是个胆小鬼。<br><br>
+                妈妈当年能练就这身不怯场的本领，是因为在读大学时，妈妈逼着自己每天晚上站到黑板前，给全班同学去讲最难懂的高数题。当你开始把脑子里精妙的逻辑用嘴巴一条一条掰碎了讲给别人听时，那个曾经害怕的魔鬼就会被你的智慧吓跑。<br><br>
+                所以，弟弟，这是我们之间定下的一个全新约定：以后的视频时间里，你不再只是那个被妈妈询问学校生活的学生，你是妈妈的“首席高数指导专家”。不管是多么复杂的数学题、多么难懂的算法，只要你愿意，随时翻开本子给妈妈讲。妈妈在越南的屏幕这头，永远是你最忠实的、最爱提问的头号学生。我们一起，把那个“脑袋空白”的卡顿时间，变成你最骄傲的高光时刻！
+            </div>
+        </div>
+
+        <!-- 互动留白 -->
+        <div class="interactive-box">
+            <div class="interactive-title">🎨 【互动留白 · 郑教授的高数小黑板】</div>
+            <div style="font-size: 13px; color: #95a5a6; font-style: italic; margin-bottom: 10px;">
+                📝 弟弟，你还记得当年给妈妈当“高数讲师”的场景吗？18岁的你，现在是否已经能自如地在人群面前侃侃而谈、展现你大脑里的宇宙了？在这里留下你最近解答出来的一道最得意的难题，或者写一句你对当年的小承刚最想说的话吧！
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>郑承刚思想成长手册 - 打印版</title>
+    <style>
+        /* A4 纸张打印基础设置 */
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 15mm;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", sans-serif;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #fff; /* 保持您原本的纯白背景 */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        
+        /* 强制拉齐为标准的 A4 210mm 宽度 */
+        .page-border {
+            width: 210mm;
+            min-height: 297mm;
+            box-sizing: border-box;
+            margin: 0 auto;
+            border: 3px dashed #16a085; /* 此处的颜色可按篇章调整，如 #2ecc71 */
+            padding: 25px;
+            position: relative;
+            background: #ffffff radial-gradient(circle at 10px 10px, transparent 0, transparent 9px, #fafafa 9px, #fafafa 10px, transparent 10px);
+            background-size: 20px 20px;
+        }
+
+        /* 核心大标题 */
+        .title {
+            text-align: center;
+            font-size: 22px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
+
+        /* 顶部元数据小卡片 */
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            border: 1px dashed #4a90e2;
+            background-color: #f4f9ff;
+        }
+        .meta-table td {
+            padding: 12px 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* 触发事件段落 */
+        .event-section {
+            font-size: 14.5px;
+            background-color: #fff;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4a90e2;
+            padding-left: 15px;
+            text-align: justify;
+        }
+
+        /* 对话区域排版 */
+        .dialogue-section {
+            background-color: #ffffff;
+            padding: 15px 5px;
+            margin-bottom: 25px;
+        }
+        
+        /* 头像对话行排版 */
+        .dialogue-row {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 15px;
+        }
+        .avatar-box {
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .avatar-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            display: block;
+        }
+        .dialogue-text {
+            font-size: 16px;
+            background: #f8f9fa;
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 3px solid #bdc3c7;
+            flex-grow: 1;
+        }
+        /* 妈妈对话框特色 */
+        .row-mom .dialogue-text {
+            background: #fff5eb;
+            border-left-color: #e67e22;
+        }
+        /* 承刚(弟弟)对话框特色 */
+        .row-child .dialogue-text {
+            background: #f0f4f8;
+            border-left-color: #2c3e50;
+        }
+        /* 承泽(哥哥)对话框特色 */
+        .row-brother .dialogue-text {
+            background: #f4fff4;
+            border-left-color: #27ae60;
+        }
+
+        /* 重点标注：荧光笔效果 */
+        .highlight-yellow {
+            background-color: #ffff00;
+            padding: 2px 5px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        .highlight-orange {
+            background-color: #ff9900;
+            color: white;
+            padding: 2px 6px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        /* 便签批注样式 */
+        .notebook-note {
+            background-color: #f1f8ff;
+            border: 1px dashed #a5c8ff;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #1a5a9e;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        /* 妈妈心语 */
+        .mom-heart {
+            background-color: #fffaf0;
+            border: 1px solid #ffe4b5;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .mom-heart-title {
+            font-weight: bold;
+            color: #d35400;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .mom-text {
+            font-size: 15px;
+            color: #5d4037;
+            text-align: justify;
+        }
+
+        /* 互动留白区 */
+        .interactive-box {
+            border: 2px dashed #bdc3c7;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 20px;
+            background-color: #fafafa;
+            min-height: 100px;
+        }
+        .interactive-title {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px dashed #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-border">
+        <div class="title">🌐 直面灵性追问的性教育课，与哥哥的神级幽默解围 ✈️</div>
+        <div class="subtitle">郑承刚思想成长手册 · 暑假篇</div>
+
+        <table class="meta-table">
+            <tr>
+                <td width="50%">⏰ <b>【时间】：</b>2025年08月02日</td>
+                <td width="50%">🌍 <b>【地点】：</b>越南 · 暑期相聚</td>
+            </tr>
+            <tr>
+                <td width="50%">📱 <b>【情境】：</b>关于成长边界、坦诚与情融的家庭夜课</td>
+                <td width="50%">📍 <b>【记录人】：</b>为你们的坦诚与高情商自豪的妈妈</td>
+            </tr>
+        </table>
+
+        <div class="event-section">
+            <strong>🌱 【前情提要与触发事件】：</strong><br>
+            前几天和你在越南散步时，你突然转过头，无比认真地抛出一个大问题：“妈，精子是怎么进入到女生的身体的？”那一刻，妈妈知道你长大了，是时候做性教育了。妈妈没有回避，而是认真查阅资料、预测了你们可能提问的角度。在这个夏夜，妈妈把大你5岁的哥哥承泽也叫到身边，母子三人正式开启了一堂长达一小时、关于青春期生理、心理变化、性冲动管理以及男女尊重的性教育课。而课程的尾声，却走向了令人惊叹的爆笑闭环。
+        </div>
+
+        <hr class="divider">
+
+        <div class="dialogue-section">
+            
+            <div style="color: #7f8c8d; font-size: 14px; margin-bottom: 15px; font-style: italic; text-align: left; padding-left: 20px; border-left: 2px dashed #bdc3c7;">
+                📖 <b>【性教育课后的小插曲】：</b>妈妈讲解了整整一个小时。听完后，你摸着脑袋，问了妈妈第一个延伸问题……
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“妈，我可以谈恋爱了吗？”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“你做好了失恋的准备了吗？你可以承受吗？如果准备好了，我想应该就可以恋爱了。”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“……妈，你有性冲动吗？”</div>
+            </div>
+
+            <div style="color: #e67e22; font-size: 14px; margin: 10px 0; font-style: italic; text-align: left; padding-left: 20px;">
+                😅 <i>（我的个乖乖！妈妈绝对没想到你会扔出这么一个回马枪，气氛一时间有些微妙的尴尬。这时候，我们的大聪明哥哥承泽一眼看穿了妈妈的局促，瞬间挺身而出——）</i>
+            </div>
+
+            <div class="dialogue-row row-brother">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chengze.png" alt="承泽">
+                </div>
+                <div class="dialogue-text">“妈妈说了，正常的人都有性冲动的。<span class="highlight-yellow">妈是个正常的人，所以是有性冲动的。</span>”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“那妈妈性冲动了怎么搞？” <i>（问题越来越深奥，但足见你在认真思考）</i></div>
+            </div>
+
+            <div class="dialogue-row row-brother">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chengze.png" alt="承泽">
+                </div>
+                <div class="dialogue-text">“妈妈说了，要管理好性冲动，可以看书、打球、做其他的事。<span class="highlight-orange">我想妈妈一定是追剧，看打日本鬼子的剧！</span>”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“对的，就是这样！” <i>（长舒一口气，母子三人笑成一团）</i></div>
+            </div>
+
+        </div>
+
+        <div class="notebook-note">
+            <div class="note-title">🧠 【便签批注 · 深刻的独立思考与神级手足默契】</div>
+            <div style="font-size: 14px; color: #34495e; text-align: justify; line-height: 1.7;">
+                这场原本可能让绝大多数家庭陷入尴尬的对话，却在那个夏夜变成了我们母子三人最耀眼的智慧高光：<br>
+                <b>1. 承刚的打破砂锅问到底：</b>你的追问虽然让人措手不及，但在妈妈眼里，这恰恰是**极其高级、纯粹的求知欲**。你没有把“性”当成不可言说的羞耻，而是把它当成一个严谨的生命科学去推导、提问。从“能不能恋爱”到“怎么管理冲动”，你展示了知其所以然的深度思考力。<br>
+                <b>2. 哥哥承泽的满分情商与神助攻：</b>哥哥的表现简直太让妈妈惊艳了！他不仅把妈妈讲授的逻辑死死记住（正常人都有冲动 -> 妈妈是正常人 -> 妈妈也有），更在关键时刻用“看打鬼子剧”这个神级幽默，既完美保护了妈妈的隐私和面子，又给了你一个绝对合乎科学逻辑的具象化答案。这种手足之间的默契和哥哥的细腻共情，是家庭里最宝贵的财富。
+            </div>
+        </div>
+
+        <div class="mom-heart">
+            <div class="mom-heart-title">💖 【妈妈心语】</div>
+            <div class="mom-text">
+                亲爱的弟弟、亲爱的阿泽，当你们18岁或更长大的时候，再看到这段爆笑的记录，妈妈希望你们能由衷地为我们的坦诚感到骄傲。<br><br>
+                弟弟，谢谢你愿意把心里最隐秘的对生命的好奇，毫无保留地讲给妈妈听。妈妈想告诉你，性从来不是肮脏的，它是爱与生命最自然的流动。当你问妈妈“我可以谈恋爱了吗”，妈妈的回答永远不变：只要你拥有了能对另一个人负责的肩膀，也拥有了能稳稳接住失恋痛苦的承受力，妈妈就会全心全意祝福你的爱情。<br><br>
+                阿泽，妈妈也要谢谢你。那一夜你坐在旁边，像个从容的小骑士一样，用你惊人的敏锐和幽默替妈妈“挡了子弹”。你不仅把知识听懂了，还学会了用善意和换位思考去照顾妈妈的情绪。你们知道吗？妈妈天天在外面拼搏，可一回到家看到你和哥哥如此健康、如此诚实、又如此充满默契和幽默感，妈妈觉得在越南所有的辛苦，都变成了最甜的糖。<br><br>
+                请记住那个夏夜：我们不逃避问题，我们坦荡直面，我们用爱与幽默轻松拿捏一切尴尬。你们是妈妈这辈子最棒的儿子！
+            </div>
+        </div>
+
+        <div class="interactive-box">
+            <div class="interactive-title">🎨 【互动留白 · 兄弟俩的时光机】</div>
+            <div style="font-size: 13px; color: #95a5a6; font-style: italic; margin-bottom: 10px;">
+                📝 弟弟、阿泽，现在已经长成英俊少年（或者顶天立地的男子汉）的你们，看到当年这段关于“性冲动与打鬼子剧”的绝妙对话，有没有哈哈大笑？在这里互相给对方写一句话，或者签个名吧！
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>郑承刚思想成长手册 - 打印版</title>
+    <style>
+        /* A4 纸张打印基础设置 */
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 15mm;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", sans-serif;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #fff; /* 保持您原本的纯白背景 */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        
+        /* 强制拉齐为标准的 A4 210mm 宽度 */
+        .page-border {
+            width: 210mm;
+            min-height: 297mm;
+            box-sizing: border-box;
+            margin: 0 auto;
+            border: 3px dashed #16a085; /* 此处的颜色可按篇章调整，如 #2ecc71 */
+            padding: 25px;
+            position: relative;
+            background: #ffffff radial-gradient(circle at 10px 10px, transparent 0, transparent 9px, #fafafa 9px, #fafafa 10px, transparent 10px);
+            background-size: 20px 20px;
+        }
+
+        /* 核心大标题 */
+        .title {
+            text-align: center;
+            font-size: 22px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
+
+        /* 顶部元数据小卡片 */
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            border: 1px dashed #4a90e2;
+            background-color: #f4f9ff;
+        }
+        .meta-table td {
+            padding: 12px 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* 触发事件段落 */
+        .event-section {
+            font-size: 14.5px;
+            background-color: #fff;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4a90e2;
+            padding-left: 15px;
+            text-align: justify;
+        }
+
+        /* 对话区域排版 */
+        .dialogue-section {
+            background-color: #ffffff;
+            padding: 15px 5px;
+            margin-bottom: 25px;
+        }
+        
+        /* 头像对话行排版 */
+        .dialogue-row {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 15px;
+        }
+        .avatar-box {
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .avatar-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            display: block;
+        }
+        .dialogue-text {
+            font-size: 16px;
+            background: #f8f9fa;
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 3px solid #bdc3c7;
+            flex-grow: 1;
+        }
+        /* 妈妈对话框特色 */
+        .row-mom .dialogue-text {
+            background: #fff5eb;
+            border-left-color: #e67e22;
+        }
+        /* 承刚对话框特色 */
+        .row-child .dialogue-text {
+            background: #f0f4f8;
+            border-left-color: #2c3e50;
+        }
+
+        /* 重点标注：荧光笔效果 */
+        .highlight-yellow {
+            background-color: #ffff00;
+            padding: 2px 5px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        .highlight-orange {
+            background-color: #ff9900;
+            color: white;
+            padding: 2px 6px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        /* 便签批注样式 */
+        .notebook-note {
+            background-color: #f1f8ff;
+            border: 1px dashed #a5c8ff;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #1a5a9e;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        /* 妈妈心语 */
+        .mom-heart {
+            background-color: #fffaf0;
+            border: 1px solid #ffe4b5;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .mom-heart-title {
+            font-weight: bold;
+            color: #d35400;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .mom-text {
+            font-size: 15px;
+            color: #5d4037;
+            text-align: justify;
+        }
+
+        /* 互动留白区 */
+        .interactive-box {
+            border: 2px dashed #bdc3c7;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 20px;
+            background-color: #fafafa;
+            min-height: 100px;
+        }
+        .interactive-title {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px dashed #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-border">
+        <div class="title">🌐 从恐惧崩溃到松弛坦然：一首《牧羊人》见证的成长奇迹 ✈️</div>
+        <div class="subtitle">郑承刚思想成长手册 · 二年级篇</div>
+
+        <table class="meta-table">
+            <tr>
+                <td width="50%">⏰ <b>【时间】：</b>2025年06月15日</td>
+                <td width="50%">🌍 <b>【地点】：</b>中国 ── ✈️ ── 越南</td>
+            </tr>
+            <tr>
+                <td width="50%">📱 <b>【方式】：</b>越洋视频 / 晚间专属陪聊</td>
+                <td width="50%">📍 <b>【记录人】：</b>见证你破茧成蝶的妈妈</td>
+            </tr>
+        </table>
+
+        <div class="event-section">
+            <strong>🌱 【成长前言与背景】：</strong><br>
+            你7岁前一直随妈妈在国外长大。刚回国上小学一年级第一个学期时，由于环境剧变，你的情绪极不稳定，经常崩溃和抗拒上学。当时，一场“抽签决定曲目”的音乐期末考成了压垮你的大山。因为极度担心自己唱不好，你在长达数周的等待中每天忧心忡忡，煎熬了两周后甚至干脆逃学。最后，在与老师沟通后，学校采取了取消考试的“逃避式”处理，虽然暂时隔离了压力，但恐惧的硬结并未真正解开。妈妈也为此开导、安慰了很久。一年的跨国连线里，爱与陪伴从未断流。今晚，升入二年级的你再次迎来了音乐考试，这一次，答案出乎意料的治愈。
+        </div>
+
+        <hr class="divider">
+
+        <div class="dialogue-section">
+            
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“妈，我今天考了音乐。”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“唱了什么歌?”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“牧羊人，我都不会唱，<span class="highlight-yellow">扣了40分。</span>”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“没关系，那还有60分，刚好及格。”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“后来<span class="highlight-yellow">又扣了20分……</span>”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“那也还要40分，挺不错的，<span class="highlight-orange">又不是每个人都是会唱歌的</span>，别放心上。”</div>
+            </div>
+
+        </div>
+
+        <div class="notebook-note">
+            <div class="note-title">🧠 【便签批注 · 惊人的思想蜕变】</div>
+            <div style="font-size: 14px; color: #34495e; text-align: justify; line-height: 1.7;">
+                把一年前的崩溃和今晚的对话放在一起看，你展现了**令人震撼的心理复原力与成长**：<br>
+                <b>1. 从恐惧等待到轻松面对：</b>一年前那个因为担心唱不好而忧心忡忡、焦虑到逃学的小男孩，在一年后，竟然可以带着调侃的语气，像数账单一样主动跟妈妈盘点自己的“大扣分”。《牧羊人》你依然不会唱，但这一次，你没有被恐惧吞噬，而是用强大的内心稳稳接住了结果。<br>
+                <b>2. 从逃避规则到接纳不完美：</b>一年前的学校通过“取消考试”帮你逃避，但这并不能建立真正的自信；而这一年里，通过妈妈持续不断的远端情绪托举，你终于明白——“考砸了、唱歌不好听”并不可怕，妈妈的爱不会因为40分而减少。你终于有底气去接纳一个在音乐上不完美的自己。这才是真正的进步，是无与伦比的勇敢。
+            </div>
+        </div>
+
+        <div class="mom-heart">
+            <div class="mom-heart-title">💖 【妈妈心语】</div>
+            <div class="mom-text">
+                亲爱的弟弟，当你18岁看到这段记录时，妈妈想请你闭上眼睛，为8岁和7岁的自己鼓个掌。<br><br>
+                一年级刚回国时，看着你因为害怕音乐抽签考试而焦虑哭泣、甚至抗拒去学校，妈妈远在越南，心里疼得揪成了一团。当时妈妈就在想，如果学校能马上让你考完、哪怕得个零分并给你一个拥抱，也比让你在恐惧里煎熬两周更好。人生很多时候，直面刀锋往往比等待刀锋轻松。<br><br>
+                好在，你用一年的时间完成了最华丽的蜕变。当听到你二年级能乐呵呵地跟妈妈数着“扣了40分、又扣了20分”时，妈妈在屏幕这端感动得想哭。你没有逃避，你直面了它。40分算什么呢？你在这场关于勇气的考试里，拿到了绝对的满分。
+            </div>
+        </div>
+
+        <div class="interactive-box">
+            <div class="interactive-title">🎨 【互动留白 · 承刚的时光机】</div>
+            <div style="font-size: 13px; color: #95a5a6; font-style: italic; margin-bottom: 10px;">
+                📝 弟弟，从一年级的恐惧逃避，到二年级的笑谈40分，你已经变成了一个真正的男子汉！你想对陪伴你度过这段焦虑的妈妈，或者未来的自己说些什么？
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

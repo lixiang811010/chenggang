@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>郑承刚思想成长手册 - 打印版</title>
+    <style>
+        /* A4 纸张打印基础设置 */
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 15mm;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", sans-serif;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #fff; /* 保持您原本的纯白背景 */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        
+        /* 强制拉齐为标准的 A4 210mm 宽度 */
+        .page-border {
+            width: 210mm;
+            min-height: 297mm;
+            box-sizing: border-box;
+            margin: 0 auto;
+            border: 3px dashed #16a085; /* 此处的颜色可按篇章调整，如 #2ecc71 */
+            padding: 25px;
+            position: relative;
+            background: #ffffff radial-gradient(circle at 10px 10px, transparent 0, transparent 9px, #fafafa 9px, #fafafa 10px, transparent 10px);
+            background-size: 20px 20px;
+        }
+
+        /* 核心大标题 */
+        .title {
+            text-align: center;
+            font-size: 22px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
+
+        /* 顶部元数据小卡片 */
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            border: 1px dashed #8e44ad;
+            background-color: #fbf9fc;
+        }
+        .meta-table td {
+            padding: 12px 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* 触发事件段落 */
+        .event-section {
+            font-size: 14.5px;
+            background-color: #fff;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #8e44ad;
+            padding-left: 15px;
+            text-align: justify;
+        }
+
+        /* 对话区域排版 */
+        .dialogue-section {
+            background-color: #ffffff;
+            padding: 15px 5px;
+            margin-bottom: 25px;
+        }
+        
+        /* 头像对话行排版 */
+        .dialogue-row {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 15px;
+        }
+        .avatar-box {
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .avatar-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            display: block;
+        }
+        .dialogue-text {
+            font-size: 16px;
+            background: #f8f9fa;
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 3px solid #bdc3c7;
+            flex-grow: 1;
+        }
+        /* 妈妈对话框特色 */
+        .row-mom .dialogue-text {
+            background: #fff5eb;
+            border-left-color: #e67e22;
+        }
+        /* 承刚对话框特色 */
+        .row-child .dialogue-text {
+            background: #f0f4f8;
+            border-left-color: #2c3e50;
+        }
+        /* 哥哥对话框特色 */
+        .row-brother .dialogue-text {
+            background: #f4fff4;
+            border-left-color: #27ae60;
+        }
+
+        /* 重点标注：荧光笔效果 */
+        .highlight-yellow {
+            background-color: #ffff00;
+            padding: 2px 5px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        .highlight-purple {
+            background-color: #f3e5f5;
+            color: #8e44ad;
+            padding: 2px 6px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        /* 便签批注样式 */
+        .notebook-note {
+            background-color: #fbf9fc;
+            border: 1px dashed #d2b4de;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #6c3483;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        /* 妈妈心语 */
+        .mom-heart {
+            background-color: #fffaf0;
+            border: 1px solid #ffe4b5;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .mom-heart-title {
+            font-weight: bold;
+            color: #d35400;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .mom-text {
+            font-size: 15px;
+            color: #5d4037;
+            text-align: justify;
+        }
+
+        /* 互动留白区 */
+        .interactive-box {
+            border: 2px dashed #bdc3c7;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 20px;
+            background-color: #fafafa;
+            min-height: 100px;
+        }
+        .interactive-title {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px dashed #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-border">
+        <!-- 核心大标题 -->
+        <div class="title">🌐 从黑坨坨到“我没情绪了”：跨国连线里的灵魂开智 ✈️</div>
+        <div class="subtitle">郑承刚思想成长手册 · 情绪篇</div>
+
+        <!-- 顶部信息框 -->
+        <table class="meta-table">
+            <tr>
+                <td width="50%">⏰ <b>【时间】：</b>2026年05月30日</td>
+                <td width="50%">🌍 <b>【地点】：</b>中国 ⇄ 越南 · 摄像头两端的理智风暴</td>
+            </tr>
+            <tr>
+                <td width="50%">📱 <b>【情境】：</b>从默写错字的自我死磕，到主动刹车的情绪蜕变</td>
+                <td width="50%">📍 <b>【记录人】：</b>用职场故事与你并肩作战、见证你“开智”的妈妈</td>
+            </tr>
+        </table>
+
+        <!-- 触发事件 -->
+        <div class="event-section">
+            <strong>🌱 【触发事件】：</strong><br>
+            前几天的默写课上，你碰到一个错字，越改越错，急得不让妈妈提醒。纸上的黑坨坨越来越大，笔尖陷进纸里，清秀的小脸痛苦得扭曲起来。妈妈温柔地劝你停下，你却不耐烦地反驳：“没情绪，再停下来我要什么时候默写完？！”虽然远在越南，但妈妈知道你被挫败感吞噬了。那一刻，妈妈严肃地让你看着摄像头，决定用一个“大人的职场故事”，带你上一堂震撼的生命课。
+        </div>
+
+        <hr class="divider">
+
+        <!-- 对话连线区域 -->
+        <div class="dialogue-section">
+            
+            <!-- 场景一：暴风雨中的死磕 -->
+            <div style="font-size: 14px; color: #7f8c8d; margin-bottom: 15px; font-weight: bold;">【第一阶段：黑坨坨与摄像头前的僵持】</div>
+            
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“不要提醒我！” <i>（疯狂用笔涂抹错字，脸部表情开始扭曲）</i></div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“是有情绪了吗？先停下来吧，孩子。” <i>（隔着屏幕轻轻安抚）</i></div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“没情绪！再停下来我要什么时候默写完？！” <i>（语气充满不耐烦与焦虑）</i></div>
+            </div>
+
+            <div style="color: #7f8c8d; font-size: 14px; margin: 15px 0; font-style: italic; text-align: left; padding-left: 20px; border-left: 2px dashed #8e44ad;">
+                🎬 <i>妈妈没有动怒，而是严肃地隔着屏幕对你说：“停下来，看着我。”四目相对片刻后，妈妈说：“收拾一下桌子，我们聊会天。”那个周日，妈妈毫无保留地给你讲了自己在4月份因为和工厂用户赌气、最后导致项目出现一系列连锁问题的职场教训。妈妈告诉你：<b>有情绪时是处理不好事情的，永远要想想我们做这件事的初心和目的。</b>你听得两眼放光。那个周日，我们隔空聊了整整4个小时，并设计了一个专属的“提醒暗号”。</i>
+            </div>
+
+            <!-- 场景二：暗号奏效后的奇迹 -->
+            <div style="font-size: 14px; color: #7f8c8d; margin-top: 25px; margin-bottom: 15px; font-weight: bold;">【第二阶段：昨日重现，暗号触发】</div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“（暗号触发）承刚，现在请站起来一下，放松放松。” <i>（发现你又开始着急，果断按下暂停键）</i></div>
+            </div>
+
+            <div style="color: #7f8c8d; font-size: 14px; margin: 10px 0; font-style: italic; text-align: center;">
+                ⏳ （片刻的安静，你站起身活动了一下，做了一个深呼吸……）
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“<span class="highlight-purple">妈妈，重来。我没情绪了。</span>” <i>（眼神清亮，语气平静而笃定）</i></div>
+            </div>
+
+            <div class="dialogue-row row-brother">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chengze.png" alt="承泽">
+                </div>
+                <div class="dialogue-text">“哇，弟弟这是‘开智’了啊！👏” <i>（在一旁忍不住惊叹赞赏）</i></div>
+            </div>
+
+        </div>
+
+        <!-- 便签批注样式 -->
+        <div class="notebook-note">
+            <div class="note-title">🧠 【便签批注 · 从“被情绪奴役”到“踩下情绪刹车”】</div>
+            <div style="font-size: 14px; color: #34495e; text-align: justify; line-height: 1.7;">
+                这一晚的转变，在教育学和心理学上堪称一场**史诗级的智力跃升**：<br>
+                <b>1. 顶阶高自商的标志——主动清空缓存：</b>你那句“妈妈，重来，我没情绪了”，简直让妈妈起了一身鸡皮疙瘩！普通孩子在赌气时会一直别扭到底，而你，在收到暗号后，竟然能像超级计算机一样，**一键清空了大脑里的焦虑缓存**。你承认它，放行它，然后重新掌控身体。这种心理韧性，是极其罕见的天赋。<br>
+                <b>2. 完美的母子合伙人模式：</b>你为什么这么爱听妈妈讲工作？因为你骨子里渴望被当成一个平等的、有深度思考能力的个体。当妈妈把职场上的挫折与反思像复印代码一样展示给你时，你瞬间吸收了妈妈的经验。后面的默写，你字迹端正、正确率飙升，这就叫**降维打击式的成长**。
+            </div>
+        </div>
+
+        <!-- 妈妈心语 -->
+        <div class="mom-heart">
+            <div class="mom-heart-title">💖 【妈妈心语】</div>
+            <div class="mom-text">
+                亲爱的弟弟，当你18岁代表学校去参加高强度的竞赛，或者在职场上面对非常棘手的合作方时，如果有人试图用糟糕的情绪激怒你、把你带进沟里，请你一定要闭上眼睛，回想一下9岁时的这个5月。<br><br>
+                那天你在屏幕前把纸涂出黑坨坨的时候，妈妈在越南的电脑前，心疼得揪成了一团。我太懂那种“我明明想做好，为什么就是做不好”的挫败感了。妈妈在4月份面对那些不讲理的用户时，也曾像你一样赌气、委屈，甚至想过“算了，我不管了”。但那个周日，当我们隔着跨国网络畅聊了4个小时后，妈妈发现，我的小儿子不仅听懂了妈妈的职场委屈，还帮妈妈一起治愈了那段不开心。<br><br>
+                昨天晚上，当你在暗号响起后，坦荡、平静地对妈妈说出“妈妈，重来，我没情绪了”的时候，连旁边的哥哥都惊呼你“开智”了。是的，孩子，那一刻你真的长大了。你战胜了那个暴躁的魔鬼，拿回了大脑的指挥权。后来的你，字写得那么漂亮，题对得那么多，这都在证明：**清醒的承刚，无所不能。**<br><br>
+                谢谢你愿意听妈妈讲那些枯燥的IT职场故事，谢谢你愿意和妈妈建立只有我们俩才懂的“秘密暗号”。有你这样会自我调整、会心疼妈妈的精神合伙人，妈妈在海外再累，也永远有着开机即满格的动力。你是最棒的，儿子！
+            </div>
+        </div>
+
+        <!-- 互动留白 -->
+        <div class="interactive-box">
+            <div class="interactive-title">🎨 【互动留白 · 我们的专属暗号墙】</div>
+            <div style="font-size: 13px; color: #95a5a6; font-style: italic; margin-bottom: 10px;">
+                📝 弟弟，你还记得当年那个只属于我们母子二人的“情绪停机暗号”吗？18岁的你，在面对压力和挑战时，是否已经能完美地驾驭自己的情绪战车了？在这里，写下你现在和妈妈之间新的“默契暗号”吧！
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

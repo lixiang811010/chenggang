@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>郑承刚思想成长手册 - 打印版</title>
+    <style>
+        /* A4 纸张打印基础设置 */
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 15mm;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", sans-serif;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #fff; /* 保持您原本的纯白背景 */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        
+        /* 强制拉齐为标准的 A4 210mm 宽度 */
+        .page-border {
+            width: 210mm;
+            min-height: 297mm;
+            box-sizing: border-box;
+            margin: 0 auto;
+            border: 3px dashed #16a085; /* 此处的颜色可按篇章调整，如 #2ecc71 */
+            padding: 25px;
+            position: relative;
+            background: #ffffff radial-gradient(circle at 10px 10px, transparent 0, transparent 9px, #fafafa 9px, #fafafa 10px, transparent 10px);
+            background-size: 20px 20px;
+        }
+
+        /* 核心大标题 */
+        .title {
+            text-align: center;
+            font-size: 22px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
+
+        /* 顶部元数据小卡片 */
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            border: 1px dashed #4a90e2;
+            background-color: #f4f9ff;
+        }
+        .meta-table td {
+            padding: 12px 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* 触发事件段落 */
+        .event-section {
+            font-size: 14.5px;
+            background-color: #fff;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4a90e2;
+            padding-left: 15px;
+            text-align: justify;
+        }
+
+        /* 对话区域排版 */
+        .dialogue-section {
+            background-color: #ffffff;
+            padding: 15px 5px;
+            margin-bottom: 25px;
+        }
+        
+        /* 头像对话行排版 */
+        .dialogue-row {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 15px;
+        }
+        .avatar-box {
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .avatar-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            display: block;
+        }
+        .dialogue-text {
+            font-size: 16px;
+            background: #f8f9fa;
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 3px solid #bdc3c7;
+            flex-grow: 1;
+        }
+        /* 妈妈对话框特色 */
+        .row-mom .dialogue-text {
+            background: #fff5eb;
+            border-left-color: #e67e22;
+        }
+        /* 承刚对话框特色 */
+        .row-child .dialogue-text {
+            background: #f0f4f8;
+            border-left-color: #2c3e50;
+        }
+
+        /* 重点标注：荧光笔效果 */
+        .highlight-yellow {
+            background-color: #ffff00;
+            padding: 2px 5px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        .highlight-orange {
+            background-color: #ff9900;
+            color: white;
+            padding: 2px 6px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        /* 便签批注样式 */
+        .notebook-note {
+            background-color: #f1f8ff;
+            border: 1px dashed #a5c8ff;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #1a5a9e;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        /* 妈妈心语 */
+        .mom-heart {
+            background-color: #fffaf0;
+            border: 1px solid #ffe4b5;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .mom-heart-title {
+            font-weight: bold;
+            color: #d35400;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .mom-text {
+            font-size: 15px;
+            color: #5d4037;
+            text-align: justify;
+        }
+
+        /* 互动留白区 */
+        .interactive-box {
+            border: 2px dashed #bdc3c7;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 20px;
+            background-color: #fafafa;
+            min-height: 100px;
+        }
+        .interactive-title {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px dashed #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-border">
+        <div class="title">🌐 允许哭泣的5遍，与拉低焦虑的“情绪刹车片” ✈️</div>
+        <div class="subtitle">郑承刚思想成长手册 · 二年级篇</div>
+
+        <table class="meta-table">
+            <tr>
+                <td width="50%">⏰ <b>【时间】：</b>2025年06月20日</td>
+                <td width="50%">🌍 <b>【地点】：</b>中国 ── ✈️ ── 越南</td>
+            </tr>
+            <tr>
+                <td width="50%">📱 <b>【方式】：</b>越洋视频 / 晚间专属陪聊</td>
+                <td width="50%">📍 <b>【记录人】：</b>永远陪在你身边的妈妈</td>
+            </tr>
+        </table>
+
+        <div class="event-section">
+            <strong>🌱 【触发事件】：</strong><br>
+            临近期末考试，由于你7岁前一直在国外长大，拼音是你的弱项，声母韵母还认不熟，写声调还要数着手指头。昨天的一单元看拼音写汉字小测试，你错了不少。一到家，你就迫不及待地在视频里和妈妈复盘了这场充满压力的期末遭遇战，并由此引发了一场极其让人动容的拼音复习长跑。
+        </div>
+
+        <hr class="divider">
+
+        <div class="dialogue-section">
+            
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“妈，你知道我今天错了多少个吗？”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“10个？”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“<span class="highlight-yellow">是20个。</span>还有两个星期就要考试了，该怎么办呢？我不想错这么多。”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“那我陪你复习。”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“好！”</div>
+            </div>
+            
+            <div style="color: #e74c3c; font-size: 14.5px; margin: 20px 0; font-style: italic; text-align: left; padding-left: 20px; border-left: 2px dashed #e74c3c;">
+                📝 <b>【复习小记】：</b>当晚的家庭作业，妈妈陪你复习第二单元。好强的你希望当晚能读够5遍。可是因为不熟练，光是读完第1遍就花了整整40分钟。你开始着急，一边痛哭着骂自己没用，一边依然死死抓着书不肯放……
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“我们先休息吧，复习一遍就好了。”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“我不想要像今天这样错这么多。我要复习5遍，可是一遍就花了这么长时间，我没办法完成……”</div>
+            </div>
+
+            <div style="color: #7f8c8d; font-size: 14.5px; margin: 20px 0; font-style: italic; text-align: left; padding-left: 20px; border-left: 2px dashed #bdc3c7;">
+                📝 <b>【转机】：</b>你一边哭一边读，情绪崩溃得更读不出来了。妈妈让你先去洗澡缓冲情绪。神奇的是，洗完澡后，你又主动坐回了书桌前，要求妈妈陪你再读一次。这一次，我们认真且安静地读完了第2遍，比之前有了巨大的进步！
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“<span class="highlight-orange">你瞧瞧，这次我们读的多好！</span>着急的时候，我们脑子一片空白，不着急的时候，脑子是灵敏的。我们读完这次就不读了，睡觉！明天默写错了，正好把错的找出来，周末再复习复习。”</div>
+            </div>
+
+        </div>
+
+        <div class="notebook-note">
+            <div class="note-title">🧠 【便签批注 · 妈妈看到的闪光点】</div>
+            <div style="font-size: 14px; color: #34495e; text-align: justify; line-height: 1.7;">
+                在那个充斥着眼泪和挫败感的夜晚，你不知道妈妈在你身上看到了多么耀眼的黄金品质：<br>
+                <b>1. 极其珍贵的“要好”与自驱力：</b>你虽然很难过、甚至崩溃到大哭，但你的哭不是因为“不想努力”，而是因为“太渴望变好，却嫌自己练习得不够多”。这种对自我的高要求和迎难而上的决心，是世界上最强大的内驱力。<br>
+                <b>2. 极其了不起的自我修复力：</b>在面临崩溃被妈妈劝去洗澡后，你没有顺水推舟去睡觉或者玩耍，而是主动重新坐回书桌前，把未完的挑战完成。洗个澡就能迅速把情绪清零，重新面对困难，这种心理韧性连很多成年人都做不到。
+            </div>
+        </div>
+
+        <div class="mom-heart">
+            <div class="mom-heart-title">💖 【妈妈心语】</div>
+            <div class="mom-text">
+                亲爱的弟弟，当你18岁看到这段话时，拼音和汉字对你来说大概早已像呼吸一样简单了吧。<br><br>
+                妈妈想让你记住8岁时的那个夜晚：你一边流着眼泪，一边一个音节一个音节地数着手指，哭着说自己“没用”。妈妈看着屏幕里的你，心里疼得揪成了一团，但同时妈妈也为你感到无比骄傲。<br><br>
+                你哪里是“没用”呢？你简直勇敢得像个小骑士。妈妈让你去洗澡，只是想帮你把脑子里的雾霾冲掉。妈妈当时对你说的那些话，就是想告诉你：**生活不是要在一天晚上把5遍全部跑完，错误也不是敌人，它是帮我们找到路标的乐高零件。**<br><br>
+                谢谢你，在最崩溃的时候依然选择相信妈妈，愿意坐回来陪妈妈读完那最后一遍。有这样“要好”又百折不挠的你，妈妈对你的未来充满了底气。
+            </div>
+        </div>
+
+        <div class="interactive-box">
+            <div class="interactive-title">🎨 【互动留白 · 承刚的时光机】</div>
+            <div style="font-size: 13px; color: #95a5a6; font-style: italic; margin-bottom: 10px;">
+                📝 8岁时那个为拼音大哭的你，现在18岁的你，拼音和考试应该早就难不倒你了吧？此时此刻，你想对当年那个不服输、一边哭一边读的自己说些什么呢？
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

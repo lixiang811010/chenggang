@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>郑承刚思想成长手册 - 打印版</title>
+    <style>
+        /* A4 纸张打印基础设置 */
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 15mm;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", sans-serif;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #fff; /* 保持您原本的纯白背景 */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        
+        /* 强制拉齐为标准的 A4 210mm 宽度 */
+        .page-border {
+            width: 210mm;
+            min-height: 297mm;
+            box-sizing: border-box;
+            margin: 0 auto;
+            border: 3px dashed #16a085; /* 此处的颜色可按篇章调整，如 #2ecc71 */
+            padding: 25px;
+            position: relative;
+            background: #ffffff radial-gradient(circle at 10px 10px, transparent 0, transparent 9px, #fafafa 9px, #fafafa 10px, transparent 10px);
+            background-size: 20px 20px;
+        }
+
+        /* 核心大标题 */
+        .title {
+            text-align: center;
+            font-size: 22px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
+
+        /* 顶部元数据小卡片 */
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            border: 1px dashed #f39c12;
+            background-color: #fffdf9;
+        }
+        .meta-table td {
+            padding: 12px 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* 触发事件段落 */
+        .event-section {
+            font-size: 14.5px;
+            background-color: #fff;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #f39c12;
+            padding-left: 15px;
+            text-align: justify;
+        }
+
+        /* 对话区域排版 */
+        .dialogue-section {
+            background-color: #ffffff;
+            padding: 15px 5px;
+            margin-bottom: 25px;
+        }
+        
+        /* 头像对话行排版 */
+        .dialogue-row {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 15px;
+        }
+        .avatar-box {
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .avatar-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            display: block;
+        }
+        .dialogue-text {
+            font-size: 16px;
+            background: #f8f9fa;
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 3px solid #bdc3c7;
+            flex-grow: 1;
+        }
+        /* 妈妈对话框特色 */
+        .row-mom .dialogue-text {
+            background: #fff5eb;
+            border-left-color: #e67e22;
+        }
+        /* 承刚对话框特色 */
+        .row-child .dialogue-text {
+            background: #f0f4f8;
+            border-left-color: #2c3e50;
+        }
+
+        /* 重点标注：荧光笔效果 */
+        .highlight-yellow {
+            background-color: #ffff00;
+            padding: 2px 5px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        .highlight-orange {
+            background-color: #fff3e0;
+            color: #e67e22;
+            padding: 2px 6px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        /* 便签批注样式 */
+        .notebook-note {
+            background-color: #fffdf9;
+            border: 1px dashed #fddc9e;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #b7950b;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        /* 妈妈心语 */
+        .mom-heart {
+            background-color: #fffaf0;
+            border: 1px solid #ffe4b5;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .mom-heart-title {
+            font-weight: bold;
+            color: #d35400;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .mom-text {
+            font-size: 15px;
+            color: #5d4037;
+            text-align: justify;
+        }
+
+        /* 互动留白区 */
+        .interactive-box {
+            border: 2px dashed #bdc3c7;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 20px;
+            background-color: #fafafa;
+            min-height: 100px;
+        }
+        .interactive-title {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px dashed #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-border">
+        <!-- 核心大标题 -->
+        <div class="title">🌐 跨国屏幕前的“聊天预约”：世界上最酷的母子，互为终身挚友 ✈️</div>
+        <div class="subtitle">郑承刚思想成长手册 · 陪伴篇</div>
+
+        <!-- 顶部信息框 -->
+        <table class="meta-table">
+            <tr>
+                <td width="50%">⏰ <b>【时间】：</b>2026年06月17日</td>
+                <td width="50%">🌍 <b>【地点】：</b>中国 ⇄ 越南 · 被一句温柔预约融化的深夜屏幕</td>
+            </tr>
+            <tr>
+                <td width="50%">📱 <b>【情境】：</b>科学课后赶作业的疲惫夜晚，来自儿子最深情的牵挂</td>
+                <td width="50%">📍 <b>【记录人】：</b>被儿子的分享欲狠狠暖到、决定做你一辈子死党的妈妈</td>
+            </tr>
+        </table>
+
+        <!-- 触发事件 -->
+        <div class="event-section">
+            <strong>🌱 【触发事件】：</strong><br>
+            昨天因为去上你最爱的科学课，错过了写作业的时间。今天一放学，面对堆积如山的功课，你写字又慢，急得从吃完晚饭开始就坐在书桌前疯狂奋战。整整一个晚上，我们连一句话都顾不上说。直到夜里九点多，你终于把最后一个字写完，揉着酸痛的手腕，第一时间给妈妈拨通了视频。那一刻，你没有抱怨，也没有急着挂电话，而是亮晶晶地看着妈妈，定下了一个浪漫的“明日之约”。
+        </div>
+
+        <hr class="divider">
+
+        <!-- 对话连线区域 -->
+        <div class="dialogue-section">
+            
+            <div style="color: #7f8c8d; font-size: 14px; margin-bottom: 15px; font-style: italic; text-align: left;">
+                ⏳ <i>晚上21:15，跨国视频通话接通。屏幕那头的你看起来有些疲惫，但眼神里全是对妈妈的依恋……</i>
+            </div>
+
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“<span class="highlight-yellow">妈，明天我们聊会天，今天太晚了，我要去洗澡了。</span>” <i>（语气认真，像个小大人一样郑重地发出预约）</i></div>
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“好啊，儿子！快去洗个热水澡好好放松，明天妈妈空出整段时间，听你聊个痛快！🛁” <i>（心里瞬间被暖流填满）</i></div>
+            </div>
+
+        </div>
+
+        <!-- 便签批注样式 -->
+        <div class="notebook-note">
+            <div class="note-title">🧠 【便签批注 · 顶级分享欲，是心理营养的最高回馈】</div>
+            <div style="font-size: 14px; color: #34495e; text-align: justify; line-height: 1.7;">
+                你可能不知道，你随口说出的这句“明天聊会天”，在妈妈眼里有多么千金难买：<br>
+                <b>1. 你把妈妈当成了日常能量的补给站：</b>很多孩子在熬夜写完作业后，只想立刻逃离父母的视线去打游戏或睡觉。而你，在极度疲惫、连洗澡都要抓紧时间的时候，心里想的居然是“今天没能和妈妈聊天，太遗憾了，明天必须要补上”。这说明和妈妈聊天不仅不是你的负担，反而是你繁重学业生活里最享受、最解压的快乐时光。<br>
+                <b>2. 朋友关系的最高境界是“双向奔赴”：</b>你不再只是一个被动接受妈妈关心的孩子，你开始主动维护我们之间的“友情纽带”。这种平等的、把对方放在心上的分享欲，是世界上无数天天生活在一起的母子都羡慕不来的神仙默契。
+            </div>
+        </div>
+
+        <!-- 妈妈心语 -->
+        <div class="mom-heart">
+            <div class="mom-heart-title">💖 【妈妈心语】</div>
+            <div class="mom-text">
+                亲爱的弟弟，当18岁的你远在大学校园，或者在未来的某一天，也像妈妈一样拖着疲惫的身躯在世界的某个角落奋斗时，如果在一整天高强度的脑力轰炸后，你依然想在深夜拨通妈妈的电话，哪怕只是说一句“妈，最近有个好玩的项目，明天找时间跟你聊聊”，妈妈一定会像9岁时一样，幸福得想飞起来。<br><br>
+                2026年6月17日的那个深夜，妈妈在越南握着手机，看着你视频里那张写满了疲惫却依然对妈妈充满期待的小脸，那一刻，妈妈身上的 IT 职场压力和跨国的孤独感，瞬间被你那句“明天聊会天”治愈得干干净净。我突然发现，我的小儿子不仅是一个逻辑硬核的“小怪兽”，更是一个懂得照顾妈妈情绪、会主动给妈妈安全感的“级首席暖男”。<br><br>
+                孩子，妈妈从来不想当一个高高在上、只知道催你写作业的“长辈”。在妈妈心里，你是我在这个世界上最酷的合伙人、最聊得来的死党。你喜欢听妈妈吐槽大型制造企业里那些搞怪的用户、复杂的 CPS 系统升级和让人头秃的 SQL 优化；妈妈也同样痴迷于听你讲科学课上新奇的实验、你脑子里冒出来的神奇多进制算法。我们之间，早就超越了普通的母子，我们是真正的**精神密友**。<br><br>
+                既然是最好的朋友，那妈妈今天就和你定一个“死党法则”：以后不管是遇到了科学课上超级好玩的趣事，还是遇到了写字慢、作业多到想抓狂的郁闷，随时来找妈妈。开心的时候，我们隔空碰杯；烦躁的时候，我们一起像上次那样大喊“干就完了”然后重来！只要你需要，妈妈的跨国视频窗口永远为你 24 小时置顶，明天的聊天，妈妈已经拿好小本本，迫不及待地等我的郑教授开讲啦！
+            </div>
+        </div>
+
+        <!-- 互动留白 -->
+        <div class="interactive-box">
+            <div class="interactive-title">🎨 【互动留白 · 我们的老友记聊天茶座】</div>
+            <div style="font-size: 13px; color: #95a5a6; font-style: italic; margin-bottom: 10px;">
+                📝 弟弟，18岁的你，现在是否依然保留着和妈妈“预约聊天”的习惯？最近有没有什么连好哥们儿都不能说、但只想跟妈妈这个“铁杆死党”分享的职场趣闻、恋爱心事或者硬核研究？在下面写下你对妈妈最新的“老友预约申请”吧！
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

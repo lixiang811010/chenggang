@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>郑承刚思想成长手册 - 打印版</title>
+    <style>
+        /* A4 纸张打印基础设置 */
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 15mm;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", sans-serif;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #fff; /* 保持您原本的纯白背景 */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        
+        /* 强制拉齐为标准的 A4 210mm 宽度 */
+        .page-border {
+            width: 210mm;
+            min-height: 297mm;
+            box-sizing: border-box;
+            margin: 0 auto;
+            border: 3px dashed #16a085; /* 此处的颜色可按篇章调整，如 #2ecc71 */
+            padding: 25px;
+            position: relative;
+            background: #ffffff radial-gradient(circle at 10px 10px, transparent 0, transparent 9px, #fafafa 9px, #fafafa 10px, transparent 10px);
+            background-size: 20px 20px;
+        }
+
+        /* 核心大标题 */
+        .title {
+            text-align: center;
+            font-size: 22px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
+
+        /* 顶部元数据小卡片 */
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            border: 1px dashed #4a90e2;
+            background-color: #f4f9ff;
+        }
+        .meta-table td {
+            padding: 12px 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* 触发事件段落 */
+        .event-section {
+            font-size: 14.5px;
+            background-color: #fff;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4a90e2;
+            padding-left: 15px;
+            text-align: justify;
+        }
+
+        /* 对话区域排版 */
+        .dialogue-section {
+            background-color: #ffffff;
+            padding: 15px 5px;
+            margin-bottom: 25px;
+        }
+        
+        /* 头像对话行排版 */
+        .dialogue-row {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 15px;
+        }
+        .avatar-box {
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .avatar-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            display: block;
+        }
+        .dialogue-text {
+            font-size: 16px;
+            background: #f8f9fa;
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 3px solid #bdc3c7;
+            flex-grow: 1;
+        }
+        /* 妈妈对话框特色 */
+        .row-mom .dialogue-text {
+            background: #fff5eb;
+            border-left-color: #e67e22;
+        }
+        /* 承刚对话框特色 */
+        .row-child .dialogue-text {
+            background: #f0f4f8;
+            border-left-color: #2c3e50;
+        }
+
+        /* 重点标注：荧光笔效果 */
+        .highlight-yellow {
+            background-color: #ffff00;
+            padding: 2px 5px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        .highlight-orange {
+            background-color: #ff9900;
+            color: white;
+            padding: 2px 6px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        /* 便签批注样式 */
+        .notebook-note {
+            background-color: #f1f8ff;
+            border: 1px dashed #a5c8ff;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #1a5a9e;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        /* 妈妈心语 */
+        .mom-heart {
+            background-color: #fffaf0;
+            border: 1px solid #ffe4b5;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .mom-heart-title {
+            font-weight: bold;
+            color: #d35400;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .mom-text {
+            font-size: 15px;
+            color: #5d4037;
+            text-align: justify;
+        }
+
+        /* 互动留白区 */
+        .interactive-box {
+            border: 2px dashed #bdc3c7;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 20px;
+            background-color: #fafafa;
+            min-height: 100px;
+        }
+        .interactive-title {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px dashed #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-border">
+        <!-- 核心大标题 -->
+        <div class="title">🌐 宇宙级的灵魂对白：超越学科与分数的无条件之爱 ✈️</div>
+        <div class="subtitle">郑承刚思想成长手册 · 情感篇</div>
+
+        <!-- 顶部信息框 -->
+        <table class="meta-table">
+            <tr>
+                <td width="50%">⏰ <b>【时间】：</b>2025年11月20日</td>
+                <td width="50%">🌍 <b>【地点】：</b>中国 ⇄ 越南 · 考后的心灵港湾</td>
+            </tr>
+            <tr>
+                <td width="50%">📱 <b>【情境】：</b>期中考试成绩公布后的灵魂自嘲与托举</td>
+                <td width="50%">📍 <b>【记录人】：</b>永远用无条件的爱将你紧紧包裹的妈妈</td>
+            </tr>
+        </table>
+
+        <!-- 触发事件 -->
+        <div class="event-section">
+            <strong>🌱 【触发事件】：</strong><br>
+            三年级期中考试的成绩终于揭晓了。面对可能不太理想的分数，你没有大哭大闹，也没有逃避敷衍，而是用了一种充满幽默感却又让人无比心疼的“哲学家方式”，向妈妈倾诉你内心的巨大挫败感。在这短短几句跨越了“外国人”和“外星人”的宇宙级自嘲后面，妈妈给出了这辈子最坚决、最温柔的回答。
+        </div>
+
+        <hr class="divider">
+
+        <!-- 对话连线区域 -->
+        <div class="dialogue-section">
+            
+            <!-- 行：承刚 -->
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">
+                    “我感觉我学语文的时候是个外国人，<br>
+                     我学英语的时候是个外国人，<br>
+                     我学数学的时候不是个地球人……<br>
+                     <span class="highlight-yellow">考试成绩出来的时候，感觉自己啥都不是。</span>”
+                </div>
+            </div>
+
+            <!-- 氛围微表情描述 -->
+            <div style="color: #7f8c8d; font-size: 14px; margin: 15px 0; font-style: italic; text-align: left; padding-left: 20px; border-left: 2px dashed #bdc3c7;">
+                ✨ <i>（听到你这一连串的天才比喻，妈妈心疼之余，更想一把抱住你。分数把你定义成了“异类”和“虚无”，但妈妈要用一秒钟，把你重新拉回属于我们的宇宙中心——）</i>
+            </div>
+
+            <!-- 行：妈妈 -->
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“<span class="highlight-orange">我感觉你任何时候都是我的儿子。</span>”</div>
+            </div>
+
+        </div>
+
+        <!-- 便签批注样式 -->
+        <div class="notebook-note">
+            <div class="note-title">🧠 【便签批注 · 天才般的幽默自嘲与宇宙级的安全感】</div>
+            <div style="font-size: 14px; color: #34495e; text-align: justify; line-height: 1.7;">
+                这一天的对话，堪称我们母子之间最经典的“史诗级对白”：<br>
+                <b>1. 承刚惊人的文学天赋与自省力：</b>虽然你在抱怨学习的吃力，但能把语数外的挫败感分别形容为“外国人”和“非地球人”，最后归结为“啥都不是”，这展现了你极其**惊人的语言组织能力和幽默感**。你是个“知其所以然”的孩子，所以当分数没能达到你的预期时，你感到了深刻的迷茫。这种用自嘲来排解压力的方式，其实非常高级。<br>
+                <b>2. 妈妈的“无条件爱之宣言”：</b>在这个世界上，学校可以用分数把你定义为好学生或差学生，社会可以用成就把你定义为成功或失败。但妈妈要给你全宇宙最稳固的底气：**你的存在价值，从来不需要靠任何一张试卷来证明。** 无论你是地球人还是外星人，无论你考了满分还是一无所获，在妈妈这里，你永远是那个独一无二、被无条件爱着的儿子。这就是你任何时候都可以赖以疗伤的终极港湾。
+            </div>
+        </div>
+
+        <!-- 妈妈心语 -->
+        <div class="mom-heart">
+            <div class="mom-heart-title">💖 【妈妈心语】</div>
+            <div class="mom-text">
+                亲爱的弟弟，当你18岁，或者更长大的时候，你一定会面临比小学三年级复杂一万倍的评价体系。绩点、KPI、收入、社会地位……那时候的你，或许也会在某些疲惫的深夜，像当年一样叹一口气，觉得自己“啥都不是”。<br><br>
+                如果那一天真的到来，请你一定要打开这一页，把妈妈当年的回答在心里默念一百遍：*“我感觉你任何时候都是我的儿子。”*<br><br>
+                孩子，别怕。学语文像外国人，那我们就慢慢去认识我们美丽的母语；学数学像外星人，那说明你的思维说不定正翱翔在宇宙的另一个维度呢！试卷那张薄薄的纸，能量太小了，它根本定义不了你如此丰盈、聪明、充满灵性的小小灵魂。妈妈在越南每天拼命工作，看过了那么多的表格和数据，但回到家，妈妈最不需要的就是用数据来衡量我的孩子。<br><br>
+                你不是外国人，也不是外星人，你就是妈妈最爱的、会用天才比喻逗妈妈笑的宝贝儿子。去他的分数，累了就回妈妈怀里歇歇，任何时候，你都是妈妈的全世界。
+            </div>
+        </div>
+
+        <!-- 互动留白 -->
+        <div class="interactive-box">
+            <div class="interactive-title">🎨 【互动留白 · 承刚的宇宙飞船】</div>
+            <div style="font-size: 13px; color: #95a5a6; font-style: italic; margin-bottom: 10px;">
+                📝 弟弟，现在那个曾经觉得自己“不是地球人”的小男孩，是不是已经成长为能够自信掌控自己世界的男子汉了？在妈妈无条件的爱里，写一句你现在最想对妈妈说的话吧！
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
