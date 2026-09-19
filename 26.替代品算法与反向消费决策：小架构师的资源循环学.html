@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>郑承刚思想成长手册 - 循环经济篇</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 15mm;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", sans-serif;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        
+        /* 保持与之前完全一致的 A4 210mm 标准宽度与信纸风格 */
+        .page-border {
+            width: 210mm;
+            min-height: 297mm;
+            box-sizing: border-box;
+            margin: 0 auto;
+            border: 3px dashed #27ae60; /* 采用代表绿色循环与可持续发展的翡翠绿 */
+            padding: 25px;
+            position: relative;
+            background: #ffffff radial-gradient(circle at 10px 10px, transparent 0, transparent 9px, #fafafa 9px, #fafafa 10px, transparent 10px);
+            background-size: 20px 20px;
+        }
+
+        /* 核心大标题与副标题 */
+        .title {
+            text-align: center;
+            font-size: 22px;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
+
+        /* 元数据表格 */
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            border: 1px dashed #27ae60;
+            background-color: #eafaf1;
+        }
+        .meta-table td {
+            padding: 12px 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* 触发事件段落 */
+        .event-section {
+            font-size: 14.5px;
+            background-color: #fff;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #27ae60;
+            padding-left: 15px;
+            text-align: justify;
+        }
+
+        /* 对话流区域 */
+        .dialogue-section {
+            background-color: #ffffff;
+            padding: 15px 5px;
+            margin-bottom: 25px;
+        }
+        
+        .dialogue-row {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 15px;
+        }
+        .avatar-box {
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .avatar-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            display: block;
+        }
+        .dialogue-text {
+            font-size: 15.5px;
+            background: #f8f9fa;
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 3px solid #bdc3c7;
+            flex-grow: 1;
+        }
+        .row-mom .dialogue-text {
+            background: #eafaf1;
+            border-left-color: #27ae60;
+        }
+        .row-child .dialogue-text {
+            background: #f0f4f8;
+            border-left-color: #34495e;
+        }
+
+        .highlight-green {
+            background-color: #d4efdf;
+            color: #145a32;
+            padding: 2px 6px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        .highlight-orange {
+            background-color: #fdebd0;
+            color: #b9770e;
+            padding: 2px 6px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        /* 观察/架构笔记 */
+        .notebook-note {
+            background-color: #edf2f7;
+            border: 1px dashed #34495e;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        /* 妈妈心语 */
+        .mom-heart {
+            background-color: #fffaf0;
+            border: 1px solid #ffe4b5;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+        .mom-heart-title {
+            font-weight: bold;
+            color: #d35400;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .mom-text {
+            font-size: 15px;
+            color: #5d4037;
+            text-align: justify;
+        }
+
+        /* 互动留白 */
+        .interactive-box {
+            border: 2px dashed #bdc3c7;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 20px;
+            background-color: #fafafa;
+            min-height: 100px;
+        }
+        .interactive-title {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px dashed #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-border">
+        <!-- 核心大标题与副标题 -->
+        <div class="title">♻️ 替代品算法与反向消费决策：小架构师的资源循环学 📦</div>
+        <div class="subtitle">郑承刚思想成长手册 · 商业与消费篇</div>
+
+        <!-- 元数据表格 -->
+        <table class="meta-table">
+            <tr>
+                <td width="50%">⏰ <b>【时间】：</b>2026年09月14日 周末</td>
+                <td width="50%">🌍 <b>【地点】：</b>中国 ⇄ 越南 · 跨国周末视频沟通现场</td>
+            </tr>
+            <tr>
+                <td width="50%">📱 <b>【情境】：</b>关于劳动课工具采购、闲置图书处理与消费观的对话</td>
+                <td width="50%">📍 <b>【记录人】：</b>被你超强物尽其用意识与理性消费观深深惊艳的妈妈</td>
+            </tr>
+        </table>
+
+        <!-- 触发事件 -->
+        <div class="event-section">
+            <strong>🌱 【触发事件】：</strong><br>
+            周末视频通话时，我和你沟通劳动课所需的工具清单。原本以为需要花钱采购新工具，你却一眼看破本质，主动提出“用其他东西替代”；在聊到家里堆积如山的二手课外书时，你不仅能通透接受二手流转，更说出了“喜欢穿哥哥衣服，有哥哥味道”的动人表达；面对涨价的笔袋，你冷静关闭购买需求。你在资源利用和消费决策上展现出的通透与理性，远超同龄人。
+        </div>
+
+        <hr class="divider">
+
+        <!-- 对话连线区域 -->
+        <div class="dialogue-section">
+            
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“老师说劳动课要准备这些工具，家里可能没有，哪些需要买呀？”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“<span class="highlight-green">不用买了，找其他东西代替。</span>” <i>（看了一眼清单，果断回答）</i></div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“这么厉害，还会废物利用！这很好，废物利用/循环利用/共享是个很有发展前景的行业。比如哥哥姐姐们留下的课外书都在咱家，想想怎么处理吧？”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“我们卖二手吧！”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“你觉得别人会嫌弃二手吗？”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“我反正不嫌弃，<span class="highlight-green">我喜欢穿哥哥的衣服，有哥哥的味道。</span>我要把我的衣服留给哥哥儿子穿，再给我儿子穿！”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“非常棒的主意！除了卖二手，还可以共享出租：整理清单发小区，1块钱租一次或以书换书，既有收入又能帮人省钱，你还学会了管理。”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“好！那我们过年就办起来！”</div>
+            </div>
+
+            <div class="dialogue-row row-mom">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="mom.jpg" alt="妈妈">
+                </div>
+                <div class="dialogue-text">“对了，之前你想买的那个笔袋，还想买吗？”</div>
+            </div>
+
+            <div class="dialogue-row row-child">
+                <div class="avatar-box">
+                    <img class="avatar-img" src="chenggang.png" alt="承刚">
+                </div>
+                <div class="dialogue-text">“<span class="highlight-orange">不想买了，它涨价了，这个还可以用。</span>” <i>（云淡风轻）</i></div>
+            </div>
+
+        </div>
+
+        <!-- 观察笔记 -->
+        <div class="notebook-note">
+            <div class="note-title">💡 【妈妈的架构师注解 · 资源与消费底层算法】</div>
+            <div style="font-size: 14px; color: #34495e; text-align: justify; line-height: 1.7;">
+                1. <b>替代品思维（功能解耦）：</b> 面对需求，普通人第一反应是“消费买新”，而你的思维是寻找功能等效的替代资源。在系统架构里，这叫“资源复用”，能从源头极大地降低系统开销。<br>
+                2. <b>情感解构与循环价值（无虚荣心）：</b> 许多人在意“二手”的面子标签，你却能看到二手物品背后承载的家族情感（“有哥哥的味道”），并主动规划了三代人的资源传承闭环。<br>
+                3. <b>价格弹性的理性决策（消费防御）：</b> 当商品价格超过心理预期，且已有设备功能尚存时（“这个还可以用”），立刻清空欲望。不被消费主义洗脑，展现出极其强悍的财务理性。
+            </div>
+        </div>
+
+        <!-- 妈妈心语 -->
+        <div class="mom-heart">
+            <div class="mom-heart-title">💖 【妈妈心语】</div>
+            <div class="mom-text">
+                亲爱的弟弟，今天视频完后妈妈开心了许久。在这场对话里，你给妈妈带来了太多惊喜！<br><br>
+                在这个消费主义盛行的时代，很多孩子都在攀比最新款的文具、最新的衣服，而你却拥有极其珍贵的“通透”与“自信”。你说“不用买，找东西替代”，说明你关注的是事物的<b>实用本质</b>而非外壳；你说“喜欢穿哥哥的衣服，有哥哥的味道”，那句真挚又接地气的话，直接暖到了妈妈的心坎里——你把物尽其用提升到了家族情感传承的高度；而面对涨价的笔袋，你一句“涨价了不买，现有的还能用”，更展现了你极强的自我控制力。<br><br>
+                孩子，懂得控制欲望、善于复用资源的人，在任何时代都是真正的“生活智者”。我们过年就把“小区共享书屋”办起来，妈妈不仅支持你做小老板，更为你这颗清醒、富有爱心且智慧的头脑感到骄傲！
+            </div>
+        </div>
+
+        <!-- 互动留白 -->
+        <div class="interactive-box">
+            <div class="interactive-title">🎨 【互动留白 · 闲置图书共享商业小蓝图】</div>
+            <div style="font-size: 13px; color: #95a5a6; font-style: italic; margin-bottom: 10px;">
+                📝 弟弟，过年我们就要启动小区共享图书项目啦！请提前在下方画出或写下你的“图书出租/以书换书”管理规则（比如：租金、押金、借阅期限以及损坏赔偿标准）：
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
